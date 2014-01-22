@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name : email with domain
+# key: email
+# --
+${1:person}@${2:domainname}.${3:extension} $0

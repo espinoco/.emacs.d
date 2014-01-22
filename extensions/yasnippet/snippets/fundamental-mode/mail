@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name : simple structure to send mail
+# key: mail
+# --
+${1:greeting} ${2:person},
+
+$0
+
+${3:goodbye}
