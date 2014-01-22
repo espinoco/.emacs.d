@@ -5,11 +5,10 @@ An ever-changing set of my Emacs configurations. I'm just starting to use Emacs 
 ## Setup
 
 In my `.emacs` I have:
-
-    ```elisp
-    (add-to-list 'load-path "~/.emacs.d")
-    (require 'init)
-    ```
+```elisp
+(add-to-list 'load-path "~/.emacs.d")
+(require 'init)
+```
 
 ## This is an Emacs Mac OS X configuration
 
