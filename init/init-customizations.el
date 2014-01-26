@@ -11,9 +11,6 @@
 
 (ido-mode t)
 
-;; Mark-work instead of M-@, since spanish MBP keyboard do not allows it
-(global-set-key (kbd "C-M-2") 'mark-word)
-
 (setq-default indent-tabs-mode nil)
 
 ;; Placing all back-up files in one directory
