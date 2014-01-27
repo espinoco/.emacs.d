@@ -11,7 +11,11 @@
 (setq org-agenda-files '("~/Org"))
 (define-key global-map "\C-ca" 'org-agenda)
 
-;; Open agenda on start-up
+;; I still don't know why, but I got to use this to use org agenda
 (org-agenda-list)
+
+;; Last command opens default empty buffer so to have a clean window
+;; layout at start-up I close other windows.
+(delete-other-windows)
 
 (provide 'init-org-mode)
