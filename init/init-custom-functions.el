@@ -46,12 +46,6 @@
 
 (global-set-key (kbd "´") 'insert-brackets-and-indent)
 
-(defun switch-buffer-like-C-x-o ()
-  (interactive)
-  (other-window 1))
-
-(global-set-key (kbd "C-i") 'switch-buffer-like-C-x-o)
-
 (defun insert-tilde-symbol()
   "Inserts tilde symbol"
   (interactive)
