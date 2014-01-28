@@ -27,7 +27,8 @@
 
 (setq x-select-enable-clipboard t)
 
-(setq mac-command-modifier 'control)    ;; Mac command key to control key
+;; Mac command key to control key
+(setq mac-command-modifier 'control)    
 
 ;; Auto-close paris
 (electric-pair-mode 1)
@@ -57,5 +58,11 @@
 						     java-mode       php-mode))
 		(let ((mark-even-if-inactive transient-mark-mode))
 		  (indent-region (region-beginning) (region-end) nil))))))
+
+(setq inhibit-startup-echo-area-message (lambda ()
+                                          (user-login-name)))
+
+(add-hook 'emacs-startup-hook (lambda ()
+                                     (message "Welcome Carlo, Happy Hacking!")))
 
 (provide 'init-customizations)
