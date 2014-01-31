@@ -74,10 +74,3 @@ vi style of % jumping to matching brace."
 (global-set-key (kbd "C-c m") 'goto-match-paren)
 
 (provide 'init-custom-functions)
-
-
-
-
-
-
-
