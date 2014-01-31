@@ -55,7 +55,9 @@
 						     c-mode          c++-mode
 						     objc-mode       latex-mode
 						     plain-tex-mode  web-mode
-						     java-mode       php-mode))
+						     java-mode       php-mode
+                                                     html-mode       nxml-mode
+                                                     css-mode))
 		(let ((mark-even-if-inactive transient-mark-mode))
 		  (indent-region (region-beginning) (region-end) nil))))))
 
