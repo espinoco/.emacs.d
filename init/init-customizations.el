@@ -65,6 +65,6 @@
                                           (user-login-name)))
 
 (add-hook 'emacs-startup-hook (lambda ()
-                                     (message "Welcome Carlo, Happy Hacking!")))
+                                (message (format "Welcome %s, Happy Hacking!" (user-login-name)))))
 
 (provide 'init-customizations)

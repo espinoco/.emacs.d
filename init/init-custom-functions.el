@@ -16,7 +16,13 @@
   (interactive)
   (insert ";"))
 
-(global-set-key (kbd "C-ñ") 'insert-semi-colon-with-ñ)
+(global-set-key (kbd "ñ") 'insert-semi-colon-with-ñ)
+
+(defun insert-ñ ()
+  (interactive)
+  (insert "ñ"))
+
+(global-set-key (kbd "C-ñ") 'insert-ñ)
 
 (defun insert-couple-parentesis()
   "Inserts single parentesis easily"

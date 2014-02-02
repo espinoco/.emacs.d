@@ -6,6 +6,7 @@
 (require 'init-custom-functions)
 (require 'init-ispell)
 (require 'init-change-windows-intuitively)
+(require 'init-key-chord)
 (require 'init-multiple-cursors)
 (require 'init-php-mode)
 (require 'init-java-customizations)
