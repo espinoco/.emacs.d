@@ -11,6 +11,9 @@
 (setq org-agenda-files '("~/Org"))
 (define-key global-map "\C-ca" 'org-agenda)
 
+(add-hook 'org-mode-hook (lambda ()
+                           (local-set-key (kbd "C-'") 'undo)))
+
 ;; I still don't know why, but I got to use this to use org agenda
 (org-agenda-list)
 
