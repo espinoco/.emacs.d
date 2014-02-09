@@ -16,7 +16,7 @@ I use Emacs from [Emacs For Mac OS X](http://emacsformacosx.com/)
 
 ## This is an Emacs MacBook Pro Spanish keyboard configuration
 
-I like command key mapped as control key, this configuration also has spanish symbols and adaptations for programing.
+I like command key mapped as control key and Caps Lock key as Meta key, this configuration also has spanish symbols and adaptations for programing.
 
 ## Works done with this configuration
 
