@@ -196,7 +196,7 @@
 
 ;;; Code:
 
-(defvar key-chord-two-keys-delay 0.1	; 0.05 or 0.1
+(defvar key-chord-two-keys-delay 0.05	; 0.05 or 0.1
   "Max time delay between two key press to be considered a key chord.")
 
 (defvar key-chord-one-key-delay 0.2	; 0.2 or 0.3 to avoid first autorepeat
