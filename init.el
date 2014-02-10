@@ -15,7 +15,6 @@
 (require 'init-highlight-symbol)
 (require 'init-yasnippet)
 (require 'init-org-mode)
-(require 'init-frame)
 (require 'init-auto-complete)
 (require 'init-open-with)
 (require 'init-expand-region)
