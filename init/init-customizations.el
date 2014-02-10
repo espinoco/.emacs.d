@@ -28,7 +28,7 @@
 (setq x-select-enable-clipboard t)
 
 ;; Mac command key to control key
-(setq mac-command-modifier 'control)    
+(setq mac-command-modifier 'control)
 
 ;; Auto-close paris
 (electric-pair-mode 1)
