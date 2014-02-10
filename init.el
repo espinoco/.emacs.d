@@ -17,6 +17,8 @@
 (require 'init-org-mode)
 (require 'init-frame)
 (require 'init-auto-complete)
+(require 'init-open-with)
+(require 'init-expand-region)
 (require 'init-keybinds)
 
 (provide 'init)
