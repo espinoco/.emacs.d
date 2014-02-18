@@ -6,6 +6,7 @@
 (require 'init-custom-functions)
 (require 'init-ispell)
 (require 'init-change-windows-intuitively)
+(require 'init-expand-region)
 (require 'init-key-chord)
 (require 'init-multiple-cursors)
 (require 'init-php-mode)
@@ -17,7 +18,6 @@
 (require 'init-org-mode)
 (require 'init-auto-complete)
 (require 'init-open-with)
-(require 'init-expand-region)
 (require 'init-keybinds)
 
 (provide 'init)
