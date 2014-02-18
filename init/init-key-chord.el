@@ -17,6 +17,6 @@
 (key-chord-define-global "x2" 'split-window-below)
 (key-chord-define-global "x3" 'split-window-right)
 (key-chord-define-global "x0" 'delete-window)
-(key-chord-define-global "ff" 'er/expand-region)
+(key-chord-define-global "jj" 'er/expand-region)
 
 (provide 'init-key-chord)
