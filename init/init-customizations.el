@@ -1,5 +1,3 @@
-(setq ring-bell-function 'ignore)
-
 (tool-bar-mode -1)
 
 (scroll-bar-mode -1)
@@ -68,5 +66,7 @@
 
 (add-hook 'emacs-startup-hook (lambda ()
                                 (message (format "Welcome %s, Happy Hacking!" (user-login-name)))))
+
+(setq ring-bell-function 'ignore)
 
 (provide 'init-customizations)
