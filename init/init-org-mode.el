@@ -11,6 +11,8 @@
 (setq org-agenda-files '("~/Org"))
 (define-key global-map "\C-ca" 'org-agenda)
 
+(setq-default major-mode 'org-mode)
+
 (add-hook 'org-mode-hook (lambda ()
                            (local-set-key (kbd "C-'") 'undo)))
 
