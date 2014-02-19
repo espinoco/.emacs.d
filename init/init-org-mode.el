@@ -23,4 +23,14 @@
 ;; layout at start-up I close other windows.
 (delete-other-windows)
 
+;; (add-hook 'kill-emacs-hook (lambda ()
+                             ;; (interactive)
+                             ;; (shell-command "cd ~/Org" nil nil)
+                             ;; (shell-command "git add -A" nil nil)
+                             ;; (shell-command (format "git commit -m \"%s Emacs kill push\""
+                                                    ;; (shell-command "date" nil nil)) nil nil)
+                             ;; (shell-command "git push -u origin master") nil nil))
+
+(defun push-org-notes)
+
 (provide 'init-org-mode)
