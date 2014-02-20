@@ -2,6 +2,8 @@
 
 (scroll-bar-mode -1)
 
+(add-to-list 'exec-path "/usr/local/bin")
+
 ;; Line numbers
 (global-linum-mode t)
 
