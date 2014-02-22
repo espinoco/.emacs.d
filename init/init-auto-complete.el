@@ -8,7 +8,6 @@
 (define-key ac-menu-map "\C-n" 'ac-next)
 (define-key ac-menu-map "\C-p" 'ac-previous)
 
-(add-to-list 'ac-modes 'fundamental-mode)
 (add-to-list 'ac-modes 'html-mode)
 (add-to-list 'ac-modes 'nxml-mode)
 
