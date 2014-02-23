@@ -1,5 +1,3 @@
-;; Mark-work instead of M-@, since spanish MBP keyboard do not allows it
-
 (global-set-key (kbd "C-'") 'undo)
 
 (global-set-key (kbd "C-c i") 'ispell)
@@ -18,5 +16,21 @@
                               (interactive)
                               (insert "\"\"")
                               (backward-char)))
+
+(global-set-key (kbd "C-,") 'uncomment-comment-region)
+
+(global-set-key (kbd "ñ") 'insert-semi-colon-with-ñ)
+
+(global-set-key (kbd "C-ñ") 'insert-ñ)
+
+(global-set-key (kbd "C-8") 'insert-couple-parentesis)
+
+(global-set-key (kbd "`") 'insert-couple-of-straight-brackets)
+
+(global-set-key (kbd "´") 'insert-brackets-and-indent)
+
+(global-set-key (kbd "C-º") 'insert-tilde-symbol)
+
+(global-set-key (kbd "C-c m") 'goto-match-paren)
 
 (provide 'init-keybinds)

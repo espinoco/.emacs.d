@@ -10,19 +10,13 @@
     (comment-dwim nil))
   (deactivate-mark))
 
-(global-set-key (kbd "C-,") 'uncomment-comment-region)
-
 (defun insert-semi-colon-with-ñ ()
   (interactive)
   (insert ";"))
 
-(global-set-key (kbd "ñ") 'insert-semi-colon-with-ñ)
-
 (defun insert-ñ ()
   (interactive)
   (insert "ñ"))
-
-(global-set-key (kbd "C-ñ") 'insert-ñ)
 
 (defun insert-couple-parentesis()
   "Inserts single parentesis easily"
@@ -30,14 +24,10 @@
   (insert "()")
   (backward-char 1))
 
-(global-set-key (kbd "C-8") 'insert-couple-parentesis)
-
 (defun insert-couple-of-straight-brackets()
   "Inserts couple of [ symbols like this: []"
   (interactive)
   (insert "[]"))
-
-(global-set-key (kbd "`") 'insert-couple-of-straight-brackets)
 
 (defun insert-brackets-and-indent ()
   (interactive)
@@ -50,14 +40,10 @@
       (forward-line -1)
       (indent-for-tab-command))))
 
-(global-set-key (kbd "´") 'insert-brackets-and-indent)
-
 (defun insert-tilde-symbol()
   "Inserts tilde symbol"
   (interactive)
   (insert "~"))
-
-(global-set-key (kbd "C-º") 'insert-tilde-symbol)
 
 ;; Disable the bell just when scrolling to limits
 (defun no-bell-sound ()
@@ -76,8 +62,6 @@ vi style of % jumping to matching brace."
   (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
-
-(global-set-key (kbd "C-c m") 'goto-match-paren)
 
 (defun play-video-file-with-vlc ()
   "Plays video file with VLC by directly opening VLC"
