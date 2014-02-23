@@ -17,7 +17,6 @@
 (require 'init-yasnippet)
 (require 'init-org-mode)
 (require 'init-auto-complete)
-(require 'init-open-with)
 (require 'init-key-chord)
 (require 'init-keybinds)
 
