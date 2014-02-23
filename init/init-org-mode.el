@@ -37,7 +37,8 @@
     (if (> selected-priority 5) (error "Enter an integer number between 0 and 6")
       (search-forward "]")
       (forward-char)
-      (insert (format "[#%d] " selected-priority)))))
+      (insert (format "[#%d] " selected-priority))
+      (org-beginning-of-line))))
 
 (define-key org-mode-map (kbd "C-c p") 'set-priority)
 
