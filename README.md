@@ -1,6 +1,6 @@
 # My personal Emacs configuration
 
-An ever-changing set of my Emacs configurations. I'm just starting to use Emacs seriously so this is not a professional configuration yet, it keeps getting improved.
+An ever-changing set of my Emacs configurations. I'm just starting to use Emacs seriously so it keeps getting improved.
 
 ## Setup
 
