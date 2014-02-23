@@ -79,4 +79,26 @@ vi style of % jumping to matching brace."
 
 (global-set-key (kbd "C-c m") 'goto-match-paren)
 
+(defun play-video-file-with-vlc ()
+  "Plays video file with VLC by directly opening VLC"
+  (interactive)
+  (defvar get-filename-on-dired 'dired-copy-filename-as-kill)
+  (shell-command (format "%s --quiet --fullscreen \"%s\""
+                         emms-player-vlc-command-name
+                         (funcall get-filename-on-dired))))
+
+(defun open-file-with-external-program ()
+  "Opens a file by directly calling the default external program"
+  (interactive)
+  (defvar get-filename-on-dired 'dired-copy-filename-as-kill)
+  (shell-command (format "open \"%s\""
+                         (funcall get-filename-on-dired))))
+
+(defun export-latex-to-pdf ()
+  "Exports latex file to pdf with pdflatex"
+  (interactive)
+  (defvar get-filename-on-dired 'dired-copy-filename-as-kill)
+  (shell-command (format "pdflatex \"%s\""
+                         (funcall get-filename-on-dired))))
+
 (provide 'init-custom-functions)
