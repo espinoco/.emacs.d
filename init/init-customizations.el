@@ -69,6 +69,4 @@
 (add-hook 'emacs-startup-hook (lambda ()
                                 (message (format "Welcome %s, Happy Hacking!" (user-login-name)))))
 
-(setq ring-bell-function 'ignore)
-
 (provide 'init-customizations)
