@@ -3,6 +3,7 @@
 (require 'init-dired)
 (require 'init-theme)
 (require 'init-path)
+(require 'init-package)
 (require 'init-customizations)
 (require 'init-custom-functions)
 (require 'init-ispell)
