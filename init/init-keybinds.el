@@ -4,7 +4,7 @@
 
 (global-set-key (kbd "C-c w") 'ispell-word)
 
-(global-set-key (kbd "C-c s") 'shell)
+(global-set-key (kbd "C-c s") 'eshell)
 
 (global-set-key (kbd "C-M-y") (lambda ()
                                 (interactive)
