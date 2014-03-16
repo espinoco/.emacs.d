@@ -6,6 +6,7 @@
 (require 'init-package)
 (require 'init-customizations)
 (require 'init-custom-functions)
+(require 'init-ace-jump-mode)
 (require 'init-ispell)
 (require 'init-change-windows-intuitively)
 (require 'init-expand-region)
