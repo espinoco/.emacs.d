@@ -4,6 +4,7 @@
 
 (key-chord-define-global "mx" 'execute-extended-command)
 (key-chord-define-global "fj" 'helm-mini)
+(key-chord-define-global "mx" 'smex)
 (key-chord-define-global "xk" 'ido-kill-buffer)
 (key-chord-define-global "xx" 'end-of-buffer)
 (key-chord-define-global "xj" 'dired-jump)
