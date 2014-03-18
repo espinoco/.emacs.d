@@ -1,3 +1,4 @@
+; -*- mode: snippet;-*-
 # name : <strong>...</strong>
 # --
 <strong>$1</strong>$0
