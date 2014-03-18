@@ -15,6 +15,7 @@
 (require 'init-expand-region)
 (require 'init-multiple-cursors)
 (require 'init-php-mode)
+(require 'init-php-htm-mode)
 (require 'init-zencoding)
 (require 'init-java-customizations)
 (require 'init-helm)
