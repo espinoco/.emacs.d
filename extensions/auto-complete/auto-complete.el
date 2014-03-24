@@ -369,16 +369,6 @@ If there is no common part, this will be nil.")
     (define-key map [C-up] 'ac-quick-help-scroll-up)
     (define-key map "\C-\M-n" 'ac-quick-help-scroll-down)
     (define-key map "\C-\M-p" 'ac-quick-help-scroll-up)
-
-    (dotimes (i 9)
-      (let ((symbol (intern (format "ac-complete-%d" (1+ i)))))
-        (fset symbol
-              `(lambda ()
-                 (interactive)
-                 (when (and (ac-menu-live-p) (popup-select ac-menu ,i))
-                   (ac-complete))))
-        (define-key map (read-kbd-macro (format "M-%s" (1+ i))) symbol)))
-
     map)
   "Keymap for completion.")
 (defvaralias 'ac-complete-mode-map 'ac-completing-map)
