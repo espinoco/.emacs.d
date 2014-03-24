@@ -17,11 +17,6 @@
 ;; (global-set-key [(shift up)] 'proff-select-window-up)
 ;; (global-set-key [(shift down)] 'proff-select-window-down)
 
-(global-set-key (kbd "C-S-j") 'proff-select-window-left)
-(global-set-key (kbd "C-S-l") 'proff-select-window-right)
-(global-set-key (kbd "C-S-i") 'proff-select-window-up)
-(global-set-key (kbd "C-S-k") 'proff-select-window-down)
-
 (defun proff-find-window-down (win)
   (let ((swin))
     (walk-windows
