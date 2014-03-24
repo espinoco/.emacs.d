@@ -59,8 +59,4 @@
 
 (setq org-src-fontify-natively t)
 
-(add-hook 'org-mode-hook
-          (lambda ()
-            (toggle-truncate-lines)))
-
 (provide 'init-org-mode)
