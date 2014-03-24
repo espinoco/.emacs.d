@@ -11,6 +11,10 @@
 
 (iswitchb-mode t)
 
+(setq ido-enable-flex-matching t)
+
+(setq ido-everywhere t)
+
 (ido-mode t)
 
 (setq-default indent-tabs-mode nil)
