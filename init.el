@@ -1,5 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/init")
 (require 'init-mac-os-x-spanish-keyboard)
+(require 'init-hippie-expand)
 (require 'init-dired)
 (require 'init-theme)
 (require 'init-path)
