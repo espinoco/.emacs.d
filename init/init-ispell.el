@@ -1,5 +1,5 @@
 (setq-default ispell-program-name "/usr/local/bin/hunspell")
-(setq ispell-dictionary "english")
+(setq ispell-dictionary "spanish")
 
 ;; Add spanish dictionary to the list
 (require 'ispell)
