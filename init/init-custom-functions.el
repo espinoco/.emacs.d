@@ -85,4 +85,18 @@ vi style of % jumping to matching brace."
   (shell-command (format "pdflatex \"%s\""
                          (funcall get-filename-on-dired))))
 
+(defun switch-to-buffer-other-side-window ()
+  "Switch to buffer in other window to the side"
+  (interactive)
+  (split-window-right)
+  (proff-select-window-right)
+  (ido-switch-buffer))
+
+(defun switch-to-buffer-other-bottom-window ()
+  "Switch to buffer in other window to the bottom"
+  (interactive)
+  (split-window-below)
+  (proff-select-window-down)
+  (ido-switch-buffer))
+
 (provide 'init-custom-functions)
