@@ -15,6 +15,8 @@
 
 (setq ido-everywhere t)
 
+(setq dired-recursive-deletes 'always)
+
 (ido-mode t)
 
 (setq-default indent-tabs-mode nil)
