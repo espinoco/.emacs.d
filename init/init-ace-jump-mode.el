@@ -19,4 +19,7 @@
 
 (setq ace-jump-mode-scope 'frame)
 
+(setq ace-jump-mode-move-keys
+      (loop for i from ?a to ?z collect i))
+
 (provide 'init-ace-jump-mode)
