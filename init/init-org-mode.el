@@ -59,4 +59,8 @@
 
 (setq org-src-fontify-natively t)
 
+(defun archive-all-done ()
+  (interactive)
+  (org-map-entries 'org-archive-subtree "/DONE" 'file))
+
 (provide 'init-org-mode)
