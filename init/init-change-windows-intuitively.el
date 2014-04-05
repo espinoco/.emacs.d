@@ -21,4 +21,8 @@
           (lambda ()
             (local-set-key (kbd "C-M-i") 'proff-select-window-up)))
 
+(add-hook 'nxml-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-M-i") 'proff-select-window-up)))
+
 (provide 'init-change-windows-intuitively)
