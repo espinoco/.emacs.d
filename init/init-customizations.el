@@ -101,4 +101,6 @@ Including indent-buffer, which should not be called automatically on save."
   (delete-trailing-whitespace)
   (indent-buffer))
 
+(setq-default mode-require-final-newline nil)
+
 (provide 'init-customizations)
