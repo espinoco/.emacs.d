@@ -21,6 +21,10 @@
           (lambda ()
             (local-set-key (kbd "C-M-i") 'proff-select-window-up)))
 
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-M-l") 'proff-select-window-right)))
+
 (add-hook 'nxml-mode-hook
           (lambda ()
             (local-set-key (kbd "C-M-i") 'proff-select-window-up)))
