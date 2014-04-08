@@ -41,4 +41,14 @@
 
 (global-set-key [f4] 'kmacro-end-macro)
 
+(global-set-key (kbd "<M-backspace>") 'tinyeat-backward-preserve)
+
+(global-set-key "\M-d" 'tinyeat-forward-preserve)
+
+(global-set-key (kbd "<S-backspace>") 'tinyeat-delete-whole-word)
+
+(global-set-key (kbd "C-k") 'tinyeat-kill-line)
+
+(global-set-key (kbd "C-S-SPC") 'tinyeat-join-lines)
+
 (provide 'init-keybinds)
