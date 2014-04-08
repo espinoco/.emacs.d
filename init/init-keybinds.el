@@ -35,4 +35,10 @@
 
 (global-set-key (kbd "C-0") 'insert-equal-symbol)
 
+(global-set-key [\M-f2] 'apply-macro-to-region-lines)
+
+(global-set-key [f3] 'kmacro-start-macro)
+
+(global-set-key [f4] 'kmacro-end-macro)
+
 (provide 'init-keybinds)
