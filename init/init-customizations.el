@@ -101,6 +101,8 @@ Including indent-buffer, which should not be called automatically on save."
   (delete-trailing-whitespace)
   (indent-buffer))
 
-(setq-default mode-require-final-newline nil)
+(setq-default mode-require-final-newline nil
+              cperl-indent-level 4
+              tab-width 4)
 
 (provide 'init-customizations)
