@@ -99,4 +99,9 @@ vi style of % jumping to matching brace."
   (proff-select-window-down)
   (ido-switch-buffer))
 
+(defun insert-equal-symbol ()
+  "Inserts symbol = "
+  (interactive)
+  (insert "="))
+
 (provide 'init-custom-functions)

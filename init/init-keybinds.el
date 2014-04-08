@@ -33,4 +33,6 @@
 
 (global-set-key (kbd "C-c m") 'goto-match-paren)
 
+(global-set-key (kbd "C-0") 'insert-equal-symbol)
+
 (provide 'init-keybinds)
