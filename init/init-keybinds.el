@@ -56,4 +56,12 @@
 
 (global-set-key (kbd "C-S-SPC") 'tinyeat-join-lines)
 
+(global-set-key (kbd "<C-backspace>") (lambda ()
+                                        (interactive)
+                                        (forward-word 2)
+                                        (backward-word)
+                                        (tinyeat-delete-whole-word)
+                                        (tinyeat-backward-preserve)
+                                        (backward-word)))
+
 (provide 'init-keybinds)
