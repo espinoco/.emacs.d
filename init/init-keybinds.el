@@ -1,11 +1,5 @@
 (global-set-key (kbd "C-'") 'undo)
 
-(global-set-key (kbd "C-c i") 'ispell)
-
-(global-set-key (kbd "C-c w") 'ispell-word)
-
-(global-set-key (kbd "C-c s") 'eshell)
-
 (global-set-key (kbd "C-M-y") (lambda ()
                                 (interactive)
                                 (yank-pop -1)))
