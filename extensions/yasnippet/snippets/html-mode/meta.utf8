@@ -1,0 +1,5 @@
+; -*- mode: snippet;-*-
+#name : <meta charset="utf-8">
+#group : meta
+# --
+<meta charset="utf-8">
