@@ -12,6 +12,11 @@
 
 (global-set-key (kbd "M-s") 'backward-word)
 
+(define-key dired-mode-map (kbd "M-s") 'backward-word)
+
+(add-hook 'eshell-mode-hook (lambda ()
+                             (local-set-key (kbd "M-s") 'backward-word)))
+
 (global-set-key (kbd "C-2") (lambda ()
                               (interactive)
                               (insert "\"\"")
