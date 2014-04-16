@@ -24,6 +24,7 @@
 (key-chord-define-global "x9" 'delete-other-windows)
 (key-chord-define-global "jr" 'switch-to-buffer-other-side-window)
 (key-chord-define-global "jv" 'switch-to-buffer-other-bottom-window)
+(key-chord-define-global "jk" 'ace-jump-mode-pop-mark)
 (key-chord-define dired-mode-map "oe" 'open-file-with-external-program)
 (key-chord-define dired-mode-map "pv" 'play-video-file-with-vlc)
 (key-chord-define dired-mode-map "ep" 'export-latex-to-pdf)
