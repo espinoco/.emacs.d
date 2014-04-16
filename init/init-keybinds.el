@@ -30,11 +30,11 @@
 
 (global-set-key (kbd "C-º") 'insert-tilde-symbol)
 
-(global-set-key (kbd "C-c m") 'goto-match-paren)
-
 (global-set-key (kbd "C-0") 'insert-equal-symbol)
 
 (global-set-key [\M-f2] 'apply-macro-to-region-lines)
+
+(global-set-key [f2] 'kmacro-end-and-call-macro)
 
 (global-set-key [f3] 'kmacro-start-macro)
 
