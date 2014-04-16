@@ -79,12 +79,6 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(add-hook 'html-mode-hook
-          (lambda ()
-            ;; Default indentation is usually 2 spaces, changing to 4.
-            (set (make-local-variable 'sgml-basic-offset) 4)))
-
-
 (defun untabify-buffer ()
   (interactive)
   (untabify (point-min) (point-max)))
