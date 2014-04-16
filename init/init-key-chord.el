@@ -16,6 +16,7 @@
 (key-chord-define-global "kc" 'ace-jump-char-mode)
 (key-chord-define-global "kk" 'ace-jump-line-mode)
 (key-chord-define-global "ks" 'eshell)
+(key-chord-define-global "ms" 'magit-status)
 (key-chord-define-global "jr" 'switch-to-buffer-other-side-window)
 (key-chord-define-global "jv" 'switch-to-buffer-other-bottom-window)
 (key-chord-define dired-mode-map "oe" 'open-file-with-external-program)
