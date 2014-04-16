@@ -19,6 +19,7 @@
 (key-chord-define-global "ms" 'magit-status)
 (key-chord-define-global "jw" 'ispell-word)
 (key-chord-define-global "jc" 'ispell)
+(key-chord-define-global "xc" 'exchange-point-and-mark)
 (key-chord-define-global "jr" 'switch-to-buffer-other-side-window)
 (key-chord-define-global "jv" 'switch-to-buffer-other-bottom-window)
 (key-chord-define dired-mode-map "oe" 'open-file-with-external-program)
