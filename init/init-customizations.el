@@ -100,6 +100,4 @@ Including indent-buffer, which should not be called automatically on save."
               tab-width 4
               tab-stop-list (number-sequence 4 120 4))
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 (provide 'init-customizations)
