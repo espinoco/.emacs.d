@@ -27,6 +27,7 @@
 (require 'init-org-mode)
 (require 'init-tiny-tools)
 (require 'init-auto-complete)
+(require 'init-gse-number-rect)
 (require 'init-key-chord)
 (require 'init-keybinds)
 
