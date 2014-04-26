@@ -17,7 +17,7 @@
 
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
-(setq ace-jump-mode-scope 'frame)
+(setq ace-jump-mode-scope 'window)
 
 (setq ace-jump-mode-move-keys
       (loop for i from ?a to ?z collect i))
