@@ -18,7 +18,6 @@
 (key-chord-define-global "ks" 'eshell)
 (key-chord-define-global "ms" 'magit-status)
 (key-chord-define-global "jw" 'ispell-word)
-(key-chord-define-global "jc" 'ispell)
 (key-chord-define-global "xc" 'exchange-point-and-mark)
 (key-chord-define-global "x0" 'delete-window)
 (key-chord-define-global "fs" 'point-to-register)
