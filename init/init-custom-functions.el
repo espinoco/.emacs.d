@@ -104,4 +104,10 @@ vi style of % jumping to matching brace."
   (proff-select-window-right)
   (find-file (funcall get-filename-on-dired)))
 
+(defun dired-copy-path-file-as-kill ()
+  "Copy path of file into the kill ring."
+  (interactive)
+  (setq current-prefix-arg '(0))
+  (call-interactively 'dired-copy-filename-as-kill))
+
 (provide 'init-custom-functions)
