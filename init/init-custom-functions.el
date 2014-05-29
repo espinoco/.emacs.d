@@ -2,7 +2,7 @@
   "If region is set, [un]comments it. Otherwise [un]comments current line."
   (interactive)
   (if (eq mark-active nil)
-      (progn 
+      (progn
 	(beginning-of-line 1)
 	(set-mark (point))
 	(forward-line)
