@@ -58,4 +58,6 @@
                                         (tinyeat-backward-preserve)
                                         (backward-word)))
 
+(define-key dired-mode-map (kbd "o") 'dired-find-file-other-vertical-window)
+
 (provide 'init-keybinds)
