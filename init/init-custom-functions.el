@@ -63,14 +63,6 @@ vi style of % jumping to matching brace."
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
-(defun play-video-file-with-vlc ()
-  "Plays video file with VLC by directly opening VLC"
-  (interactive)
-  (defvar get-filename-on-dired 'dired-copy-filename-as-kill)
-  (shell-command (format "%s --quiet --fullscreen \"%s\""
-                         emms-player-vlc-command-name
-                         (funcall get-filename-on-dired))))
-
 (defun open-file-with-external-program ()
   "Opens a file by directly calling the default external program"
   (interactive)
