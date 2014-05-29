@@ -60,4 +60,6 @@
 
 (define-key dired-mode-map (kbd "o") 'dired-find-file-other-vertical-window)
 
+(define-key dired-mode-map (kbd "W") 'dired-copy-path-file-as-kill)
+
 (provide 'init-keybinds)
