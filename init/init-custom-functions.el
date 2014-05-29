@@ -96,4 +96,12 @@ vi style of % jumping to matching brace."
   (interactive)
   (insert "="))
 
+(defun dired-find-file-other-vertical-window ()
+  "In Dired, visit this file or directory in another vertical window."
+  (interactive)
+  (defvar get-filename-on-dired 'dired-copy-filename-as-kill)
+  (split-window-right)
+  (proff-select-window-right)
+  (find-file (funcall get-filename-on-dired)))
+
 (provide 'init-custom-functions)
