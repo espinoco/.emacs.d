@@ -62,4 +62,6 @@
 
 (define-key dired-mode-map (kbd "W") 'dired-copy-path-file-as-kill)
 
+(define-key dired-mode-map (kbd "Z") 'dired-zip-compress-uncompress)
+
 (provide 'init-keybinds)

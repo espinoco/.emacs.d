@@ -110,4 +110,19 @@ vi style of % jumping to matching brace."
   (setq current-prefix-arg '(0))
   (call-interactively 'dired-copy-filename-as-kill))
 
+(defun dired-zip-compress-uncompress ()
+  "Compress/Uncompress file or directory at point with zip format."
+  (interactive)
+  (defvar get-filename-on-dired 'dired-copy-filename-as-kill)
+  (if (string= (file-name-extension (funcall get-filename-on-dired)) "zip")
+      (call-process-shell-command (format "unzip \"%s\""
+                                          (funcall get-filename-on-dired))
+                                  nil "*Shell Command Output*" t)
+    (call-process-shell-command (format "zip -r -X %s.zip \"%s\""
+                                        (funcall get-filename-on-dired)
+                                        (funcall get-filename-on-dired))
+                                nil "*Shell Command Output*" t))
+  (message (format "%s compressed/uncompressed"
+                   (funcall get-filename-on-dired))))
+
 (provide 'init-custom-functions)
