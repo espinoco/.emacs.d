@@ -118,7 +118,7 @@ vi style of % jumping to matching brace."
       (call-process-shell-command (format "unzip \"%s\""
                                           (funcall get-filename-on-dired))
                                   nil "*Shell Command Output*" t)
-    (call-process-shell-command (format "zip -r -X %s.zip \"%s\""
+    (call-process-shell-command (format "zip -r -X \"%s.zip\" \"%s\""
                                         (funcall get-filename-on-dired)
                                         (funcall get-filename-on-dired))
                                 nil "*Shell Command Output*" t))
