@@ -105,7 +105,7 @@ vi style of % jumping to matching brace."
   (find-file (funcall get-filename-on-dired)))
 
 (defun dired-copy-path-file-as-kill ()
-  "Copy path of marked (or next ARG) files into the kill ring."
+  "Copy path of marked (or at point) files and folders."
   (interactive)
   (setq current-prefix-arg '(0))
   (call-interactively 'dired-copy-filename-as-kill))
