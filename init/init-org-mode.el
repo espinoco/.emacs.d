@@ -63,4 +63,6 @@
   (interactive)
   (org-map-entries 'org-archive-subtree "/DONE" 'file))
 
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
+
 (provide 'init-org-mode)
