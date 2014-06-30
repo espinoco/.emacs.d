@@ -61,4 +61,4 @@
   (interactive)
   (shell-command "cd ~/Org && git add -A && git commit -m \"Emacs manually puched notes\" && git push -u origin master" nil nil))
 
-(provide 'init-test-org-mode)
+(provide 'init-org-mode)
