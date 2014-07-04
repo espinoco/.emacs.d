@@ -64,4 +64,6 @@
 
 (define-key dired-mode-map (kbd "Z") 'dired-zip-compress-uncompress)
 
+(define-key dired-mode-map (kbd "f") 'ido-find-file)
+
 (provide 'init-keybinds)
