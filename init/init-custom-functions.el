@@ -3,10 +3,10 @@
   (interactive)
   (if (eq mark-active nil)
       (progn
-	(beginning-of-line 1)
-	(set-mark (point))
-	(forward-line)
-	(comment-dwim nil))
+    (beginning-of-line 1)
+    (set-mark (point))
+    (forward-line)
+    (comment-dwim nil))
     (comment-dwim nil))
   (deactivate-mark))
 
