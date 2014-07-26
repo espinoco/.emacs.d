@@ -126,7 +126,7 @@ vi style of % jumping to matching brace."
                    (funcall get-filename-on-dired))))
 
 (defun kill-gpg-buffers ()
-  "Kills gps buffers"
+  "Kills gpg buffers"
   (interactive)
   (kill-matching-buffers ".*\.gpg$"))
 
