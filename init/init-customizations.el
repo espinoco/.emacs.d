@@ -102,4 +102,9 @@ Including indent-buffer, which should not be called automatically on save."
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+
+(add-hook 'kill-emacs-hook (lambda ()
+                             (interactive)
+                             (kill-gpg-buffers)))
+
 (provide 'init-customizations)

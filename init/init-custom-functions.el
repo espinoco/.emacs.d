@@ -125,4 +125,9 @@ vi style of % jumping to matching brace."
   (message (format "%s compressed/uncompressed"
                    (funcall get-filename-on-dired))))
 
+(defun kill-gpg-buffers ()
+  "Kills gps buffers"
+  (interactive)
+  (kill-matching-buffers ".*\.gpg$"))
+
 (provide 'init-custom-functions)
