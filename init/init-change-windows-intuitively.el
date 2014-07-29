@@ -29,4 +29,14 @@
           (lambda ()
             (local-set-key (kbd "C-M-i") 'proff-select-window-up)))
 
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-M-i") 'proff-select-window-up)))
+
+(define-key gnus-summary-mode-map (kbd "C-M-i") 'proff-select-window-up)
+
+(define-key gnus-summary-mode-map (kbd "C-M-k") 'proff-select-window-down)
+
+(define-key gnus-summary-mode-map (kbd "C-M-l") 'proff-select-window-right)
+
 (provide 'init-change-windows-intuitively)
