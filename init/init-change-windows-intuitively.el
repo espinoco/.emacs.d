@@ -1,5 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/extensions/change-windows-intuitively")
 (require 'change-windows-intuitively)
+(require 'gnus)
 
 (global-set-key (kbd "C-M-j") 'proff-select-window-left)
 (global-set-key (kbd "C-M-l") 'proff-select-window-right)
