@@ -5,7 +5,8 @@
 
 (setq-default major-mode 'org-mode)
 
-(setq org-src-fontify-natively t)
+(setq org-src-fontify-natively t
+      org-log-repeat nil)
 
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
