@@ -102,6 +102,7 @@ Including indent-buffer, which should not be called automatically on save."
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(add-hook 'before-save-hook 'untabify-buffer)
 
 (add-hook 'kill-emacs-hook (lambda ()
                              (interactive)
