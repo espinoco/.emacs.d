@@ -66,4 +66,6 @@
 
 (define-key dired-mode-map (kbd "f") 'ido-find-file)
 
+(define-key calendar-mode-map (kbd "q") 'delete-window)
+
 (provide 'init-keybinds)
