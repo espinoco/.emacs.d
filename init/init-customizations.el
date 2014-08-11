@@ -108,4 +108,8 @@ Including indent-buffer, which should not be called automatically on save."
                              (interactive)
                              (kill-gpg-buffers)))
 
+(add-hook 'emacs-startup-hook (lambda ()
+                                (org-agenda-list)
+                                (delete-other-windows)))
+
 (provide 'init-customizations)
