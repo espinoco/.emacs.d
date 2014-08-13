@@ -29,7 +29,7 @@
 (key-chord-define-global "wj" 'windmove-left)
 (key-chord-define-global "wk" 'windmove-down)
 (key-chord-define-global "wl" 'windmove-right)
-(key-chord-define-global "wi" 'windmove-up)
+(key-chord-define-global "wh" 'windmove-up)
 (key-chord-define dired-mode-map "oe" 'open-file-with-external-program)
 (key-chord-define dired-mode-map "ep" 'export-latex-to-pdf)
 (require 'message)
