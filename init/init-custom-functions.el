@@ -81,14 +81,14 @@ vi style of % jumping to matching brace."
   "Switch to buffer in other window to the side"
   (interactive)
   (split-window-right)
-  (proff-select-window-right)
+  (windmove-right)
   (ido-switch-buffer))
 
 (defun switch-to-buffer-other-bottom-window ()
   "Switch to buffer in other window to the bottom"
   (interactive)
   (split-window-below)
-  (proff-select-window-down)
+  (windmove-down)
   (ido-switch-buffer))
 
 (defun insert-equal-symbol ()
@@ -101,7 +101,7 @@ vi style of % jumping to matching brace."
   (interactive)
   (defvar get-filename-on-dired 'dired-copy-filename-as-kill)
   (split-window-right)
-  (proff-select-window-right)
+  (windmove-right)
   (find-file (funcall get-filename-on-dired)))
 
 (defun dired-copy-path-file-as-kill ()
