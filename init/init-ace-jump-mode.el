@@ -15,12 +15,11 @@
 (eval-after-load "ace-jump-mode"
   '(ace-jump-mode-enable-mark-sync))
 
-(define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
-
-(setq ace-jump-mode-scope 'window)
+(setq ace-jump-mode-scope 'frame)
 
 (setq ace-jump-mode-move-keys
       (nconc (loop for i from ?a to ?z collect i)
-             (loop for i from ?0 to ?9 collect i)))
+             (loop for i from ?0 to ?9 collect i)
+             (loop for i from ?A to ?Z collect i)))
 
 (provide 'init-ace-jump-mode)
