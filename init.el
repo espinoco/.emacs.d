@@ -22,6 +22,7 @@
 (require 'init-java-customizations)
 (require 'init-helm)
 (require 'init-emms)
+(require 'init-multi-web-mode)
 (require 'init-highlight-symbol)
 (require 'init-yasnippet)
 (require 'init-org-mode)
