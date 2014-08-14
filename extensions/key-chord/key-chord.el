@@ -38,8 +38,8 @@
 ;;
 ;; Add to your ~/.emacs
 ;;
-;;	(require 'key-chord)
-;;	(key-chord-mode 1)
+;;  (require 'key-chord)
+;;  (key-chord-mode 1)
 ;;
 ;; and some chords, for example
 ;;
@@ -83,7 +83,7 @@
 ;; `4' and `r' pressed together insert a dollar sign.
 ;;
 ;; A ONE-key chord is a single key quickly pressed twice (within one third
-;; of a second or so). 
+;; of a second or so).
 ;;
 ;; Examples:
 ;;
@@ -114,7 +114,7 @@
 ;; write. Otherwise, if you are typing fast, two key intended to be separate
 ;; letters might instead trig a chord.
 ;; E.g. "uu" would be a good chord in spanish but not in finnish, and
-;; "hj" would be a good chord in english but not in swedish. 
+;; "hj" would be a good chord in english but not in swedish.
 ;;
 ;; Don't rely solely on /usr/dict/words to find unusual combination.
 ;; For example "cv" or "fg" can be quite common in certain kinds of
@@ -186,20 +186,20 @@
 ;; 0.5 (2008-09-15) l.david.andersson(at)sverige.nu
 ;;      Bugfix sit-for; Improved examples; New E-mail in comment
 ;; 0.4 (2005-05-07) david(at)symsoft.se
-;; 	Slightly better macro heuristics; Added option key-chord-in-macros
+;;  Slightly better macro heuristics; Added option key-chord-in-macros
 ;; 0.3 (2005-04-14) david(at)symsoft.se
-;; 	Require advice; More examples
+;;  Require advice; More examples
 ;; 0.2 (2003-09-13) david(at)symsoft.se
-;; 	Quick and dirty fix for keyboard macros
+;;  Quick and dirty fix for keyboard macros
 ;; 0.1 (2003-04-27) david(at)symsoft.se
-;;	First release
+;;  First release
 
 ;;; Code:
 
-(defvar key-chord-two-keys-delay 0.05	; 0.05 or 0.1
+(defvar key-chord-two-keys-delay 0.05 ; 0.05 or 0.1
   "Max time delay between two key press to be considered a key chord.")
 
-(defvar key-chord-one-key-delay 0.2	; 0.2 or 0.3 to avoid first autorepeat
+(defvar key-chord-one-key-delay 0.2 ; 0.2 or 0.3 to avoid first autorepeat
   "Max time delay between two press of the same key to be considered a key chord.
 This should normally be a little longer than `key-chord-two-keys-delay'.")
 
@@ -233,14 +233,14 @@ See functions `key-chord-define-global' or `key-chord-define'
 and variables `key-chord-two-keys-delay' and `key-chord-one-key-delay'."
   (interactive "P")
   (setq key-chord-mode (if arg
-			   (> (prefix-numeric-value arg) 0)
-			 (not key-chord-mode)))
+               (> (prefix-numeric-value arg) 0)
+             (not key-chord-mode)))
   (cond (key-chord-mode
-	 (setq input-method-function 'key-chord-input-method)
-	 (message "Key Chord mode on"))
-	(t
-	 (setq input-method-function nil)
-	 (message "Key Chord mode off"))))
+     (setq input-method-function 'key-chord-input-method)
+     (message "Key Chord mode on"))
+    (t
+     (setq input-method-function nil)
+     (message "Key Chord mode off"))))
 
 ;;;###autoload
 (defun key-chord-define-global (keys command)
@@ -263,9 +263,9 @@ If COMMAND is nil, the key-chord is removed."
       (error "Key-chord keys must have two elements"))
   ;; Exotic chars in a string are >255 but define-key wants 128..255 for those
   (let ((key1 (logand 255 (aref keys 0)))
-	(key2 (logand 255 (aref keys 1))))
+    (key2 (logand 255 (aref keys 1))))
     (if (eq key1 key2)
-	(define-key keymap (vector 'key-chord key1 key2) command)
+    (define-key keymap (vector 'key-chord key1 key2) command)
       ;; else
       (define-key keymap (vector 'key-chord key1 key2) command)
       (define-key keymap (vector 'key-chord key2 key1) command))))
@@ -274,21 +274,21 @@ If COMMAND is nil, the key-chord is removed."
   "Like lookup-key but no third arg and no numeric return value."
   (let ((res (lookup-key keymap key)))
     (if (numberp res)
-	nil
+    nil
       ;; else
       res)))
 
 (defun key-chord-lookup-key (key)
   "Lookup KEY in all current key maps."
   (let ((maps (current-minor-mode-maps))
-	res)
+    res)
     (while (and maps (not res))
       (setq res (key-chord-lookup-key1 (car maps) key)
-	    maps (cdr maps)))
+        maps (cdr maps)))
     (or res
-	(if (current-local-map) 
-	    (key-chord-lookup-key1 (current-local-map) key))
-	(key-chord-lookup-key1 (current-global-map) key))))
+    (if (current-local-map)
+        (key-chord-lookup-key1 (current-local-map) key))
+    (key-chord-lookup-key1 (current-global-map) key))))
 
 (defun key-chord-describe ()
   "List key chord bindings in a help buffer.
@@ -300,31 +300,31 @@ Please ignore that."
 (defun key-chord-input-method (first-char)
   "Input method controlled by key bindings with the prefix `key-chord'."
   (if (and (not (eq first-char key-chord-last-unmatched))
-	   (key-chord-lookup-key (vector 'key-chord first-char)))
+       (key-chord-lookup-key (vector 'key-chord first-char)))
       (let ((delay (if (key-chord-lookup-key (vector 'key-chord first-char first-char))
-		       key-chord-one-key-delay
-		     ;; else
-		     key-chord-two-keys-delay)))
-	(if (if executing-kbd-macro
-		(not (memq first-char key-chord-in-last-kbd-macro))
-	      (sit-for delay 0 'no-redisplay))
-	    (progn
-	      (setq key-chord-last-unmatched nil)
-	      (list first-char))
-	  ;; else input-pending-p
-	  (let* ((input-method-function nil)
-		 (next-char (read-event))
-		 (res (vector 'key-chord first-char next-char)))
-	    (if (key-chord-lookup-key res)
-		(progn
-		  (setq key-chord-defining-kbd-macro
-			(cons first-char key-chord-defining-kbd-macro))
-		  (list 'key-chord first-char next-char))
-	      ;; else put back next-char and return first-char
-	      (setq unread-command-events (cons next-char unread-command-events))
-	      (if (eq first-char next-char)
-		  (setq key-chord-last-unmatched first-char))
-	      (list first-char)))))
+               key-chord-one-key-delay
+             ;; else
+             key-chord-two-keys-delay)))
+    (if (if executing-kbd-macro
+        (not (memq first-char key-chord-in-last-kbd-macro))
+          (sit-for delay 0 'no-redisplay))
+        (progn
+          (setq key-chord-last-unmatched nil)
+          (list first-char))
+      ;; else input-pending-p
+      (let* ((input-method-function nil)
+         (next-char (read-event))
+         (res (vector 'key-chord first-char next-char)))
+        (if (key-chord-lookup-key res)
+        (progn
+          (setq key-chord-defining-kbd-macro
+            (cons first-char key-chord-defining-kbd-macro))
+          (list 'key-chord first-char next-char))
+          ;; else put back next-char and return first-char
+          (setq unread-command-events (cons next-char unread-command-events))
+          (if (eq first-char next-char)
+          (setq key-chord-last-unmatched first-char))
+          (list first-char)))))
     ;; else no key-chord keymap
     (setq key-chord-last-unmatched first-char)
     (list first-char)))
