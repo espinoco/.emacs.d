@@ -113,4 +113,8 @@ Including indent-buffer, which should not be called automatically on save."
                                 (org-agenda-list)
                                 (delete-other-windows)))
 
+(global-auto-revert-mode t)
+
+(setq auto-revert-interval 1)
+
 (provide 'init-customizations)
