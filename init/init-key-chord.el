@@ -33,6 +33,6 @@
 (key-chord-define dired-mode-map "oe" 'open-file-with-external-program)
 (key-chord-define dired-mode-map "ep" 'export-latex-to-pdf)
 (require 'message)
-(key-chord-define message-mode-map "jw" 'ispell-message)
+(key-chord-define message-mode-map "jq" 'ispell-message)
 
 (provide 'init-key-chord)
