@@ -62,4 +62,12 @@
   (interactive)
   (shell-command "cd ~/Org && git add -A && git commit -m \"Emacs manually puched notes\" && git push -u origin master" nil nil))
 
+(setq org-tag-faces
+      '(
+        ("onhold" . (:foreground "yellow" :weight bold))
+        ("next" . (:foreground "green" :weight bold))
+        ("someday" . (:foreground "purple" :weight bold))
+        ("project" . (:foreground "red" :weight bold))
+        ))
+
 (provide 'init-org-mode)
