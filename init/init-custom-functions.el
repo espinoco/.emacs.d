@@ -130,4 +130,9 @@ vi style of % jumping to matching brace."
   (interactive)
   (kill-matching-buffers ".*\.gpg$"))
 
+(defun revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive)
+  (revert-buffer t t))
+
 (provide 'init-custom-functions)
