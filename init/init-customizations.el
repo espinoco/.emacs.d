@@ -114,8 +114,8 @@ Including indent-buffer, which should not be called automatically on save."
                                 (org-agenda-list)
                                 (delete-other-windows)))
 
-(global-auto-revert-mode t)
+(ido-mode 1)
 
-(setq auto-revert-interval 1)
+(put 'dired-do-copy 'ido 'find-file)
 
 (provide 'init-customizations)
