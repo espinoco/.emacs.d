@@ -6,7 +6,7 @@ An ever-changing set of my Emacs configurations. I'm just starting to use Emacs 
 
 In my `.emacs` I have:
 ```elisp
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/init")
 (require 'init)
 ```
 

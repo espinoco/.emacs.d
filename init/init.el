@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/init")
 (require 'init-mac-os-x-spanish-keyboard)
 (require 'init-mexico-holidays)
 (require 'init-hippie-expand)
