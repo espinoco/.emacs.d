@@ -101,9 +101,10 @@ Including indent-buffer, which should not be called automatically on save."
               tab-width 4
               tab-stop-list (number-sequence 4 120 4))
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(add-hook 'before-save-hook 'untabify-buffer)
+(add-hook 'before-save-hook (lambda ()
+                              (interactive)
+                              (delete-trailing-whitespace)
+                              (untabify-buffer)))
 
 (add-hook 'kill-emacs-hook (lambda ()
                              (interactive)
