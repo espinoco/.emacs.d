@@ -1,6 +1,6 @@
 # My personal Emacs configuration
 
-An ever-changing set of my Emacs configurations. I'm just starting to use Emacs seriously so it keeps getting improved.
+An ever-changing set of my Emacs configurations.
 
 ## Setup
 
@@ -12,11 +12,15 @@ In my `.emacs` I have:
 
 ## This is an Emacs Mac OS X configuration
 
-I use Emacs from [Emacs For Mac OS X](http://emacsformacosx.com/)
+I install Emacs from homebrew:
+
+`brew install emacs --HEAD --use-git-head --cocoa --with-gnutls`
 
 ## This is an Emacs MacBook Pro Spanish keyboard configuration
 
-I like command key mapped as control key and Caps Lock key as Meta key, this configuration also has spanish symbols and adaptations for programing.
+I like command key mapped as control key and Caps Lock key as Meta
+key, this configuration also has spanish symbols and adaptations for
+programing.
 
 ## Works done with this configuration
 
@@ -25,4 +29,4 @@ I like command key mapped as control key and Caps Lock key as Meta key, this con
   * PHP development.
   * Emacs Lisp hacks.
 
-## Emacs 24.3 tested configuration
+## Emacs 24.4 tested configuration
