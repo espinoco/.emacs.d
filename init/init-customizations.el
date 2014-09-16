@@ -118,4 +118,12 @@ Including indent-buffer, which should not be called automatically on save."
 
 (put 'dired-do-copy 'ido 'find-file)
 
+(let ((default-directory "~/.emacs.d/elpa"))
+  (normal-top-level-add-subdirs-to-load-path))
+
+(require 'magit)
+
+(add-hook 'magit-log-edit-mode-hook (lambda ()
+                                      (flyspell-mode t)))
+
 (provide 'init-customizations)
