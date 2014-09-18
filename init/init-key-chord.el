@@ -17,6 +17,7 @@
 (key-chord-define-global "kk" 'ace-jump-line-mode)
 (key-chord-define-global "ks" 'eshell)
 (key-chord-define-global "ms" 'magit-status)
+(key-chord-define-global "ml" 'magit-log)
 (key-chord-define-global "qj" 'ispell-word)
 (key-chord-define-global "xc" 'exchange-point-and-mark)
 (key-chord-define-global "x0" 'delete-window)

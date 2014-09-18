@@ -74,4 +74,11 @@
 
 (define-key calendar-mode-map (kbd "q") 'delete-window)
 
+(let ((default-directory "~/.emacs.d/elpa"))
+  (normal-top-level-add-subdirs-to-load-path))
+
+(require 'magit)
+
+(define-key magit-log-mode-map (kbd "x") 'magit-reset-head-hard)
+
 (provide 'init-keybinds)
