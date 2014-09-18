@@ -2726,9 +2726,11 @@ Operations, , Logical Operations, calc, GNU Emacs Calc Manual}).  For example
 @item if($1 < 20, teen, string(""))
 "teen" if age $1 is less than 20, else the Org table result field is set to
 empty with the empty string.
-@item if("$1" == "nan" || "$2" == "nan", string(""), $1 + $2); E
+@item if("$1" == "nan" || "$2" == "nan", string(""), $1 + $2); E f-1
 Sum of the first two columns.  When at least one of the input fields is empty
-the Org table result field is set to empty.
+the Org table result field is set to empty.  @samp{E} is required to not
+convert empty fields to 0.  @samp{f-1} is an optional Calc format string
+similar to @samp{%.1f} but leaves empty results empty.
 @item if(typeof(vmean($1..$7)) == 12, string(""), vmean($1..$7); E
 Mean value of a range unless there is any empty field.  Every field in the
 range that is empty is replaced by @samp{nan} which lets @samp{vmean} result
@@ -9952,11 +9954,10 @@ include your @file{.emacs} file, you could use:
 @end example
 
 @noindent
-The optional second and third parameter are the markup (e.g., @samp{quote},
-@samp{example}, or @samp{src}), and, if the markup is @samp{src}, the
-language for formatting the contents.  The markup is optional; if it is not
-given, the text will be assumed to be in Org mode format and will be
-processed normally.
+The optional second and third parameter are the markup (i.e., @samp{example}
+or @samp{src}), and, if the markup is @samp{src}, the language for formatting
+the contents.  The markup is optional; if it is not given, the text will be
+assumed to be in Org mode format and will be processed normally.
 
 Contents of the included file will belong to the same structure (headline,
 item) containing the @code{INCLUDE} keyword.  In particular, headlines within
@@ -12229,7 +12230,7 @@ height:width ratio, do the following
 @cindex #+ATTR_ODT
 You can control the manner in which an image is anchored by setting the
 @code{:anchor} property of it's @code{#+ATTR_ODT} line.  You can specify one
-of the the following three values for the @code{:anchor} property:
+of the following three values for the @code{:anchor} property:
 @samp{"as-char"}, @samp{"paragraph"} and @samp{"page"}.
 
 To create an image that is anchored to a page, do the following:
@@ -13335,7 +13336,6 @@ string of these options for details.
 @item @code{:headline-levels}       @tab @code{org-export-headline-levels}
 @item @code{:language}              @tab @code{org-export-default-language}
 @item @code{:preserve-breaks}       @tab @code{org-export-preserve-breaks}
-@item @code{:publishing-directory}  @tab @code{org-export-publishing-directory}
 @item @code{:section-numbers}       @tab @code{org-export-with-section-numbers}
 @item @code{:select-tags}           @tab @code{org-export-select-tags}
 @item @code{:with-author}           @tab @code{org-export-with-author}
@@ -15474,10 +15474,10 @@ are active:
 @item @kbd{C-c C-c} @tab @code{org-babel-execute-src-block}
 @kindex C-c C-o
 @item @kbd{C-c C-o} @tab @code{org-babel-open-src-block-result}
-@kindex C-up
-@item @kbd{C-@key{up}}    @tab @code{org-babel-load-in-session}
+@kindex M-up
+@item @kbd{M-@key{up}}    @tab @code{org-babel-load-in-session}
 @kindex M-down
-@item @kbd{M-@key{down}}  @tab @code{org-babel-pop-to-session}
+@item @kbd{M-@key{down}}  @tab @code{org-babel-switch-to-session}
 @end multitable
 
 In an Org mode buffer, the following key bindings are active:
