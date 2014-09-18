@@ -123,7 +123,7 @@ Including indent-buffer, which should not be called automatically on save."
 
 (require 'magit)
 
-(add-hook 'magit-log-edit-mode-hook (lambda ()
-                                      (flyspell-mode t)))
+(add-hook 'git-commit-mode (lambda ()
+                             (flyspell-mode t)))
 
 (provide 'init-customizations)
