@@ -11,7 +11,8 @@
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
 (add-hook 'org-mode-hook (lambda ()
-                           (local-set-key (kbd "C-'") 'undo)))
+                           (local-set-key (kbd "C-'") 'undo)
+                           (org-indent-mode 1)))
 
 (setq org-agenda-files '("~/Dropbox/Org"))
 
