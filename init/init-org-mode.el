@@ -8,6 +8,15 @@
 (setq org-src-fontify-natively t
       org-log-repeat nil)
 
+(setq org-level-faces '(org-level-1
+                        org-level-2
+                        org-level-3
+                        org-level-7
+                        org-level-8
+                        org-level-6
+                        org-level-4
+                        org-level-5))
+
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
 (add-hook 'org-mode-hook (lambda ()
