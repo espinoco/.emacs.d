@@ -118,6 +118,10 @@ Including indent-buffer, which should not be called automatically on save."
 
 (put 'dired-do-copy 'ido 'find-file)
 
+(put 'dired-create-directory 'ido 'find-file)
+
+(put 'dired-do-rename 'ido 'find-file)
+
 (let ((default-directory "~/.emacs.d/elpa"))
   (normal-top-level-add-subdirs-to-load-path))
 
