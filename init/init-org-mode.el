@@ -13,7 +13,7 @@
 (add-hook 'org-mode-hook (lambda ()
                            (local-set-key (kbd "C-'") 'undo)))
 
-(setq org-agenda-files '("~/Org"))
+(setq org-agenda-files '("~/Dropbox/Org"))
 
 (define-key global-map "\C-ca" 'org-agenda)
 
@@ -56,11 +56,11 @@
 
 (add-hook 'kill-emacs-hook (lambda ()
                              (interactive)
-                             (shell-command "cd ~/Org && git add -A && git commit -m \"Emacs kill push\" && git push -u origin master" nil nil)))
+                             (shell-command "cd ~/Dropbox/Org && git add -A && git commit -m \"Emacs kill push\" && git push -u origin master" nil nil)))
 
 (defun push-org-notes ()
   (interactive)
-  (shell-command "cd ~/Org && git add -A && git commit -m \"Emacs manually puched notes\" && git push -u origin master" nil nil))
+  (shell-command "cd ~/Dropbox/Org && git add -A && git commit -m \"Emacs manually puched notes\" && git push -u origin master" nil nil))
 
 (setq org-tag-faces
       '(
