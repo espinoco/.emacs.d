@@ -104,12 +104,12 @@ gse-number-rectangle-min-width."
    (list
     (region-beginning) ; start
     (region-end) ; end
-    (if (functionp 'read-number)
+    (if (functionp 'read-string)
         (condition-case nil
             (read-number "First number [1]: " t "1")
           (wrong-number-of-arguments
            (read-number "First number: " 1)))
-      (string-to-int (read-string "First number [1]: " nil nil "1"))) ; start-at
+      (string-to-number (read-number "First number [1]: " nil nil "1"))) ; start-at
     (read-string "Suffix: " nil 'gse-number-rectangle-history) ; suffix-text
     current-prefix-arg)) ; prefix
 
@@ -130,5 +130,3 @@ gse-number-rectangle-min-width."
 ;;---------------------------------------------------------------------------
 
 (provide 'gse-number-rect)
-
-
