@@ -74,7 +74,7 @@
                                           (user-login-name)))
 
 (add-hook 'emacs-startup-hook (lambda ()
-                                (message (format "Welcome %s, Happy Hacking!" (user-login-name)))))
+                                (message (format "Emacs is ready Master %s, Happy Hacking!" (user-login-name)))))
 
 (pending-delete-mode t)
 
