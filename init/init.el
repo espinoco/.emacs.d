@@ -28,6 +28,7 @@
 (require 'init-auto-complete)
 (require 'init-eshell)
 (require 'init-gse-number-rect)
+(require 'init-git-modes)
 (require 'init-key-chord)
 (require 'init-keybinds)
 

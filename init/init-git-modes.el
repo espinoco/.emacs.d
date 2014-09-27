@@ -1,0 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/extensions/git-modes/git-modes")
+(require 'gitattributes-mode)
+(require 'gitconfig-mode)
+(require 'gitignore-mode)
+(provide 'init-git-modes)
