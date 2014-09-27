@@ -15,7 +15,7 @@
 (key-chord-define-global "kd" 'ace-jump-mode)
 (key-chord-define-global "kc" 'ace-jump-char-mode)
 (key-chord-define-global "kk" 'ace-jump-line-mode)
-(key-chord-define-global "ks" 'eshell)
+(key-chord-define-global ",." 'eshell)
 (key-chord-define-global "ms" 'magit-status)
 (key-chord-define-global "ml" 'magit-log)
 (key-chord-define-global "qj" 'ispell-word)
