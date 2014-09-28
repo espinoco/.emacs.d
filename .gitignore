@@ -14,6 +14,17 @@ ehthumbs.db
 # EmacsLisp byte-compiled files
 *.elc
 
+# Org-mode
+.org-id-locations
+*_archive
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
 # Emacs personal configuration files
 /tramp
 .mc-lists.el
@@ -21,6 +32,4 @@ ehthumbs.db
 ac-comphist.dat
 auto-save-list
 /emms
-/elpa
-eshell
 /init/init-personal-functions.el
