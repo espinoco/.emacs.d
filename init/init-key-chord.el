@@ -32,6 +32,8 @@
 (key-chord-define-global "wl" 'windmove-right)
 (key-chord-define-global "wh" 'windmove-up)
 (key-chord-define-global "kl" 'revert-buffer-no-confirm)
+(add-hook 'eshell-mode-hook
+          '(lambda () (key-chord-define eshell-mode-map ",." 'exit-eshell)))
 (key-chord-define dired-mode-map "oe" 'open-file-with-external-program)
 (key-chord-define dired-mode-map "ep" 'export-latex-to-pdf)
 (require 'message)

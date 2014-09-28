@@ -135,4 +135,10 @@ vi style of % jumping to matching brace."
   (interactive)
   (revert-buffer t t))
 
+(defun exit-eshell ()
+  "Exits eshell just like executing exit"
+  (interactive)
+  (insert "exit")
+  (eshell-send-input))
+
 (provide 'init-custom-functions)
