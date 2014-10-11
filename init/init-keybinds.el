@@ -81,4 +81,6 @@
 
 (define-key magit-log-mode-map (kbd "x") 'magit-reset-head-hard)
 
+(global-set-key (kbd "C-j") 'newline-and-indent)
+
 (provide 'init-keybinds)
