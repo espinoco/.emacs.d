@@ -32,6 +32,7 @@
 (require 'init-markdown-mode)
 (require 'init-haml-mode)
 (require 'init-sass-mode)
+(require 'init-diff-hl)
 (require 'init-key-chord)
 (require 'init-keybinds)
 

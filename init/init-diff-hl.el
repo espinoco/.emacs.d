@@ -1,0 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/extensions/diff-hl")
+(require 'diff-hl)
+(require 'diff-hl-dired)
+(add-hook 'java-mode-hook 'turn-on-diff-hl-mode)
+(provide 'init-diff-hl)
