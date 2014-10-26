@@ -1,5 +1,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
+(require 'cl)
+
 (defun set-solarized-dark-theme ()
   (interactive)
   (custom-set-faces
@@ -16,6 +18,10 @@
    '(yas/field-highlight-face ((t (:background unspecified)))))
   (load-theme 'solarized-light t))
 
-(set-solarized-dark-theme)
+(load-theme 'zenburn t)
+
+;; (set-face-attribute 'region nil :foreground "#c9bb9b" :background "#2b2b2b")
+(global-hl-line-mode 1)
+(set-face-background hl-line-face "#434443")
 
 (provide 'init-theme)
