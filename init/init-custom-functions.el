@@ -10,25 +10,6 @@
     (comment-dwim nil))
   (deactivate-mark))
 
-(defun insert-semi-colon-with-ñ ()
-  (interactive)
-  (insert ";"))
-
-(defun insert-ñ ()
-  (interactive)
-  (insert "ñ"))
-
-(defun insert-couple-parentesis()
-  "Inserts single parentesis easily"
-  (interactive)
-  (insert "()")
-  (backward-char 1))
-
-(defun insert-couple-of-straight-brackets()
-  "Inserts couple of [ symbols like this: []"
-  (interactive)
-  (insert "[]"))
-
 (defun insert-brackets-and-indent ()
   (interactive)
   (insert "{")
@@ -39,11 +20,6 @@
       (indent-for-tab-command)
       (forward-line -1)
       (indent-for-tab-command))))
-
-(defun insert-tilde-symbol()
-  "Inserts tilde symbol"
-  (interactive)
-  (insert "~"))
 
 ;; Disable the bell just when scrolling to limits
 (defun no-bell-sound ()
@@ -90,11 +66,6 @@ vi style of % jumping to matching brace."
   (split-window-below)
   (windmove-down)
   (ido-switch-buffer))
-
-(defun insert-equal-symbol ()
-  "Inserts symbol = "
-  (interactive)
-  (insert "="))
 
 (defun dired-find-file-other-vertical-window ()
   "In Dired, visit this file or directory in another vertical window."

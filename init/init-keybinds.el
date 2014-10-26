@@ -11,26 +11,9 @@
 (add-hook 'eshell-mode-hook (lambda ()
                              (local-set-key (kbd "M-s") 'backward-word)))
 
-(global-set-key (kbd "C-2") (lambda ()
-                              (interactive)
-                              (insert "\"\"")
-                              (backward-char)))
-
 (global-set-key (kbd "C-,") 'uncomment-comment-region)
 
-(global-set-key (kbd "ñ") 'insert-semi-colon-with-ñ)
-
-(global-set-key (kbd "C-ñ") 'insert-ñ)
-
-(global-set-key (kbd "C-8") 'insert-couple-parentesis)
-
-(global-set-key (kbd "`") 'insert-couple-of-straight-brackets)
-
 (global-set-key (kbd "´") 'insert-brackets-and-indent)
-
-(global-set-key (kbd "C-º") 'insert-tilde-symbol)
-
-(global-set-key (kbd "C-0") 'insert-equal-symbol)
 
 (global-set-key [\M-f2] 'apply-macro-to-region-lines)
 
