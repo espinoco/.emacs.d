@@ -43,5 +43,4 @@
 (key-chord-define dired-mode-map "ep" 'export-latex-to-pdf)
 (require 'message)
 (key-chord-define message-mode-map "jq" 'ispell-message)
-
 (provide 'init-key-chord)
