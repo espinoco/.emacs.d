@@ -4,8 +4,6 @@
 
 (add-to-list 'exec-path "/usr/local/bin")
 
-(global-linum-mode t)
-
 (global-hl-line-mode 1)
 
 (require 'uniquify)
