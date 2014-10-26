@@ -32,6 +32,7 @@
 (require 'init-haml-mode)
 (require 'init-sass-mode)
 (require 'init-single-files)
+(require 'init-evil)
 (require 'init-diff-hl)
 (require 'init-tea-time)
 (require 'init-key-chord)
