@@ -31,6 +31,7 @@
 (key-chord-define-global "GG" 'end-of-buffer)
 (key-chord-define-global "xx" 'delete-other-windows)
 (key-chord-define-global "ww" 'delete-window)
+(key-chord-define-global "yy" 'copy-line-or-region)
 (add-hook 'eshell-mode-hook
           '(lambda () (key-chord-define eshell-mode-map ",." 'exit-eshell)))
 (key-chord-define dired-mode-map "oe" 'open-file-with-external-program)

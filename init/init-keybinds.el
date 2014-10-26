@@ -1,4 +1,4 @@
-(global-set-key (kbd "C-'") 'undo)
+(global-set-key (kbd "C--") 'undo)
 
 (global-set-key (kbd "C-M-y") (lambda ()
                                 (interactive)
@@ -49,6 +49,8 @@
 
 (define-key dired-mode-map (kbd "f") 'ido-find-file)
 
+(define-key dired-mode-map (kbd "l") 'dired-goto-file)
+
 (define-key dired-mode-map (kbd "Q") 'kill-this-buffer)
 
 (define-key dired-mode-map (kbd "q") 'delete-window)
@@ -65,5 +67,8 @@
 (define-key magit-log-mode-map (kbd "x") 'magit-reset-head-hard)
 
 (global-set-key (kbd "C-j") 'newline-and-indent)
+
+(global-set-key (kbd "C-o") 'insert-and-indent-line-below)
+(global-set-key (kbd "C-S-o") 'insert-and-indent-line-above)
 
 (provide 'init-keybinds)
