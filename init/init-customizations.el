@@ -142,4 +142,5 @@ Including indent-buffer, which should not be called automatically on save."
 (add-hook 'post-command-hook 'my-disable-chords)
 (setq my-timer (run-with-idle-timer 0.3 'repeat 'my-enable-chords))
 
+(global-linum-mode 0)
 (provide 'init-customizations)
