@@ -57,13 +57,6 @@
 
 (define-key org-mode-map (kbd "C-c p") 'set-priority)
 
-(defun insert-straight-brackets-in-org-mode()
-  "Inserts couple of [ symbols like this: [ ] "
-  (interactive)
-  (insert "[ ] "))
-
-(define-key org-mode-map (kbd "`") 'insert-straight-brackets-in-org-mode)
-
 (add-hook 'kill-emacs-hook (lambda ()
                              (interactive)
                              (shell-command "cd ~/Dropbox/Org && git add -A && git commit -m \"Emacs kill push\" && git push -u origin master" nil nil)))
