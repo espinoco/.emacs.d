@@ -68,6 +68,12 @@
 
 (global-set-key (kbd "C-j") 'newline-and-indent)
 
+(require 'org-agenda)
+
+(define-key org-agenda-mode-map (kbd "k") 'org-agenda-previous-line)
+(define-key org-agenda-mode-map (kbd "j") 'org-agenda-next-line)
+(define-key org-agenda-mode-map (kbd "m") 'org-agenda-switch-to)
+
 (global-set-key (kbd "C-o") 'insert-and-indent-line-below)
 (global-set-key (kbd "C-S-o") 'insert-and-indent-line-above)
 
