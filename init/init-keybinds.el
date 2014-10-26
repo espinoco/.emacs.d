@@ -74,6 +74,12 @@
 (define-key org-agenda-mode-map (kbd "j") 'org-agenda-next-line)
 (define-key org-agenda-mode-map (kbd "m") 'org-agenda-switch-to)
 
+(require 'dired)
+
+(define-key dired-mode-map (kbd "k") 'dired-previous-line)
+(define-key dired-mode-map (kbd "j") 'dired-next-line)
+(define-key dired-mode-map (kbd "-") 'dired-jump)
+
 (global-set-key (kbd "C-o") 'insert-and-indent-line-below)
 (global-set-key (kbd "C-S-o") 'insert-and-indent-line-above)
 
