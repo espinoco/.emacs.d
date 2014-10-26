@@ -132,4 +132,14 @@ Including indent-buffer, which should not be called automatically on save."
 (setq display-time-24hr-format t)
 
 (display-time-mode 1)
+
+(defun my-enable-chords ()
+  (setq input-method-function 'key-chord-input-method))
+
+(defun my-disable-chords ()
+  (setq input-method-function nil))
+
+(add-hook 'post-command-hook 'my-disable-chords)
+(setq my-timer (run-with-idle-timer 0.3 'repeat 'my-enable-chords))
+
 (provide 'init-customizations)
