@@ -129,4 +129,7 @@ Including indent-buffer, which should not be called automatically on save."
 (add-hook 'git-commit-mode (lambda ()
                              (flyspell-mode t)))
 
+(setq display-time-24hr-format t)
+
+(display-time-mode 1)
 (provide 'init-customizations)
