@@ -83,4 +83,15 @@
 (global-set-key (kbd "C-o") 'insert-and-indent-line-below)
 (global-set-key (kbd "C-S-o") 'insert-and-indent-line-above)
 
+(setq viper-mode nil)
+(require 'viper)
+(global-set-key (kbd "M-f") 'viper-forward-word)
+(global-set-key (kbd "M-s") 'viper-backward-word)
+(global-set-key (kbd "M-e") 'viper-end-of-word)
+(add-hook 'c-mode-common-hook (lambda ()
+                                (local-set-key (kbd "M-e") 'viper-end-of-word)))
+(require 'org)
+(add-hook 'org-mode-hook (lambda ()
+                           (local-set-key (kbd "M-e") 'viper-end-of-word)))
+
 (provide 'init-keybinds)
