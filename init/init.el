@@ -1,4 +1,3 @@
-(require 'init-mac-os-x-spanish-keyboard)
 (require 'init-mexico-holidays)
 (require 'init-hippie-expand)
 (require 'init-dired)

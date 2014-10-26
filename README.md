@@ -12,15 +12,9 @@ In my `.emacs` I have:
 
 ## This is an Emacs Mac OS X configuration
 
-I install Emacs from homebrew:
+I install Emacs from homebrew with:
 
 `brew install emacs --HEAD --use-git-head --cocoa --with-gnutls`
-
-## This is an Emacs MacBook Pro Spanish keyboard configuration
-
-I like command key mapped as control key and Caps Lock key as Meta
-key, this configuration also has spanish symbols and adaptations for
-programing.
 
 ## Works done with this configuration
 
