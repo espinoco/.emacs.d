@@ -6,13 +6,14 @@
 (setq tea-time-notification-title "Excuse me Master")
 
 (add-hook 'tea-time-notification-hook
-          (lambda ()
-            (call-process-shell-command
-             (format "terminal-notifier -message \"%s\" -title \"%s\" -group 78904269 -sender org.gnu.Emacs"
-                     tea-time-notification-message
-                     tea-time-notification-title)
-             nil
-             "*Shell Command Output*"
-             t)))
+  (lambda ()
+    (call-process-shell-command
+     (format
+      "terminal-notifier -message \"%s\" -title \"%s\" -group 78904269 -sender org.gnu.Emacs"
+      tea-time-notification-message
+      tea-time-notification-title)
+     nil
+     "*Shell Command Output*"
+     t)))
 
 (provide 'init-tea-time)
