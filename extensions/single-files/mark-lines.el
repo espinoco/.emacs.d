@@ -327,14 +327,24 @@ active region.
 
 Otherwose arg is treated exactly as `previous-line'."
   (interactive "P")
-  (mark-lines--move 'previous-line arg))
+  (mark-lines--move 'previous-line arg)
+  (set-temporary-overlay-map
+   (let ((map (make-sparse-keymap)))
+     (define-key map (kbd "k") 'mark-lines-previous-line)
+     (define-key map (kbd "j") 'mark-lines-next-line)
+     map)))
 
 
 ;;;###autoload
 (defun mark-lines-next-line (arg)
   "same as `mark-lines-previous-line', going in the other direction."
   (interactive "P")
-  (mark-lines--move 'next-line arg))
+  (mark-lines--move 'next-line arg)
+  (set-temporary-overlay-map
+   (let ((map (make-sparse-keymap)))
+     (define-key map (kbd "k") 'mark-lines-previous-line)
+     (define-key map (kbd "j") 'mark-lines-next-line)
+     map)))
 
 
 ;;; mark-lines.el ends here
