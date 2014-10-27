@@ -2,15 +2,15 @@
 
 (setq ispell-program-name "/usr/local/bin/hunspell"
       ispell-really-hunspell t
-      ispell-dictionary "english")
+      ispell-dictionary "en_US")
 
 (add-to-list 'ispell-local-dictionary-alist
-             '("english"
+             '("en_US"
                "[[:alpha:]]"
                "[^[:alpha:]]"
                "[']"
                t
-               ("-d" "english")
+               ("-d" "en_US")
                nil utf-8))
 
 (add-to-list 'ispell-local-dictionary-alist
@@ -22,7 +22,7 @@
 (defun switch-dictionary ()
   (interactive)
   (let* ((dic ispell-current-dictionary)
-         (change (if (string= dic "english") "spanish" "english")))
+         (change (if (string= dic "en_US") "spanish" "en_US")))
     (ispell-change-dictionary change)
     (message "Dictionary switched from %s to %s" dic change)
     ))
