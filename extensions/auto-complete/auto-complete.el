@@ -624,7 +624,7 @@ You can not use it in source definition like (prefix . `NAME')."
         if (ac-source-available-p source)
         do
         (setq source (ac-source-entity source))
-        (flet ((add-attribute (name value &optional append) (add-to-list 'source (cons name value) append)))
+        (cl-flet ((add-attribute (name value &optional append) (add-to-list 'source (cons name value) append)))
           ;; prefix
           (let* ((prefix (assoc 'prefix source))
                  (real (assoc-default (cdr prefix) ac-prefix-definitions)))
@@ -835,7 +835,7 @@ You can not use it in source definition like (prefix . `NAME')."
                 (setq point nil))
             (if point
                 (setq prefix-def prefix))))
-        
+
         if (equal prefix prefix-def) do (push source sources)
 
         finally return
@@ -1318,7 +1318,7 @@ that have been made before in this function."
       (ac-complete)
     (when (and (ac-inline-live-p)
                ac-common-part)
-      (ac-inline-hide) 
+      (ac-inline-hide)
       (ac-expand-string ac-common-part (eq last-command this-command))
       (setq ac-common-part nil)
       t)))
