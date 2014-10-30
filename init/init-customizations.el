@@ -46,7 +46,7 @@
 ;; Default indent
 (setq-default c-basic-offset 4)
 
-(set-face-attribute 'default nil :font "Source Code Pro ExtraLight" :height 120)
+(setq default-frame-alist '((font . "Source Code Pro ExtraLight-12")))
 
 ;; Save the state of Emacs from one session to another
 (desktop-save-mode 1)
