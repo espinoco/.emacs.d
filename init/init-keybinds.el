@@ -94,4 +94,7 @@
 (add-hook 'org-mode-hook (lambda ()
                            (local-set-key (kbd "M-e") 'viper-end-of-word)))
 
+(require 'evil)
+(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
+
 (provide 'init-keybinds)
