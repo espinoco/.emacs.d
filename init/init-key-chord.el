@@ -6,7 +6,6 @@
 (key-chord-define-global "fj" 'ido-switch-buffer)
 (key-chord-define-global "xk" 'ido-kill-buffer)
 (key-chord-define-global "xj" 'dired-jump)
-(key-chord-define-global "js" 'save-buffer)
 (key-chord-define-global "xh" 'mark-whole-buffer)
 (key-chord-define-global "cm" 'goto-match-paren)
 (key-chord-define-global "jj" 'er/expand-region)
