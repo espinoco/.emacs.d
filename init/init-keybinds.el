@@ -76,8 +76,6 @@
 
 (require 'dired)
 
-(define-key dired-mode-map (kbd "k") 'dired-previous-line)
-(define-key dired-mode-map (kbd "j") 'dired-next-line)
 (define-key dired-mode-map (kbd "-") 'dired-jump)
 
 (global-set-key (kbd "C-o") 'insert-and-indent-line-below)
