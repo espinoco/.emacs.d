@@ -1,7 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/extensions/key-chord")
 (require 'key-chord)
 (key-chord-mode 1)
-
+;; Key chords to use: hh, qq, aa, uu, yy, vv, js
 (key-chord-define-global "mx" 'smex)
 (key-chord-define-global "fj" 'ido-switch-buffer)
 (key-chord-define-global "xk" 'ido-kill-buffer)
