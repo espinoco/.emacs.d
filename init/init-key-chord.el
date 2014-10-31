@@ -28,10 +28,12 @@
 (key-chord-define-global "wk" 'windmove-up)
 (key-chord-define-global "xx" 'delete-other-windows)
 (key-chord-define-global "ww" 'delete-window)
+(key-chord-define-global "ii" 'evil-force-normal-state)
 (add-hook 'eshell-mode-hook
           '(lambda () (key-chord-define eshell-mode-map ",." 'exit-eshell)))
 (key-chord-define dired-mode-map "oe" 'open-file-with-external-program)
 (key-chord-define dired-mode-map "ep" 'export-latex-to-pdf)
 (require 'message)
 (key-chord-define message-mode-map "jq" 'ispell-message)
+
 (provide 'init-key-chord)
