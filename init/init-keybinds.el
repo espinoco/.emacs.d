@@ -65,6 +65,7 @@
 (require 'magit)
 
 (define-key magit-log-mode-map (kbd "x") 'magit-reset-head-hard)
+(define-key magit-mode-map (kbd "SPC") 'ace-jump-mode)
 
 (global-set-key (kbd "C-j") 'newline-and-indent)
 
@@ -102,5 +103,6 @@
 
 (require 'evil)
 (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
+(define-key dired-mode-map (kbd "SPC") 'ace-jump-mode)
 
 (provide 'init-keybinds)
