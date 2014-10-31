@@ -1,4 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/extensions/evil")
+(add-to-list 'load-path "~/.emacs.d/extensions/evil-surround")
 (require 'evil)
-;; (evil-mode t)
+(require 'evil-surround)
+(evil-mode t)
+(global-evil-surround-mode 1)
 (provide 'init-evil)
