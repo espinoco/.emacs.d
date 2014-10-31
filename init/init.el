@@ -31,6 +31,7 @@
 (require 'init-markdown-mode)
 (require 'init-haml-mode)
 (require 'init-sass-mode)
+(require 'init-smartrep)
 (require 'init-single-files)
 (require 'init-evil)
 (require 'init-diff-hl)
