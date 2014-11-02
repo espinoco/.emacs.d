@@ -143,4 +143,6 @@ Including indent-buffer, which should not be called automatically on save."
 (setq my-timer (run-with-idle-timer 0.3 'repeat 'my-enable-chords))
 
 (global-linum-mode 0)
+(setq shell-file-name "/bin/sh")
+
 (provide 'init-customizations)
