@@ -9,7 +9,7 @@
 (key-chord-define-global "xh" 'mark-whole-buffer)
 (key-chord-define-global "cm" 'goto-match-paren)
 (key-chord-define-global "jj" 'er/expand-region)
-(key-chord-define-global "kd" 'ace-jump-mode)
+(key-chord-define-global "kd" 'ace-jump-char-mode)
 (key-chord-define-global "kc" 'ace-jump-char-mode)
 (key-chord-define-global "kk" 'ace-jump-line-mode)
 (key-chord-define-global ",." 'eshell)

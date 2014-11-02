@@ -65,7 +65,7 @@
 (require 'magit)
 
 (define-key magit-log-mode-map (kbd "x") 'magit-reset-head-hard)
-(define-key magit-mode-map (kbd "SPC") 'ace-jump-mode)
+(define-key magit-mode-map (kbd "SPC") 'ace-jump-char-mode)
 
 (global-set-key (kbd "C-j") 'newline-and-indent)
 
@@ -102,8 +102,9 @@
                        ("s" . 'mc/skip-to-next-like-this)))
 
 (require 'evil)
-(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
-(define-key dired-mode-map (kbd "SPC") 'ace-jump-mode)
+(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
+(define-key dired-mode-map (kbd "SPC") 'ace-jump-char-mode)
 (define-key dired-mode-map (kbd "<return>") 'open-file-with-external-program)
+(define-key org-agenda-mode-map (kbd "SPC") 'ace-jump-char-mode)
 
 (provide 'init-keybinds)
