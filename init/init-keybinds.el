@@ -104,5 +104,6 @@
 (require 'evil)
 (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
 (define-key dired-mode-map (kbd "SPC") 'ace-jump-mode)
+(define-key dired-mode-map (kbd "<return>") 'open-file-with-external-program)
 
 (provide 'init-keybinds)
