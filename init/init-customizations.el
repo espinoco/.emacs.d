@@ -16,6 +16,8 @@
 
 (setq dired-recursive-deletes 'always)
 
+(setq dired-recursive-copies 'always)
+
 (ido-mode t)
 
 (setq-default indent-tabs-mode nil)
