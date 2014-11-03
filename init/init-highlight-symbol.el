@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/extensions/highlight-symbol")
 (require 'highlight-symbol)
 (global-set-key [(control f9)] 'highlight-symbol-at-point)
 (global-set-key [f9] 'highlight-symbol-next)

@@ -1,6 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/extensions/org/lisp")
-(add-to-list 'load-path "~/.emacs.d/extensions/org/contrib/lisp" t)
-
 (require 'org)
 
 (setq-default major-mode 'org-mode)

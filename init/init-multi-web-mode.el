@@ -1,5 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/extensions/multi-web-mode")
-
 (require 'multi-web-mode)
 (setq mweb-default-major-mode 'html-mode)
 (setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
