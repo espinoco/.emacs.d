@@ -13,10 +13,10 @@
 (defvar emacs-dir (file-name-directory load-file-name)
   "The root dir of Emacs.")
 
-(defvar emacs-modules-dir (expand-file-name "modules" emacs-dir)
+(defvar modules-dir (expand-file-name "modules" emacs-dir)
   "This directory houses all of the built-in Emacs modules.")
 
-(defvar emacs-core-dir (expand-file-name "core" emacs-dir)
+(defvar core-dir (expand-file-name "core" emacs-dir)
   "The home of Emacs's core functionality.")
 
 (defvar savefile-dir (expand-file-name "savefile" emacs-dir)
@@ -39,7 +39,6 @@
 (require 'ui)
 (require 'core)
 (require 'editor)
-(require 'init)
 (require 'global-keybindings)
 
 (when (eq system-type 'darwin)

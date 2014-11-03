@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/extensions/key-chord")
 (require 'key-chord)
 (key-chord-mode 1)
 ;; Key chords to use: hh, qq, aa, uu, yy, vv, js

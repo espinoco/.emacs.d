@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/extensions/tea-time")
 (require 'tea-time)
 (setq tea-time-sound "~/Music/your-turn.mp3")
 (setq tea-time-sound-command "afplay %s")
