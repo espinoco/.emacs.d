@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/extensions/php")
 (require 'php-mode)
 
 (autoload 'php-mode "php-mode"

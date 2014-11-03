@@ -1,5 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/extensions/ace-jump-mode")
-
 (autoload
   'ace-jump-mode
   "ace-jump-mode"
