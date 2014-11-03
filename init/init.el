@@ -13,7 +13,6 @@
 (require 'init-helm)
 (require 'init-multi-web-mode)
 (require 'init-highlight-symbol)
-;; from here
 (require 'init-yasnippet)
 (require 'init-org-mode)
 (require 'init-tiny-tools)
@@ -21,13 +20,14 @@
 (require 'init-eshell)
 (require 'init-gse-number-rect)
 (require 'init-git-modes)
-;; to here
+;; from here
 (require 'init-markdown-mode)
 (require 'init-haml-mode)
 (require 'init-sass-mode)
 (require 'init-smartrep)
 (require 'init-single-files)
 (require 'init-evil)
+;; to here
 (require 'init-diff-hl)
 (require 'init-tea-time)
 (require 'init-key-chord)
