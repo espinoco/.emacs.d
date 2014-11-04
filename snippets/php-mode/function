@@ -1,7 +1,7 @@
-#contributor : Andrew Gwozdziewycz <web@apgwoz.com>
-#name : function ...(...)
+# -*- mode: snippet -*-
+# name : function ...(...)
 # --
-function ${function_name}(${function_args})
+function ${1:name}($2)
 {
-   $0
+    $0
 }
