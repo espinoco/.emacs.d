@@ -29,5 +29,6 @@
 (require 'init-tea-time)
 (require 'init-magit)
 (require 'init-key-chord)
+(require 'init-personal-functions)
 (require 'init-gnus)
 (require 'init-tramp)
