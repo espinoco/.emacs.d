@@ -49,7 +49,4 @@
 (when (file-exists-p modules-file)
   (load modules-file))
 
-;; Delete me
-(setq ring-bell-function 'no-bell-sound)
-
 (message "Emacs is ready Master %s, Happy Hacking!" current-user)
