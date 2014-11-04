@@ -189,18 +189,10 @@ Including indent-buffer, which should not be called automatically on save."
 
 (defun set-solarized-dark-theme ()
   (interactive)
-  (custom-set-faces
-   '(helm-match ((t (:inherit match :background "black"))))
-   '(helm-selection ((t (:background "#2b2b2b" :underline t))))
-   '(yas/field-highlight-face ((t (:background "dark blue")))))
   (load-theme 'solarized-dark t))
 
 (defun set-solarized-light-theme ()
   (interactive)
-  (custom-set-faces
-   '(helm-match ((t (:inherit match))))
-   '(helm-selection ((t (:background "#b5ffd1" :underline t))))
-   '(yas/field-highlight-face ((t (:background unspecified)))))
   (load-theme 'solarized-light t))
 
 (provide 'core)
