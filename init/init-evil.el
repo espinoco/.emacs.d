@@ -1,3 +1,6 @@
+(require 'evil-leader)
+(global-evil-leader-mode)
+(evil-leader/set-leader ",")
 (require 'evil)
 (require 'evil-numbers)
 (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
@@ -29,4 +32,13 @@
 ;; (add-hook 'multiple-cursors-mode-enabled-hook 'evil-emacs-state)
 ;; (add-hook 'multiple-cursors-mode-disabled-hook 'evil-normal-state)
 ;; Don't move back the cursor one position when exiting insert mode
+(evil-leader/set-key
+  "f" 'find-file
+  "b" 'ido-switch-buffer
+  "k" 'kill-buffer
+  "," 'evilnc-comment-or-uncomment-lines
+  "s" 'magit-status
+  )
+(evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
+(evil-leader/set-key-for-mode 'emacs-lisp-mode "e" 'eval-region)
 (provide 'init-evil)
