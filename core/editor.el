@@ -151,4 +151,6 @@
 
 (setq ring-bell-function 'no-bell-sound)
 
+(setq ring-bell-function 'ignore)
+
 (provide 'editor)
