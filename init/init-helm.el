@@ -15,6 +15,7 @@
      (mml-attach-file . ido)
      (byte-recompile-directory . ido)
      (dired-do-rename . ido)
+     (dired-create-directory . ido)
      )))
 
 (provide 'init-helm)
