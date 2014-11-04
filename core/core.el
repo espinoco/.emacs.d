@@ -191,7 +191,7 @@ Including indent-buffer, which should not be called automatically on save."
   (interactive)
   (custom-set-faces
    '(helm-match ((t (:inherit match :background "black"))))
-   '(helm-selection ((t (:background "navy" :underline t))))
+   '(helm-selection ((t (:background "#2b2b2b" :underline t))))
    '(yas/field-highlight-face ((t (:background "dark blue")))))
   (load-theme 'solarized-dark t))
 
