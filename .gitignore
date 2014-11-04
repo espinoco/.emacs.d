@@ -25,7 +25,6 @@ ehthumbs.db
 
 # Emacs personal configuration files
 /tramp
-.mc-lists.el
 /bookmarks
 ac-comphist.dat
 auto-save-list
