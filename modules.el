@@ -1,3 +1,4 @@
+(require 'init-dired)
 (require 'init-ace-jump-mode)
 (require 'init-ido-vertical-mode)
 (require 'init-smex)

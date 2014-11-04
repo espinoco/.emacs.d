@@ -4,12 +4,12 @@
 
 (require 'dired)
 
-(define-key dired-mode-map (kbd "-") 'dired-jump)
-
 (autoload 'dired-jump "dired-x"
   "Jump to Dired buffer corresponding to current buffer." t)
 
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
+
+(define-key dired-mode-map (kbd "-") 'dired-jump)
 
 (define-key dired-mode-map (kbd "M-s") 'backward-word)
 
@@ -20,8 +20,6 @@
 (define-key dired-mode-map (kbd "Z") 'dired-zip-compress-uncompress)
 
 (define-key dired-mode-map (kbd "f") 'ido-find-file)
-
-(define-key dired-mode-map (kbd "l") 'dired-goto-file)
 
 (define-key dired-mode-map (kbd "Q") 'kill-this-buffer)
 
