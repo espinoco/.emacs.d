@@ -149,4 +149,6 @@
 
 (define-key calendar-mode-map (kbd "q") 'delete-window)
 
+(setq ring-bell-function 'no-bell-sound)
+
 (provide 'editor)
