@@ -32,6 +32,9 @@
 ;; (add-hook 'multiple-cursors-mode-enabled-hook 'evil-emacs-state)
 ;; (add-hook 'multiple-cursors-mode-disabled-hook 'evil-normal-state)
 ;; Don't move back the cursor one position when exiting insert mode
+(define-key evil-normal-state-map "m" 'point-to-register)
+(define-key evil-normal-state-map "'" 'jump-to-register)
+(define-key evil-normal-state-map (kbd "C-y") 'yank)
 (evil-leader/set-key
   "f" 'find-file
   "b" 'ido-switch-buffer
