@@ -38,6 +38,7 @@
   "k" 'kill-buffer
   "," 'evilnc-comment-or-uncomment-lines
   "s" 'magit-status
+  "d" 'dired-jump
   )
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
 (evil-leader/set-key-for-mode 'emacs-lisp-mode "e" 'eval-region)
