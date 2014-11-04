@@ -1,5 +1,12 @@
 (require 'org)
 
+(require 'org-agenda)
+
+(require 'viper)
+
+(add-hook 'org-mode-hook (lambda ()
+                           (local-set-key (kbd "M-e") 'viper-end-of-word)))
+
 (setq-default major-mode 'org-mode)
 
 (setq org-src-fontify-natively t
@@ -69,5 +76,13 @@
         ("someday" . (:foreground "purple" :weight bold))
         ("project" . (:foreground "red" :weight bold))
         ))
+
+(define-key org-agenda-mode-map (kbd "k") 'org-agenda-previous-line)
+
+(define-key org-agenda-mode-map (kbd "j") 'org-agenda-next-line)
+
+(define-key org-agenda-mode-map (kbd "m") 'org-agenda-switch-to)
+
+(define-key org-agenda-mode-map (kbd "SPC") 'ace-jump-char-mode)
 
 (provide 'init-org-mode)

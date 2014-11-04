@@ -28,5 +28,5 @@
 (require 'init-evil)
 (require 'init-diff-hl)
 (require 'init-tea-time)
+(require 'init-magit)
 (require 'init-key-chord)
-(require 'init-keybinds)

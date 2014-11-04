@@ -142,4 +142,11 @@
 
 (setq calendar-mark-holidays-flag t)
 
+(add-hook 'c-mode-common-hook (lambda ()
+                               (local-set-key (kbd "M-e") 'viper-end-of-word)))
+
+(require 'calendar)
+
+(define-key calendar-mode-map (kbd "q") 'delete-window)
+
 (provide 'editor)

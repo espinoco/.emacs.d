@@ -8,6 +8,7 @@
 (setq evilnc-hotkey-comment-operator ",,")
 (require 'evil-nerd-commenter)
 (evilnc-default-hotkeys)
+(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
 ;; (defvar my-mc-evil-previous-state nil)
 ;; (defun my-mc-evil-switch-to-emacs-state ()
 ;;   (when (and (bound-and-true-p evil-mode)
