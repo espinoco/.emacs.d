@@ -20,13 +20,8 @@ ehthumbs.db
 /eshell/history
 /eshell/lastdir
 
-# elpa packages
-/elpa/
-
 # Emacs personal configuration files
 /tramp
-/bookmarks
 ac-comphist.dat
 auto-save-list
-/emms
 /init/init-personal-functions.el
