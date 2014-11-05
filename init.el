@@ -17,7 +17,7 @@
   "This folder stores all the automatically generated save/history-files.")
 
 (defvar modules-file (expand-file-name "modules.el" emacs-dir)
-  "This files contains a list of modules that will be loaded by Prelude.")
+  "This file contains a list of modules that will be loaded by Emacs.")
 
 (unless (file-exists-p savefile-dir)
   (make-directory savefile-dir))
