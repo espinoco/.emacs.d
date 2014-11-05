@@ -28,7 +28,7 @@
 (require 'init-diff-hl)
 (require 'init-tea-time)
 (require 'init-magit)
-(require 'init-personal-functions)
+(require 'init-libgdx)
 (require 'init-gnus)
 (require 'init-tramp)
 (require 'init-key-chord)
