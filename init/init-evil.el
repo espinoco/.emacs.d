@@ -37,7 +37,7 @@
 (define-key evil-normal-state-map (kbd "C-y") 'yank)
 (evil-leader/set-key
   "f" 'find-file
-  "b" 'ido-switch-buffer
+  "j" 'ido-switch-buffer
   "k" 'kill-buffer
   "," 'evilnc-comment-or-uncomment-lines
   "s" 'magit-status
