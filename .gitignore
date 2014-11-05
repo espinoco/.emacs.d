@@ -24,4 +24,4 @@ ehthumbs.db
 /tramp
 ac-comphist.dat
 auto-save-list
-/init/init-personal-functions.el
+personal.el
