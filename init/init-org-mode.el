@@ -85,4 +85,6 @@
 
 (define-key org-agenda-mode-map (kbd "SPC") 'ace-jump-char-mode)
 
+(define-key org-mode-map (kbd ",") nil)
+
 (provide 'init-org-mode)
