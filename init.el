@@ -19,6 +19,9 @@
 (defvar modules-file (expand-file-name "modules.el" emacs-dir)
   "This file contains a list of modules that will be loaded by Emacs.")
 
+(defvar personal-file (expand-file-name "personal.el" emacs-dir)
+  "This directory is for my private configuration.")
+
 (unless (file-exists-p savefile-dir)
   (make-directory savefile-dir))
 
@@ -38,9 +41,12 @@
 (when (eq system-type 'darwin)
     (require 'os-x))
 
-(message "Loading Emacs's modules...")
-
 (when (file-exists-p modules-file)
+  (message "Loading Emacs's modules...")
   (load modules-file))
+
+(when (file-exists-p personal-file)
+  (message "Loading personal configuration files...")
+  (load personal-file))
 
 (message "Emacs is ready Master %s, Happy Hacking!" current-user)
