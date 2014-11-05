@@ -187,12 +187,4 @@ Including indent-buffer, which should not be called automatically on save."
 (defun my-disable-chords ()
   (setq input-method-function nil))
 
-(defun set-solarized-dark-theme ()
-  (interactive)
-  (load-theme 'solarized-dark t))
-
-(defun set-solarized-light-theme ()
-  (interactive)
-  (load-theme 'solarized-light t))
-
 (provide 'core)
