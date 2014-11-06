@@ -87,4 +87,6 @@
 
 (define-key org-mode-map (kbd ",") nil)
 
+(define-key org-agenda-mode-map (kbd ",") nil)
+
 (provide 'init-org-mode)
