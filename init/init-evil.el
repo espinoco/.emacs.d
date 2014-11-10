@@ -45,4 +45,34 @@
   )
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
 (evil-leader/set-key-for-mode 'emacs-lisp-mode "e" 'eval-region)
+
+;; org-mode
+
+(defun evil-org-insert-heading-respect-content ()
+  "Insert heading in org-mode with evil"
+  (interactive)
+  (evil-digit-argument-or-evil-beginning-of-line)
+  (org-insert-heading-respect-content)
+  (evil-append 1)
+  (org-shiftmetadown)
+  )
+
+(defun evil-org-insert-heading-above-respect-content ()
+  "Insert heading above in org-mode with evil"
+  (interactive)
+  (evil-digit-argument-or-evil-beginning-of-line)
+  (org-insert-heading-respect-content)
+  (evil-append 1)
+  )
+;; (evil-define-key 'normal org-mode-map (kbd "C-<return>") 'evil-org-insert-heading-respect-content)
+
+(evil-leader/set-key-for-mode 'org-mode "t" 'org-todo)
+(evil-leader/set-key-for-mode 'org-mode "o" 'evil-org-insert-heading-respect-content)
+(evil-leader/set-key-for-mode 'org-mode "O" 'evil-org-insert-heading-above-respect-content)
+
+(evil-define-key 'normal org-mode-map "gj" 'org-shiftmetadown)
+(evil-define-key 'normal org-mode-map "gk" 'org-shiftmetaup)
+(evil-define-key 'normal org-mode-map "gl" 'org-shiftmetaright)
+(evil-define-key 'normal org-mode-map "gh" 'org-shiftmetaleft)
+
 (provide 'init-evil)
