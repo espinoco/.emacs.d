@@ -1,5 +1,6 @@
-#name : function template
-#contributor : Xah Lee
+# -*- mode: snippet -*-
+# name : function
+# key: defun
 # --
 (defun $1 ()
   "$2"
