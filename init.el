@@ -48,5 +48,3 @@
 (when (file-exists-p personal-file)
   (message "Loading personal configuration files...")
   (load personal-file))
-
-(message "Emacs is ready Master %s, Happy Hacking!" current-user)
