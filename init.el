@@ -7,7 +7,6 @@
 (when (version< emacs-version "24.4")
     (error "Emacs requires at least GNU Emacs 24.4, but you're running %s" emacs-version))
 
-;; Always load newest byte code
 (setq load-prefer-newer t)
 
 (defvar emacs-dir (file-name-directory load-file-name)
@@ -48,4 +47,3 @@
 (when (file-exists-p personal-file)
   (message "Loading personal configuration files...")
   (load personal-file))
-
