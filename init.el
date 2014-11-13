@@ -49,4 +49,4 @@
   (message "Loading personal configuration files...")
   (load personal-file))
 
-(message "Emacs is ready Master %s, Happy Hacking!" current-user)
+(message "Emacs is ready %s, Happy Hacking!" current-user)
