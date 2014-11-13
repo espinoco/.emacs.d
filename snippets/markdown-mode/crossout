@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Cross out
+# key: crossout
+# --
+~~$1~~$0

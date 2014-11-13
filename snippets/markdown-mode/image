@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Image
+# key: image
+# --
+![$1]($0)

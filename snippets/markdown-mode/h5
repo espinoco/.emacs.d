@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Heading 5
+# key: h5
+# --
+##### $1
+
+$0
