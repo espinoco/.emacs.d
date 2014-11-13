@@ -75,4 +75,17 @@
 (evil-define-key 'normal org-mode-map "gl" 'org-shiftmetaright)
 (evil-define-key 'normal org-mode-map "gh" 'org-shiftmetaleft)
 
+;; calendar
+
+;; (require 'calendar)
+
+;; (evil-set-initial-state 'calendar-mode 'emacs)
+
+;; (add-hook 'calendar-mode-hook (lambda ()
+;;                                 (local-set-key "h" 'calendar-backward-day)
+;;                                 (local-set-key "l" 'calendar-forward-day)
+;;                                 (local-set-key "k" 'calendar-backward-week)
+;;                                 (local-set-key "j" 'calendar-forward-week)
+;;                                 ))
+
 (provide 'init-evil)
