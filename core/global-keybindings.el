@@ -2,8 +2,6 @@
                                 (interactive)
                                 (yank-pop -1)))
 
-(global-set-key (kbd "´") 'insert-brackets-and-indent)
-
 (global-set-key [\M-f2] 'apply-macro-to-region-lines)
 
 (global-set-key [f2] 'kmacro-end-and-call-macro)

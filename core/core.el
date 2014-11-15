@@ -1,16 +1,5 @@
 ;; core.el --- Here are the definitions of most of the added functions
 
-(defun insert-brackets-and-indent ()
-  (interactive)
-  (insert "{")
-  (let ((pps (syntax-ppss)))
-    (when (and (eolp) (not (or (nth 3 pps) (nth 4 pps))))
-      (indent-for-tab-command)
-      (insert "\n\n}")
-      (indent-for-tab-command)
-      (forward-line -1)
-      (indent-for-tab-command))))
-
 (defun goto-match-paren (arg)
   "Go to the matching parenthesis if on parenthesis, otherwise insert %.
 vi style of % jumping to matching brace."
