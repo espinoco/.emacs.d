@@ -2,14 +2,6 @@
                                 (interactive)
                                 (yank-pop -1)))
 
-(global-set-key [\M-f2] 'apply-macro-to-region-lines)
-
-(global-set-key [f2] 'kmacro-end-and-call-macro)
-
-(global-set-key [f3] 'kmacro-start-macro)
-
-(global-set-key [f4] 'kmacro-end-macro)
-
 (global-set-key (kbd "<M-backspace>") 'tinyeat-backward-preserve)
 
 (global-set-key "\M-d" 'tinyeat-forward-preserve)
