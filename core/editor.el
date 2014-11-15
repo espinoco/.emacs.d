@@ -80,12 +80,10 @@
 
 (setq my-timer (run-with-idle-timer 0.3 'repeat 'my-enable-chords))
 
-(setq inhibit-startup-echo-area-message (lambda ()
-                                          (user-login-name)))
+;; (setq inhibit-startup-echo-area-message user-login-name)
 
-(add-hook 'emacs-startup-hook (lambda ()
-                                (message (format "Emacs is ready Master %s, Happy Hacking!" (user-login-name)))))
-
+;; (add-hook 'emacs-startup-hook (lambda ()
+;;                                 (message (format "Emacs is ready Master %s, Happy Hacking!" (user-login-name)))))
 
 ;; (add-hook 'php-mode-hook 'syntax-color-hex)
 ;; (add-hook 'html-mode-hook 'syntax-color-hex)
