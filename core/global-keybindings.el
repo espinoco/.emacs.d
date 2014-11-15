@@ -14,6 +14,6 @@
 
 (global-set-key "\M- " 'hippie-expand)
 
-(global-set-key (kbd "C-j") 'newline-and-indent)
+(global-set-key (kbd "<return>") 'newline-and-indent)
 
 (provide 'global-keybindings)
