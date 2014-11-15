@@ -25,7 +25,7 @@
 
 (define-key dired-mode-map (kbd "c") 'dired-do-query-replace-regexp)
 
-(define-key dired-mode-map (kbd "SPC") 'ace-jump-char-mode)
+(define-key dired-mode-map (kbd "s") 'ace-jump-char-mode)
 
 (define-key dired-mode-map (kbd "<return>") 'open-file-with-external-program)
 
