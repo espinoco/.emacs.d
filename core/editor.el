@@ -70,10 +70,6 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(add-hook 'emacs-startup-hook (lambda ()
-                                (org-agenda-list)
-                                (delete-other-windows)))
-
 (add-hook 'kill-emacs-hook 'kill-gpg-buffers)
 
 (add-hook 'post-command-hook 'my-disable-chords)
