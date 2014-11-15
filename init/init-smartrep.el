@@ -12,4 +12,12 @@
                        ("h" . 'windmove-left)
                        ("l" . 'windmove-right)))
 
+(global-set-key "\C-l" nil)
+
+(smartrep-define-key
+    global-map "C-l" '(("j" . 'mc/mark-next-like-this)
+                       ("k" . 'mc/mark-previous-like-this)
+                       ("a" . 'mc/mark-all-like-this)
+                       ("s" . 'mc/skip-to-next-like-this)))
+
 (provide 'init-smartrep)
