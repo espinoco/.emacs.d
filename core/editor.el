@@ -63,8 +63,8 @@
                                      plain-tex-mode  web-mode
                                      java-mode       php-mode
                                      html-mode       nxml-mode
-                                     css-mode        multi-web-mode
-                                     multi-web-global-mode))
+                                     css-mode
+                                     ))
         (let ((mark-even-if-inactive transient-mark-mode))
           (indent-region (region-beginning) (region-end) nil))))))
 
