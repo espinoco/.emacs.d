@@ -68,10 +68,7 @@
         (let ((mark-even-if-inactive transient-mark-mode))
           (indent-region (region-beginning) (region-end) nil))))))
 
-(add-hook 'before-save-hook (lambda ()
-                              (interactive)
-                              (delete-trailing-whitespace)
-                              (untabify-buffer)))
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (add-hook 'kill-emacs-hook (lambda ()
                              (interactive)
