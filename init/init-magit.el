@@ -4,4 +4,7 @@
 
 (define-key magit-mode-map (kbd "SPC") 'ace-jump-char-mode)
 
+(add-hook 'git-commit-mode (lambda ()
+                             (flyspell-mode t)))
+
 (provide 'init-magit)
