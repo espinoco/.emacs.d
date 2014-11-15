@@ -89,4 +89,8 @@
 
 (define-key org-agenda-mode-map (kbd ",") nil)
 
+;; (add-hook 'emacs-startup-hook (lambda ()
+;;                                 (org-agenda-list)
+;;                                 (delete-other-windows)))
+
 (provide 'init-org-mode)
