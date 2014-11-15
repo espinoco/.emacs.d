@@ -83,7 +83,7 @@
 
 (define-key org-agenda-mode-map (kbd "m") 'org-agenda-switch-to)
 
-(define-key org-agenda-mode-map (kbd "SPC") 'ace-jump-char-mode)
+(define-key org-agenda-mode-map (kbd "s") 'ace-jump-char-mode)
 
 (define-key org-mode-map (kbd ",") nil)
 
