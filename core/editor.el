@@ -1,7 +1,14 @@
 ;; editor.el --- Enhanced core editing experience.
 
 (setq-default indent-tabs-mode nil)
+
 (setq-default tab-width 4)
+
+(setq-default c-basic-offset 4)
+
+(setq cperl-indent-level 4)
+
+(setq-default tab-stop-list (number-sequence 4 120 4))
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -34,8 +41,6 @@
 (electric-pair-mode 1)
 
 (show-paren-mode 1)
-
-(setq-default c-basic-offset 4)
 
 (setq default-frame-alist '((font . "Source Code Pro ExtraLight-12")))
 
@@ -101,9 +106,6 @@
 (add-hook 'emacs-startup-hook (lambda ()
                                 (message (format "Emacs is ready Master %s, Happy Hacking!" (user-login-name)))))
 
-(setq-default tab-stop-list (number-sequence 4 120 4))
-
-(setq cperl-indent-level 4)
 
 ;; (add-hook 'php-mode-hook 'syntax-color-hex)
 ;; (add-hook 'html-mode-hook 'syntax-color-hex)
