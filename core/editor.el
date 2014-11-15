@@ -115,10 +115,6 @@
 
 (setenv "PATH" (concat (getenv "PATH") ":/bin"))
 
-(add-hook 'c-mode-common-hook (lambda ()
-                               (local-set-key (kbd "M-e") 'viper-end-of-word)))
-
-
 (setq ring-bell-function 'ignore)
 
 (provide 'editor)
