@@ -19,6 +19,10 @@
 
 (ido-mode t)
 
+(put 'dired-do-copy 'ido 'find-file)
+
+(put 'dired-do-rename 'ido 'find-file)
+
 (require 'uniquify)
 
 (setq uniquify-buffer-name-style 'post-forward)
