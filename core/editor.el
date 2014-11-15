@@ -70,10 +70,6 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(add-hook 'kill-emacs-hook (lambda ()
-                             (interactive)
-                             (kill-gpg-buffers)))
-
 (add-hook 'emacs-startup-hook (lambda ()
                                 (org-agenda-list)
                                 (delete-other-windows)))
@@ -82,6 +78,7 @@
 
 (add-hook 'git-commit-mode (lambda ()
                              (flyspell-mode t)))
+(add-hook 'kill-emacs-hook 'kill-gpg-buffers)
 
 (add-hook 'post-command-hook 'my-disable-chords)
 
