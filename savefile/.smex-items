@@ -1,6 +1,7 @@
 
 ;; ----- smex-history -----
 (
+ smex-save-to-file
  flush-lines
  undo
  set-mark-command
@@ -14,7 +15,6 @@
  epa-encrypt-file
  describe-mode
  eval-region
- html-mode
 )
 
 ;; ----- smex-data -----
@@ -261,4 +261,5 @@
  (iswitchb-buffer . 1)
  (magit-commit . 1)
  (undo . 1)
+ (smex-save-to-file . 1)
 )

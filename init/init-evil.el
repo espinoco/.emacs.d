@@ -50,8 +50,9 @@
   "m" 'smex
   "b" 'previous-buffer
   )
+
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
-(evil-define-key 'normal dired-mode-map (kbd "s") 'ace-jump-char-mode)
+
 (evil-leader/set-key-for-mode 'emacs-lisp-mode "e" 'eval-region)
 
 ;; org-mode
@@ -95,5 +96,22 @@
 ;;                                 (local-set-key "k" 'calendar-backward-week)
 ;;                                 (local-set-key "j" 'calendar-forward-week)
 ;;                                 ))
+
+(dolist (command '(evil-paste-after evil-paste-before))
+  (eval `(defadvice ,command (after indent-region activate)
+           (and (not current-prefix-arg)
+                (member major-mode '(emacs-lisp-mode lisp-mode
+                                     clojure-mode    scheme-mode
+                                     haskell-mode    ruby-mode
+                                     rspec-mode      python-mode
+                                     c-mode          c++-mode
+                                     objc-mode       latex-mode
+                                     plain-tex-mode  web-mode
+                                     java-mode       php-mode
+                                     html-mode       nxml-mode
+                                     css-mode
+                                     ))
+        (let ((mark-even-if-inactive transient-mark-mode))
+          (indent-region (region-beginning) (region-end) nil))))))
 
 (provide 'init-evil)
