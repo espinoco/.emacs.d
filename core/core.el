@@ -23,14 +23,6 @@
       (forward-line -1)
       (indent-for-tab-command))))
 
-(defun no-bell-sound ()
-  "Disable the bell just when scrolling to limits"
-  (unless (memq this-command
-                '(isearch-abort abort-recursive-edit exit-minibuffer
-                                keyboard-quit mwheel-scroll down up next-line previous-line
-                                backward-char forward-char))
-    (ding)))
-
 (defun goto-match-paren (arg)
   "Go to the matching parenthesis if on parenthesis, otherwise insert %.
 vi style of % jumping to matching brace."
