@@ -11,7 +11,12 @@
 (setq evilnc-hotkey-comment-operator ",,")
 (require 'evil-nerd-commenter)
 (evilnc-default-hotkeys)
-(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
+;; (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
+(define-key evil-normal-state-map (kbd "s") 'ace-jump-char-mode)
+(global-set-key (kbd "C-c") 'nil)
+(global-set-key (kbd "C-c") 'evil-force-normal-state)
+(define-key evil-normal-state-map (kbd "C-c") 'evil-force-normal-state)
+(define-key evil-insert-state-map (kbd "C-c") 'evil-force-normal-state)
 ;; (defvar my-mc-evil-previous-state nil)
 ;; (defun my-mc-evil-switch-to-emacs-state ()
 ;;   (when (and (bound-and-true-p evil-mode)
@@ -42,8 +47,11 @@
   "," 'evilnc-comment-or-uncomment-lines
   "s" 'magit-status
   "d" 'dired-jump
+  "m" 'smex
+  "b" 'previous-buffer
   )
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
+(evil-define-key 'normal dired-mode-map (kbd "s") 'ace-jump-char-mode)
 (evil-leader/set-key-for-mode 'emacs-lisp-mode "e" 'eval-region)
 
 ;; org-mode
