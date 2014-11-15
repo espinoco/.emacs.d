@@ -1,17 +1,5 @@
 ;; core.el --- Here are the definitions of most of the added functions
 
-(defun uncomment-comment-region ()
-  "If region is set, [un]comments it. Otherwise [un]comments current line."
-  (interactive)
-  (if (eq mark-active nil)
-      (progn
-    (beginning-of-line 1)
-    (set-mark (point))
-    (forward-line)
-    (comment-dwim nil))
-    (comment-dwim nil))
-  (deactivate-mark))
-
 (defun insert-brackets-and-indent ()
   (interactive)
   (insert "{")
