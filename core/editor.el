@@ -122,8 +122,6 @@
                                (local-set-key (kbd "M-e") 'viper-end-of-word)))
 
 
-(setq ring-bell-function 'no-bell-sound)
-
 (setq ring-bell-function 'ignore)
 
 (provide 'editor)
