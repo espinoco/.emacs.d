@@ -1,10 +1,6 @@
-(global-set-key (kbd "C--") 'undo)
-
 (global-set-key (kbd "C-M-y") (lambda ()
                                 (interactive)
                                 (yank-pop -1)))
-
-(global-set-key (kbd "M-s") 'backward-word)
 
 (global-set-key (kbd "C-,") 'uncomment-comment-region)
 
