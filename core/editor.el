@@ -48,12 +48,6 @@
 
 (pending-delete-mode t)
 
-(put 'dired-do-copy 'ido 'find-file)
-
-(put 'dired-create-directory 'ido 'find-file)
-
-(put 'dired-do-rename 'ido 'find-file)
-
 (display-time-mode 1)
 
 (setq display-time-24hr-format t)
