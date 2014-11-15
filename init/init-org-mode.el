@@ -2,6 +2,8 @@
 
 (require 'org-agenda)
 
+(setq viper-mode nil)
+
 (require 'viper)
 
 (add-hook 'org-mode-hook (lambda ()
