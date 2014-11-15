@@ -74,10 +74,6 @@
                                 (org-agenda-list)
                                 (delete-other-windows)))
 
-(require 'magit)
-
-(add-hook 'git-commit-mode (lambda ()
-                             (flyspell-mode t)))
 (add-hook 'kill-emacs-hook 'kill-gpg-buffers)
 
 (add-hook 'post-command-hook 'my-disable-chords)
