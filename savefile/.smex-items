@@ -1,6 +1,7 @@
 
 ;; ----- smex-history -----
 (
+ yas-reload-all
  smex-save-to-file
  flush-lines
  undo
@@ -14,7 +15,6 @@
  revert-buffer-no-confirm
  epa-encrypt-file
  describe-mode
- eval-region
 )
 
 ;; ----- smex-data -----
@@ -178,7 +178,7 @@
  (canlock-verify . 1)
  (load-theme . 24)
  (vkill . 1)
- (yas-reload-all . 29)
+ (yas-reload-all . 30)
  (exit-eshell . 9)
  (eshell-quit-process . 1)
  (sass-mode . 1)
