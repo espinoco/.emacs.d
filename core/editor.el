@@ -16,8 +16,6 @@
 
 (setq uniquify-buffer-name-style 'post-forward)
 
-(iswitchb-mode t)
-
 (setq ido-enable-flex-matching t)
 
 (setq ido-everywhere t)
