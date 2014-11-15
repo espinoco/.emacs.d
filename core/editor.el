@@ -115,9 +115,6 @@
 
 (setenv "PATH" (concat (getenv "PATH") ":/bin"))
 
-(setq exec-path (append exec-path '("/bin")))
-
-
 (add-hook 'c-mode-common-hook (lambda ()
                                (local-set-key (kbd "M-e") 'viper-end-of-word)))
 
