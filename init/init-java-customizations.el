@@ -25,7 +25,4 @@ Insert a `*' at the beggining of the new line if inside of a comment."
             (setq c-comment-start-regexp "(@|/(/|[*][*]?))")
 	    (modify-syntax-entry ?@ "< b" java-mode-syntax-table)))
 
-(add-hook 'java-mode-hook (lambda ()
-                            (setq c-basic-offset 4)))
-
 (provide 'init-java-customizations)
