@@ -24,6 +24,7 @@
 (require 'init-sass-mode)
 (require 'init-smartrep)
 (require 'init-single-files)
+(require 'init-calendar)
 (require 'init-evil)
 (require 'init-diff-hl)
 (require 'init-tea-time)
