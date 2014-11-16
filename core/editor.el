@@ -46,7 +46,7 @@
 
 (show-paren-mode 1)
 
-(setq default-frame-alist '((font . "Source Code Pro ExtraLight-12")))
+(setq default-frame-alist '((font . "Menlo-11")))
 
 (desktop-save-mode 1)
 
