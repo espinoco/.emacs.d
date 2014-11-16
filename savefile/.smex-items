@@ -1,12 +1,12 @@
 
 ;; ----- smex-history -----
 (
+ calendar
  set-face-font
  smex-save-to-file
  flush-lines
  undo
  set-mark-command
- calendar
  iswitchb-mode
  rgrep
  org-agenda
@@ -33,7 +33,7 @@
  (calc . 86)
  (make-directory . 60)
  (sql-mode . 2)
- (calendar . 189)
+ (calendar . 191)
  (shell . 21)
  (smex-major-mode-commands . 1)
  (mc/edit-lines . 2)
