@@ -1,6 +1,7 @@
 
 ;; ----- smex-history -----
 (
+ turn-off-evil-mode
  calendar
  set-face-font
  smex-save-to-file
@@ -14,7 +15,6 @@
  eval-region
  revert-buffer-no-confirm
  html-mode
- gnus
 )
 
 ;; ----- smex-data -----
@@ -33,7 +33,7 @@
  (calc . 86)
  (make-directory . 60)
  (sql-mode . 2)
- (calendar . 191)
+ (calendar . 193)
  (shell . 21)
  (smex-major-mode-commands . 1)
  (mc/edit-lines . 2)
@@ -202,7 +202,7 @@
  (evil-mode . 8)
  (org-agenda-switch-to . 1)
  (dired-hide-details-mode . 2)
- (turn-off-evil-mode . 95)
+ (turn-off-evil-mode . 96)
  (turn-on-evil-mode . 44)
  (yas-expand . 1)
  (set-runtime-and-priority . 1)
