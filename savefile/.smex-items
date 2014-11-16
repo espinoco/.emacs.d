@@ -1,6 +1,7 @@
 
 ;; ----- smex-history -----
 (
+ org-agenda-list
  revert-buffer-no-confirm
  calendar
  set-face-font
@@ -14,7 +15,6 @@
  align-regexp
  eval-region
  html-mode
- gnus
 )
 
 ;; ----- smex-data -----
@@ -133,7 +133,7 @@
  (mmm-mode-on . 1)
  (org-version . 14)
  (org-agenda . 6)
- (org-agenda-list . 3)
+ (org-agenda-list . 5)
  (delete-region . 2)
  (erc . 19)
  (ispell-message . 16)
@@ -167,7 +167,7 @@
  (global-auto-revert-mode . 2)
  (text-mode . 2)
  (java-mode . 1)
- (revert-buffer-no-confirm . 120)
+ (revert-buffer-no-confirm . 121)
  (flyspell-mode . 6)
  (magit-log . 8)
  (magit-reset-head-hard . 1)
