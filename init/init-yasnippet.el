@@ -5,4 +5,6 @@
 
 (yas-reload-all)
 
+(yas-global-mode t)
+
 (provide 'init-yasnippet)
