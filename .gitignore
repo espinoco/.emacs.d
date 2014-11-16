@@ -8,6 +8,7 @@ ehthumbs.db
 
 # Emacs temp files
 *~
+ido.last
 
 # EmacsLisp byte-compiled files
 *.elc
