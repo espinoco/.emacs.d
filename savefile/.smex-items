@@ -1,20 +1,20 @@
 
 ;; ----- smex-history -----
 (
+ revert-buffer-no-confirm
+ calendar
  set-face-font
  smex-save-to-file
  flush-lines
  undo
  set-mark-command
- calendar
  iswitchb-mode
  rgrep
  org-agenda
  align-regexp
- calc
- revert-buffer-no-confirm
- epa-encrypt-file
- describe-mode
+ eval-region
+ html-mode
+ gnus
 )
 
 ;; ----- smex-data -----
@@ -33,7 +33,7 @@
  (calc . 86)
  (make-directory . 60)
  (sql-mode . 2)
- (calendar . 189)
+ (calendar . 193)
  (shell . 21)
  (smex-major-mode-commands . 1)
  (mc/edit-lines . 2)
@@ -167,7 +167,7 @@
  (global-auto-revert-mode . 2)
  (text-mode . 2)
  (java-mode . 1)
- (revert-buffer-no-confirm . 114)
+ (revert-buffer-no-confirm . 115)
  (flyspell-mode . 6)
  (magit-log . 8)
  (magit-reset-head-hard . 1)
@@ -202,8 +202,8 @@
  (evil-mode . 8)
  (org-agenda-switch-to . 1)
  (dired-hide-details-mode . 2)
- (turn-off-evil-mode . 92)
- (turn-on-evil-mode . 43)
+ (turn-off-evil-mode . 96)
+ (turn-on-evil-mode . 44)
  (yas-expand . 1)
  (set-runtime-and-priority . 1)
  (insert-line-after-cursor . 2)
@@ -263,4 +263,7 @@
  (undo . 1)
  (smex-save-to-file . 1)
  (set-face-font . 3)
+ (mc/mark-next-word-like-this . 1)
+ (mc/mark-next-symbol-like-this . 2)
+ (evil-ace-jump-char-mode . 1)
 )

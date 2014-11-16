@@ -27,6 +27,4 @@
 
 (setq calendar-mark-holidays-flag t)
 
-(define-key calendar-mode-map (kbd "q") 'delete-window)
-
 (provide 'init-calendar)
