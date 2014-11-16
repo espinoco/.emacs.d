@@ -2,10 +2,6 @@
 
 (require 'org-agenda)
 
-(setq viper-mode nil)
-
-(require 'viper)
-
 (setq org-src-fontify-natively t
       org-log-repeat nil)
 
