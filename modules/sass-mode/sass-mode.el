@@ -197,7 +197,7 @@ LIMIT is the limit of the search."
   (setq font-lock-extend-region-functions
         '(font-lock-extend-region-wholelines font-lock-extend-region-multiline))
   (set (make-local-variable 'font-lock-multiline) nil)
-  (set (make-local-variable 'comment-start) "/*")
+  (set (make-local-variable 'comment-start) "//")
   (set (make-local-variable 'comment-start-skip) "/[/*]\s*")
   (set (make-local-variable 'haml-indent-function) 'sass-indent-p)
   (set (make-local-variable 'haml-indent-offset) sass-indent-offset)

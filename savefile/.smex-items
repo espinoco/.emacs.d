@@ -1,10 +1,10 @@
 
 ;; ----- smex-history -----
 (
+ calendar
  kmacro-bind-to-key
  revert-buffer-no-confirm
  org-agenda-list
- calendar
  set-face-font
  smex-save-to-file
  flush-lines
@@ -33,7 +33,7 @@
  (calc . 86)
  (make-directory . 60)
  (sql-mode . 2)
- (calendar . 193)
+ (calendar . 194)
  (shell . 21)
  (smex-major-mode-commands . 1)
  (mc/edit-lines . 2)
