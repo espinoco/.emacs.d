@@ -1,7 +1,6 @@
 
 ;; ----- smex-history -----
 (
- turn-off-evil-mode
  calendar
  set-face-font
  smex-save-to-file
@@ -15,6 +14,7 @@
  eval-region
  revert-buffer-no-confirm
  html-mode
+ gnus
 )
 
 ;; ----- smex-data -----
@@ -265,4 +265,5 @@
  (set-face-font . 3)
  (mc/mark-next-word-like-this . 1)
  (mc/mark-next-symbol-like-this . 2)
+ (evil-ace-jump-char-mode . 1)
 )
