@@ -167,7 +167,7 @@
  (global-auto-revert-mode . 2)
  (text-mode . 2)
  (java-mode . 1)
- (revert-buffer-no-confirm . 117)
+ (revert-buffer-no-confirm . 118)
  (flyspell-mode . 6)
  (magit-log . 8)
  (magit-reset-head-hard . 1)
