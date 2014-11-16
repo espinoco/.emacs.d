@@ -6,11 +6,6 @@
 
 (require 'viper)
 
-(add-hook 'org-mode-hook (lambda ()
-                           (local-set-key (kbd "M-e") 'viper-end-of-word)))
-
-(setq-default major-mode 'org-mode)
-
 (setq org-src-fontify-natively t
       org-log-repeat nil)
 
@@ -26,12 +21,9 @@
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
 (add-hook 'org-mode-hook (lambda ()
-                           (local-set-key (kbd "C-'") 'undo)
                            (org-indent-mode 1)))
 
 (setq org-agenda-files '("~/Dropbox/Org"))
-
-(define-key global-map "\C-ca" 'org-agenda)
 
 (defun archive-all-done ()
   (interactive)
@@ -50,8 +42,6 @@
   (insert "]")
   (org-beginning-of-line))
 
-(define-key org-mode-map (kbd "C-c r") 'set-runtime)
-
 (defun set-priority (selected-priority)
   (interactive "nEnter priority (Blocker: 1, Critical: 2, Major: 3, Minor: 4, Trivial: 5): ")
   (if (< selected-priority 1) (error "Enter an integer number between 0 and 6")
@@ -61,8 +51,6 @@
       (insert (format "[#%d] " selected-priority))
       (org-beginning-of-line))))
 
-(define-key org-mode-map (kbd "C-c p") 'set-priority)
-
 (add-hook 'kill-emacs-hook (lambda ()
                              (interactive)
                              (shell-command "cd ~/Dropbox/Org ; git add -A ; git commit -m \"Emacs kill push\" ; git push -u origin master" nil nil)))
@@ -70,14 +58,6 @@
 (defun push-org-notes ()
   (interactive)
   (shell-command "cd ~/Dropbox/Org ; git add -A ; git commit -m \"Emacs manually puched notes\" ; git push -u origin master" nil nil))
-
-(setq org-tag-faces
-      '(
-        ("onhold" . (:foreground "yellow" :weight bold))
-        ("next" . (:foreground "green" :weight bold))
-        ("someday" . (:foreground "purple" :weight bold))
-        ("project" . (:foreground "red" :weight bold))
-        ))
 
 (define-key org-agenda-mode-map (kbd "k") 'org-agenda-previous-line)
 
