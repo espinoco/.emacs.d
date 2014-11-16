@@ -114,4 +114,17 @@
         (let ((mark-even-if-inactive transient-mark-mode))
           (indent-region (region-beginning) (region-end) nil))))))
 
+;; multiple-cursors
+
+(define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this)
+
+(define-key evil-normal-state-map (kbd "C-p") 'mc/unmark-next-like-this)
+
+(define-key evil-normal-state-map (kbd "C-x") 'mc/skip-to-next-like-this)
+
+;; (evil-define-key 'normal mc/keymap (kbd "C-c") 'mc/keyboard-quit)
+;; (evil-define-key 'visual mc/keymap (kbd "C-c") 'mc/keyboard-quit)
+
+;; (define-key mc/keymap (kbd "C-c") 'mc/keyboard-quit)
+
 (provide 'init-evil)
