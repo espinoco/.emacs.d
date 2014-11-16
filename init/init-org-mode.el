@@ -54,10 +54,6 @@
   (interactive)
   (shell-command "cd ~/Dropbox/Org ; git add -A ; git commit -m \"Emacs manually puched notes\" ; git push -u origin master" nil nil))
 
-(define-key org-agenda-mode-map (kbd "k") 'org-agenda-previous-line)
-
-(define-key org-agenda-mode-map (kbd "j") 'org-agenda-next-line)
-
 (define-key org-agenda-mode-map (kbd "m") 'org-agenda-switch-to)
 
 (define-key org-agenda-mode-map (kbd "s") 'ace-jump-char-mode)

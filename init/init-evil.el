@@ -82,6 +82,10 @@
   )
 ;; (evil-define-key 'normal org-mode-map (kbd "C-<return>") 'evil-org-insert-heading-respect-content)
 
+(define-key org-agenda-mode-map "j" 'evil-next-line)
+
+(define-key org-agenda-mode-map "k" 'evil-previous-line)
+
 (evil-leader/set-key-for-mode 'org-mode "t" 'org-todo)
 (evil-leader/set-key-for-mode 'org-mode "o" 'evil-org-insert-heading-respect-content)
 (evil-leader/set-key-for-mode 'org-mode "O" 'evil-org-insert-heading-above-respect-content)
