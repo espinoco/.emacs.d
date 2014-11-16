@@ -53,7 +53,4 @@
 
 (add-to-list 'ac-modes 'eshell-mode)
 
-(add-hook 'eshell-mode-hook (lambda ()
-                             (local-set-key (kbd "M-s") 'backward-word)))
-
 (provide 'init-eshell)
