@@ -56,6 +56,7 @@
   "d" 'dired-jump
   "m" 'smex
   "b" 'previous-buffer
+  "a" 'org-agenda-list
   )
 
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)

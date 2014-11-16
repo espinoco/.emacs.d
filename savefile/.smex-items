@@ -133,7 +133,7 @@
  (mmm-mode-on . 1)
  (org-version . 14)
  (org-agenda . 6)
- (org-agenda-list . 7)
+ (org-agenda-list . 8)
  (delete-region . 2)
  (erc . 19)
  (ispell-message . 16)
