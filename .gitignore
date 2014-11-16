@@ -9,6 +9,7 @@ ehthumbs.db
 # Emacs temp files
 *~
 ido.last
+.smex-items
 
 # EmacsLisp byte-compiled files
 *.elc
