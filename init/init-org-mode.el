@@ -16,8 +16,7 @@
 
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
-(add-hook 'org-mode-hook (lambda ()
-                           (org-indent-mode 1)))
+(setq org-startup-indented t)
 
 (setq org-agenda-files '("~/Dropbox/Org"))
 
