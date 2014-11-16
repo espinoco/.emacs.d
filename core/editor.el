@@ -19,6 +19,8 @@
 
 (ido-mode t)
 
+(setq ido-save-directory-list-file (concat savefile-dir "/ido.last"))
+
 (put 'dired-do-copy 'ido 'find-file)
 
 (put 'dired-do-rename 'ido 'find-file)
