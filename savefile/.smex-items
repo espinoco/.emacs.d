@@ -1,8 +1,9 @@
 
 ;; ----- smex-history -----
 (
- org-agenda-list
+ kmacro-bind-to-key
  revert-buffer-no-confirm
+ org-agenda-list
  calendar
  set-face-font
  smex-save-to-file
@@ -12,9 +13,8 @@
  iswitchb-mode
  rgrep
  org-agenda
- align-regexp
  eval-region
- html-mode
+ align-regexp
 )
 
 ;; ----- smex-data -----
@@ -167,7 +167,7 @@
  (global-auto-revert-mode . 2)
  (text-mode . 2)
  (java-mode . 1)
- (revert-buffer-no-confirm . 121)
+ (revert-buffer-no-confirm . 122)
  (flyspell-mode . 6)
  (magit-log . 8)
  (magit-reset-head-hard . 1)
@@ -204,7 +204,7 @@
  (dired-hide-details-mode . 2)
  (turn-off-evil-mode . 96)
  (turn-on-evil-mode . 44)
- (yas-expand . 1)
+ (yas-expand . 2)
  (set-runtime-and-priority . 1)
  (insert-line-after-cursor . 2)
  (insert-line-before-cursor . 1)
@@ -266,4 +266,6 @@
  (mc/mark-next-word-like-this . 1)
  (mc/mark-next-symbol-like-this . 2)
  (evil-ace-jump-char-mode . 1)
+ (kmacro-bind-to-key . 1)
+ (my-get-all-frame-buffers . 1)
 )
