@@ -11,10 +11,10 @@
  rgrep
  org-agenda
  align-regexp
- calc
+ eval-region
  revert-buffer-no-confirm
- epa-encrypt-file
- describe-mode
+ html-mode
+ gnus
 )
 
 ;; ----- smex-data -----
@@ -202,8 +202,8 @@
  (evil-mode . 8)
  (org-agenda-switch-to . 1)
  (dired-hide-details-mode . 2)
- (turn-off-evil-mode . 92)
- (turn-on-evil-mode . 43)
+ (turn-off-evil-mode . 95)
+ (turn-on-evil-mode . 44)
  (yas-expand . 1)
  (set-runtime-and-priority . 1)
  (insert-line-after-cursor . 2)
@@ -263,4 +263,6 @@
  (undo . 1)
  (smex-save-to-file . 1)
  (set-face-font . 3)
+ (mc/mark-next-word-like-this . 1)
+ (mc/mark-next-symbol-like-this . 2)
 )

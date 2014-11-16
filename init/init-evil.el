@@ -39,6 +39,13 @@
 ;; Don't move back the cursor one position when exiting insert mode
 (define-key evil-normal-state-map "m" 'point-to-register)
 (define-key evil-normal-state-map "'" 'jump-to-register)
+(define-key evil-normal-state-map [escape] 'keyboard-quit)
+(define-key evil-visual-state-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 (define-key evil-normal-state-map (kbd "C-y") 'yank)
 (evil-leader/set-key
   "f" 'find-file
@@ -113,5 +120,18 @@
                                      ))
         (let ((mark-even-if-inactive transient-mark-mode))
           (indent-region (region-beginning) (region-end) nil))))))
+
+;; multiple-cursors
+
+(define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this)
+
+(define-key evil-normal-state-map (kbd "C-p") 'mc/unmark-next-like-this)
+
+(define-key evil-normal-state-map (kbd "C-x") 'mc/skip-to-next-like-this)
+
+;; (evil-define-key 'normal mc/keymap (kbd "C-c") 'mc/keyboard-quit)
+;; (evil-define-key 'visual mc/keymap (kbd "C-c") 'mc/keyboard-quit)
+
+;; (define-key mc/keymap (kbd "C-c") 'mc/keyboard-quit)
 
 (provide 'init-evil)

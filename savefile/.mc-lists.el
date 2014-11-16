@@ -52,4 +52,5 @@
 
 (setq mc/cmds-to-run-once
       '(
+        describe-key
         ))
