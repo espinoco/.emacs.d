@@ -12,6 +12,7 @@
         evil-append
         evil-backward-char
         evil-backward-word-begin
+        evil-change
         evil-delete
         evil-delete-backward-char-and-join
         evil-delete-char
@@ -53,4 +54,6 @@
 (setq mc/cmds-to-run-once
       '(
         describe-key
+        evil-lookup
+        evil-window-middle
         ))

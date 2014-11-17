@@ -1,20 +1,20 @@
 
 ;; ----- smex-history -----
 (
+ load-theme
+ align-regexp
+ org-agenda-list
+ gnus
+ mml-attach-file
+ calc
  calendar
  kmacro-bind-to-key
  revert-buffer-no-confirm
- org-agenda-list
  set-face-font
  smex-save-to-file
  flush-lines
  undo
  set-mark-command
- iswitchb-mode
- rgrep
- org-agenda
- eval-region
- align-regexp
 )
 
 ;; ----- smex-data -----
@@ -30,7 +30,7 @@
  (ace-jump-mode . 1)
  (set-solarized-light-theme . 80)
  (test-php-expansion . 8)
- (calc . 86)
+ (calc . 93)
  (make-directory . 60)
  (sql-mode . 2)
  (calendar . 194)
@@ -76,7 +76,7 @@
  (phases-of-moon . 1)
  (animate-birthday-present . 4)
  (hippie-expand . 15)
- (gnus . 100)
+ (gnus . 103)
  (gnus-group-subscribe . 3)
  (smtpmail-send-queued-mail . 1)
  (epa-encrypt-file . 7)
@@ -89,7 +89,7 @@
  (split-window . 1)
  (helm-M-x . 1)
  (helm-find-files . 1)
- (align-regexp . 161)
+ (align-regexp . 167)
  (org-archive-all-done . 4)
  (my-org-archive-done-tasks . 6)
  (archive-all-done . 39)
@@ -133,7 +133,7 @@
  (mmm-mode-on . 1)
  (org-version . 14)
  (org-agenda . 6)
- (org-agenda-list . 8)
+ (org-agenda-list . 10)
  (delete-region . 2)
  (erc . 19)
  (ispell-message . 16)
@@ -169,14 +169,14 @@
  (java-mode . 1)
  (revert-buffer-no-confirm . 122)
  (flyspell-mode . 6)
- (magit-log . 8)
+ (magit-log . 9)
  (magit-reset-head-hard . 1)
  (ispell-change-dictionary . 6)
  (revert-buffers-with-modes . 2)
  (org-indent-mode . 8)
  (pack-assets . 7)
  (canlock-verify . 1)
- (load-theme . 24)
+ (load-theme . 25)
  (vkill . 1)
  (yas-reload-all . 30)
  (exit-eshell . 9)
@@ -256,7 +256,7 @@
  (org-end-of-line . 2)
  (org-shiftdown . 1)
  (org-shiftmetadown . 1)
- (org-deadline . 1)
+ (org-deadline . 3)
  (iswitchb-mode . 4)
  (iswitchb-buffer . 1)
  (magit-commit . 1)
@@ -268,4 +268,6 @@
  (evil-ace-jump-char-mode . 1)
  (kmacro-bind-to-key . 1)
  (my-get-all-frame-buffers . 1)
+ (mml-attach-file . 1)
+ (message-send . 1)
 )
