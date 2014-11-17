@@ -87,9 +87,7 @@
 ;; (add-hook 'emacs-startup-hook (lambda ()
 ;;                                 (message (format "Emacs is ready Master %s, Happy Hacking!" (user-login-name)))))
 
-;; (add-hook 'php-mode-hook 'syntax-color-hex)
-;; (add-hook 'html-mode-hook 'syntax-color-hex)
-;; (add-hook 'sass-mode-hook 'syntax-color-hex)
+(add-hook 'emacs-lisp-mode-hook 'syntax-color-hex)
 
 (add-to-list 'exec-path "/usr/local/bin")
 
