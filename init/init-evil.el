@@ -139,4 +139,8 @@
 
 ;; (define-key mc/keymap (kbd "C-c") 'mc/keyboard-quit)
 
+;; gnus
+
+(define-key message-mode-map (kbd "gs") 'message-send-and-exit)
+
 (provide 'init-evil)
