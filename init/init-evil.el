@@ -57,8 +57,6 @@
 
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
-(define-key evil-normal-state-map (kbd "C-y") 'yank)
-
 (evil-leader/set-key
   "f" 'find-file
   "j" 'ido-switch-buffer
