@@ -30,6 +30,7 @@
   "Evil force normal state"
   (interactive)
   (ac-stop)
+  (mc/keyboard-quit)
   (evil-force-normal-state)
   )
 
@@ -61,7 +62,6 @@
   "f" 'find-file
   "j" 'ido-switch-buffer
   "k" 'kill-buffer
-  "," 'evilnc-comment-or-uncomment-lines
   "s" 'magit-status
   "d" 'dired-jump
   "m" 'smex
@@ -93,7 +93,6 @@
   (org-insert-heading-respect-content)
   (evil-append 1)
   )
-;; (evil-define-key 'normal org-mode-map (kbd "C-<return>") 'evil-org-insert-heading-respect-content)
 
 (define-key org-agenda-mode-map "j" 'evil-next-line)
 
@@ -117,19 +116,6 @@
 
 (evil-define-key 'normal org-mode-map "gs" 'org-schedule)
 
-;; calendar
-
-;; (require 'calendar)
-
-;; (evil-set-initial-state 'calendar-mode 'emacs)
-
-;; (add-hook 'calendar-mode-hook (lambda ()
-;;                                 (local-set-key "h" 'calendar-backward-day)
-;;                                 (local-set-key "l" 'calendar-forward-day)
-;;                                 (local-set-key "k" 'calendar-backward-week)
-;;                                 (local-set-key "j" 'calendar-forward-week)
-;;                                 ))
-
 (dolist (command '(evil-paste-after evil-paste-before))
   (eval `(defadvice ,command (after indent-region activate)
            (and (not current-prefix-arg)
@@ -147,6 +133,8 @@
         (let ((mark-even-if-inactive transient-mark-mode))
           (indent-region (region-beginning) (region-end) nil))))))
 
+;; calendar
+
 ;; multiple-cursors
 
 (define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this)
@@ -154,11 +142,6 @@
 (define-key evil-normal-state-map (kbd "C-p") 'mc/unmark-next-like-this)
 
 (define-key evil-normal-state-map (kbd "C-x") 'mc/skip-to-next-like-this)
-
-;; (evil-define-key 'normal mc/keymap (kbd "C-c") 'mc/keyboard-quit)
-;; (evil-define-key 'visual mc/keymap (kbd "C-c") 'mc/keyboard-quit)
-
-;; (define-key mc/keymap (kbd "C-c") 'mc/keyboard-quit)
 
 ;; gnus
 

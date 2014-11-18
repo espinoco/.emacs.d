@@ -44,8 +44,6 @@
 
 (setq x-select-enable-clipboard t)
 
-(electric-pair-mode 1)
-
 (show-paren-mode 1)
 
 (setq default-frame-alist '((font . "Menlo-11")))

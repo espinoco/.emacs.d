@@ -38,6 +38,7 @@
         ispell-word
         keyboard-quit
         kill-region
+        my-evil-force-normal-state
         nxml-electric-slash
         org-delete-char
         org-return-indent
@@ -55,5 +56,6 @@
       '(
         describe-key
         evil-lookup
+        evil-mouse-drag-region
         evil-window-middle
         ))
