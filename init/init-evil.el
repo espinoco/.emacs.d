@@ -14,7 +14,7 @@
 
 (global-evil-surround-mode 1)
 
-(setq evilnc-hotkey-comment-operator ",,")
+(setq evilnc-hotkey-comment-operator ",ci")
 
 (require 'evil-nerd-commenter)
 
