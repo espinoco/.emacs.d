@@ -2,4 +2,4 @@
 # name: Italic
 # key: italic
 # --
-*$1*$0
+*$1* $0
