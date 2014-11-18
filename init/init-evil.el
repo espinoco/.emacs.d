@@ -1,25 +1,43 @@
 (require 'evil-leader)
+
 (global-evil-leader-mode)
+
 (evil-leader/set-leader ",")
+
 (require 'evil)
+
 (require 'evil-numbers)
+
 (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
+
 (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+
 (require 'evil-surround)
+
 (evil-mode t)
+
 (global-evil-surround-mode 1)
+
 (setq evilnc-hotkey-comment-operator ",,")
+
 (require 'evil-nerd-commenter)
+
 (evilnc-default-hotkeys)
+
 ;; (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
+
 (define-key evil-normal-state-map (kbd "s") 'ace-jump-char-mode)
 
 (define-key evil-visual-state-map (kbd "<return>") 'align-regexp)
 
 (global-set-key (kbd "C-c") 'nil)
+
 (global-set-key (kbd "C-c") 'evil-force-normal-state)
+
 (define-key evil-normal-state-map (kbd "C-c") 'evil-force-normal-state)
+
 (define-key evil-insert-state-map (kbd "C-c") 'evil-force-normal-state)
+
 ;; (defvar my-mc-evil-previous-state nil)
 ;; (defun my-mc-evil-switch-to-emacs-state ()
 ;;   (when (and (bound-and-true-p evil-mode)
@@ -41,15 +59,25 @@
 ;; (add-hook 'multiple-cursors-mode-disabled-hook 'evil-normal-state)
 ;; Don't move back the cursor one position when exiting insert mode
 (define-key evil-normal-state-map "m" 'point-to-register)
+
 (define-key evil-normal-state-map "'" 'jump-to-register)
+
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
+
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
+
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+
 (define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+
 (define-key evil-normal-state-map (kbd "C-y") 'yank)
+
 (evil-leader/set-key
   "f" 'find-file
   "j" 'ido-switch-buffer
