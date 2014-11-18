@@ -147,6 +147,8 @@
 
 (define-key calendar-mode-map (kbd "c") 'calendar-cursor-holidays)
 
+(define-key calendar-mode-map (kbd "s") 'ace-jump-char-mode)
+
 ;; multiple-cursors
 
 (define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this)
