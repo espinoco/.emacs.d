@@ -26,11 +26,18 @@
 
 (global-set-key (kbd "C-c") 'nil)
 
-(global-set-key (kbd "C-c") 'evil-force-normal-state)
+(defun my-evil-force-normal-state ()
+  "Evil force normal state"
+  (interactive)
+  (ac-stop)
+  (evil-force-normal-state)
+  )
 
-(define-key evil-normal-state-map (kbd "C-c") 'evil-force-normal-state)
+(global-set-key (kbd "C-c") 'my-evil-force-normal-state)
 
-(define-key evil-insert-state-map (kbd "C-c") 'evil-force-normal-state)
+(define-key evil-normal-state-map (kbd "C-c") 'my-evil-force-normal-state)
+
+(define-key evil-insert-state-map (kbd "C-c") 'my-evil-force-normal-state)
 
 ;; (defvar my-mc-evil-previous-state nil)
 ;; (defun my-mc-evil-switch-to-emacs-state ()
