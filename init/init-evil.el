@@ -13,6 +13,9 @@
 (evilnc-default-hotkeys)
 ;; (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
 (define-key evil-normal-state-map (kbd "s") 'ace-jump-char-mode)
+
+(define-key evil-visual-state-map (kbd "<return>") 'align-regexp)
+
 (global-set-key (kbd "C-c") 'nil)
 (global-set-key (kbd "C-c") 'evil-force-normal-state)
 (define-key evil-normal-state-map (kbd "C-c") 'evil-force-normal-state)
