@@ -20,8 +20,6 @@
 
 (evilnc-default-hotkeys)
 
-;; (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
-
 (define-key evil-normal-state-map (kbd "s") 'ace-jump-char-mode)
 
 (define-key evil-visual-state-map (kbd "<return>") 'align-regexp)
