@@ -8,10 +8,6 @@
 
 (require 'evil-numbers)
 
-(global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
-
-(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
-
 (require 'evil-surround)
 
 (evil-mode t)
@@ -88,6 +84,8 @@
   "m" 'smex
   "b" 'previous-buffer
   "a" 'org-agenda-list
+  "+" 'evil-numbers/inc-at-pt
+  "-" 'evil-numbers/dec-at-pt
   )
 
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
