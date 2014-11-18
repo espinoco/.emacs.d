@@ -135,6 +135,18 @@
 
 ;; calendar
 
+(evil-set-initial-state 'calendar-mode 'emacs)
+
+(define-key calendar-mode-map (kbd "l") 'calendar-forward-day)
+
+(define-key calendar-mode-map (kbd "h") 'calendar-backward-day)
+
+(define-key calendar-mode-map (kbd "j") 'calendar-forward-week)
+
+(define-key calendar-mode-map (kbd "k") 'calendar-backward-week)
+
+(define-key calendar-mode-map (kbd "c") 'calendar-cursor-holidays)
+
 ;; multiple-cursors
 
 (define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this)
