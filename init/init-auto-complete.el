@@ -26,8 +26,6 @@
 
 (ac-set-trigger-key "TAB")
 
-(define-key ac-completing-map "\C-c" 'ac-stop)
-
 (setq ac-use-quick-help nil)
 
 (provide 'init-auto-complete)
