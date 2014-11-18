@@ -88,13 +88,22 @@
 (define-key org-agenda-mode-map "k" 'evil-previous-line)
 
 (evil-leader/set-key-for-mode 'org-mode "t" 'org-todo)
+
 (evil-leader/set-key-for-mode 'org-mode "o" 'evil-org-insert-heading-respect-content)
+
 (evil-leader/set-key-for-mode 'org-mode "O" 'evil-org-insert-heading-above-respect-content)
 
 (evil-define-key 'normal org-mode-map "gj" 'org-shiftmetadown)
+
 (evil-define-key 'normal org-mode-map "gk" 'org-shiftmetaup)
+
 (evil-define-key 'normal org-mode-map "gl" 'org-shiftmetaright)
+
 (evil-define-key 'normal org-mode-map "gh" 'org-shiftmetaleft)
+
+(evil-define-key 'normal org-mode-map "gd" 'org-deadline)
+
+(evil-define-key 'normal org-mode-map "gs" 'org-schedule)
 
 ;; calendar
 
