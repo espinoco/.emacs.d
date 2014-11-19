@@ -31,5 +31,6 @@
 (require 'init-libgdx)
 (require 'init-gnus)
 (require 'init-tramp)
+(require 'init-powerline)
 (require 'init-evil)
 (require 'init-key-chord)
