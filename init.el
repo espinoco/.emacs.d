@@ -24,15 +24,14 @@
 (unless (file-exists-p savefile-dir)
   (make-directory savefile-dir))
 
-;(let ((default-directory emacs-dir))
-  ;(normal-top-level-add-subdirs-to-load-path))
-
 (let ((default-directory "~/.emacs.d/modules"))
+  (normal-top-level-add-subdirs-to-load-path))
+
+(let ((default-directory "~/.emacs.d/elpa"))
   (normal-top-level-add-subdirs-to-load-path))
 
 (add-to-list 'load-path (concat emacs-dir "core"))
 (add-to-list 'load-path (concat emacs-dir "init"))
-;(add-to-list 'load-path (concat emacs-dir "modules"))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/zenburn-emacs")
