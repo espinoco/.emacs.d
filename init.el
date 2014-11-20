@@ -24,8 +24,15 @@
 (unless (file-exists-p savefile-dir)
   (make-directory savefile-dir))
 
-(let ((default-directory emacs-dir))
+;(let ((default-directory emacs-dir))
+  ;(normal-top-level-add-subdirs-to-load-path))
+
+(let ((default-directory "~/.emacs.d/modules"))
   (normal-top-level-add-subdirs-to-load-path))
+
+(add-to-list 'load-path (concat emacs-dir "core"))
+(add-to-list 'load-path (concat emacs-dir "init"))
+;(add-to-list 'load-path (concat emacs-dir "modules"))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/zenburn-emacs")
@@ -45,6 +52,6 @@
   (message "Loading Emacs's modules...")
   (load modules-file))
 
-(when (file-exists-p personal-file)
-  (message "Loading personal configuration files...")
-  (load personal-file))
+;(when (file-exists-p personal-file)
+  ;(message "Loading personal configuration files...")
+  ;(load personal-file))
