@@ -25,4 +25,6 @@
 
 (key-chord-define message-mode-map "jq" 'ispell-message)
 
+(setq my-timer (run-with-idle-timer 0.3 'repeat 'my-enable-chords))
+
 (provide 'init-key-chord)

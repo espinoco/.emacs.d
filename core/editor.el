@@ -78,8 +78,6 @@
 
 (add-hook 'post-command-hook 'my-disable-chords)
 
-;(setq my-timer (run-with-idle-timer 0.3 'repeat 'my-enable-chords))
-
 (setq inhibit-startup-echo-area-message user-login-name)
 
 (add-hook 'emacs-startup-hook 'welcome-message)
