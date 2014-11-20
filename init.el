@@ -57,6 +57,6 @@
   (message "Loading Emacs's modules...")
   (load modules-file))
 
-;(when (file-exists-p personal-file)
-  ;(message "Loading personal configuration files...")
-  ;(load personal-file))
+(when (file-exists-p personal-file)
+  (message "Loading personal configuration files...")
+  (load personal-file))
