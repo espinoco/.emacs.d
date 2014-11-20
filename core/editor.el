@@ -48,7 +48,7 @@
 
 (setq default-frame-alist '((font . "Menlo-11")))
 
-(desktop-save-mode 1)
+;(desktop-save-mode 1)
 
 (pending-delete-mode t)
 
@@ -78,12 +78,11 @@
 
 (add-hook 'post-command-hook 'my-disable-chords)
 
-(setq my-timer (run-with-idle-timer 0.3 'repeat 'my-enable-chords))
+;(setq my-timer (run-with-idle-timer 0.3 'repeat 'my-enable-chords))
 
 (setq inhibit-startup-echo-area-message user-login-name)
 
-;; (add-hook 'emacs-startup-hook (lambda ()
-;;                                 (message (format "Emacs is ready Master %s, Happy Hacking!" (user-login-name)))))
+(add-hook 'emacs-startup-hook 'welcome-message)
 
 (add-hook 'emacs-lisp-mode-hook 'syntax-color-hex)
 
