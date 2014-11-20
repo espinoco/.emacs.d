@@ -91,37 +91,6 @@ vi style of % jumping to matching brace."
   (insert "exit")
   (eshell-send-input))
 
-(defun insert-and-indent-line-below ()
-  (interactive)
-  (end-of-line)
-  (newline-and-indent))
-
-(defun insert-and-indent-line-above ()
-  (interactive)
-  (push-mark)
-  (let*
-      ((ipt (progn (back-to-indentation) (point)))
-       (bol (progn (move-beginning-of-line 1) (point)))
-       (indent (buffer-substring bol ipt)))
-    (newline)
-    (previous-line)
-    (insert indent)))
-
-(defun copy-line-or-region ()
-  "Copy current line, or text selection.
-When `universal-argument' is called first, copy whole buffer (but respect `narrow-to-region')."
-  (interactive)
-  (let (p1 p2)
-    (if (null current-prefix-arg)
-        (progn (if (use-region-p)
-                   (progn (setq p1 (region-beginning))
-                          (setq p2 (region-end)))
-                 (progn (setq p1 (line-beginning-position))
-                        (setq p2 (line-end-position)))))
-      (progn (setq p1 (point-min))
-             (setq p2 (point-max))))
-    (kill-ring-save p1 p2)))
-
 (defun syntax-color-hex ()
     "Syntax color hex color spec such as 「#ff1100」 in current buffer."
     (interactive)
