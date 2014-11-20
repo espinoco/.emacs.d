@@ -15,6 +15,12 @@
 (defvar savefile-dir (expand-file-name "savefile" emacs-dir)
   "This folder stores all the automatically generated save/history-files.")
 
+(defvar elpa-dir (expand-file-name "elpa" emacs-dir)
+  "This folder stores all modules installed from elpa.")
+
+(defvar modules-dir (expand-file-name "modules" emacs-dir)
+  "This folder stores all modules that will be loaded by Emacs.")
+
 (defvar modules-file (expand-file-name "modules.el" emacs-dir)
   "This file contains a list of modules that will be loaded by Emacs.")
 
@@ -24,10 +30,10 @@
 (unless (file-exists-p savefile-dir)
   (make-directory savefile-dir))
 
-(let ((default-directory "~/.emacs.d/modules"))
+(let ((default-directory modules-dir))
   (normal-top-level-add-subdirs-to-load-path))
 
-(let ((default-directory "~/.emacs.d/elpa"))
+(let ((default-directory elpa-dir))
   (normal-top-level-add-subdirs-to-load-path))
 
 (add-to-list 'load-path (concat emacs-dir "core"))
