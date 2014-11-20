@@ -13,7 +13,7 @@ In my `.emacs` I have:
 
 I install Emacs from homebrew with:
 
-`brew install emacs --HEAD --use-git-head --cocoa --with-gnutls`
+`brew install emacs --cocoa --with-gnutls`
 
 ## Works done with this configuration
 
@@ -22,4 +22,4 @@ I install Emacs from homebrew with:
   * PHP development.
   * Emacs Lisp hacks.
 
-## Emacs 24.4 tested configuration
+## Emacs 24.4.1 tested configuration
