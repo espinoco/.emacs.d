@@ -12,7 +12,7 @@
 ;(require 'init-java)
 ;(require 'init-helm)
 ;(require 'init-highlight-symbol)
-;(require 'init-yasnippet)
+(require 'init-yasnippet)
 ;(require 'init-org-mode)
 ;(require 'init-tiny-tools)
 ;(require 'init-auto-complete)
