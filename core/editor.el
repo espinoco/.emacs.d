@@ -48,7 +48,7 @@
 
 (setq default-frame-alist '((font . "Menlo-11")))
 
-;(desktop-save-mode 1)
+(desktop-save-mode 1)
 
 (pending-delete-mode t)
 
