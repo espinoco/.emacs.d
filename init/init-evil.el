@@ -165,6 +165,6 @@
 
 ;; magit
 
-(evil-define-key 'normal git-commit-mode-map "cc" 'git-commit-commit)
+(evil-define-key 'normal git-commit-mode-map ",c" 'git-commit-commit)
 
 (provide 'init-evil)
