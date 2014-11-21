@@ -32,5 +32,6 @@
 (require 'init-gnus)
 (require 'init-tramp)
 (require 'init-powerline)
+(require 'init-sublimity)
 (require 'init-evil)
 (require 'init-key-chord)

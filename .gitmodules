@@ -4,3 +4,6 @@
 [submodule "modules/emacs-powerline"]
 	path = modules/emacs-powerline
 	url = https://github.com/jonathanchu/emacs-powerline.git
+[submodule "modules/sublimity"]
+	path = modules/sublimity
+	url = https://github.com/zk-phi/sublimity.git
