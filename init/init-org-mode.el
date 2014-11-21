@@ -66,4 +66,6 @@
 ;;                                 (org-agenda-list)
 ;;                                 (delete-other-windows)))
 
+(add-hook 'emacs-startup-hook 'org-agenda-list)
+
 (provide 'init-org-mode)
