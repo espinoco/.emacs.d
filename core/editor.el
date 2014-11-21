@@ -88,6 +88,9 @@
 
 (setenv "PATH" (concat (getenv "PATH") ":/bin"))
 
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
+
 (setq ring-bell-function 'ignore)
 
 (provide 'editor)

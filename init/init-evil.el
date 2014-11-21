@@ -69,6 +69,8 @@
   "b" 'previous-buffer
   "+" 'evil-numbers/inc-at-pt
   "-" 'evil-numbers/dec-at-pt
+  "<left>"  'winner-undo
+  "<right>"  'winner-redo
   )
 
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
