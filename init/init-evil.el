@@ -163,4 +163,8 @@
 
 (define-key message-mode-map (kbd "gs") 'message-send-and-exit)
 
+;; magit
+
+(evil-define-key 'normal git-commit-mode-map "cc" 'git-commit-commit)
+
 (provide 'init-evil)
