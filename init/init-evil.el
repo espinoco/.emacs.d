@@ -65,6 +65,7 @@
   "s" 'magit-status
   "d" 'dired-jump
   "m" 'smex
+  "a" 'org-agenda-list
   "b" 'previous-buffer
   "+" 'evil-numbers/inc-at-pt
   "-" 'evil-numbers/dec-at-pt
@@ -164,9 +165,9 @@
 
 ;; magit
 
-(evil-define-key 'normal git-commit-mode-map ",c" 'git-commit-commit)
+(evil-define-key 'normal git-commit-mode-map "gc" 'git-commit-commit)
 
-(evil-define-key 'normal git-commit-mode-map ",a" 'git-commit-abort)
+(evil-define-key 'normal git-commit-mode-map "ga" 'git-commit-abort)
 
 (evil-set-initial-state 'git-commit-mode 'insert)
 
