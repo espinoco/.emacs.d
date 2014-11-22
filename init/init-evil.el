@@ -26,6 +26,8 @@
 
 (global-set-key (kbd "C-c") 'nil)
 
+(define-key evil-normal-state-map (kbd "C-e") 'fiplr-find-file)
+
 (defun my-evil-force-normal-state ()
   "Evil force normal state"
   (interactive)

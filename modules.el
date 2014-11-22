@@ -33,5 +33,6 @@
 (require 'init-tramp)
 (require 'init-powerline)
 (require 'init-sublimity)
+(require 'init-fiplr)
 (require 'init-evil)
 (require 'init-key-chord)
