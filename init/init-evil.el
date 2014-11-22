@@ -163,7 +163,7 @@
 
 ;; gnus
 
-(define-key message-mode-map (kbd "gs") 'message-send-and-exit)
+;; (define-key message-mode-map (kbd "gs") 'message-send-and-exit)
 
 ;; magit
 
