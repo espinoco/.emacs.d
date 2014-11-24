@@ -175,4 +175,24 @@
 
 (evil-set-initial-state 'git-commit-mode 'insert)
 
+;; window
+
+(defun my-evil-window-actions ()
+  (interactive)
+  (set-temporary-overlay-map
+   (let ((map (make-sparse-keymap)))
+     (define-key map (kbd "q") 'delete-window)
+     (define-key map (kbd "o") 'delete-other-windows)
+     (define-key map (kbd "s") 'switch-to-buffer-other-bottom-window)
+     (define-key map (kbd "v") 'switch-to-buffer-other-side-window)
+     (define-key map (kbd "k") 'windmove-up)
+     (define-key map (kbd "j") 'windmove-down)
+     (define-key map (kbd "h") 'windmove-left)
+     (define-key map (kbd "l") 'windmove-right)
+     map)))
+
+(define-key evil-normal-state-map (kbd "C-w") 'my-evil-window-actions)
+
+(define-key org-agenda-mode-map "\C-w" 'my-evil-window-actions)
+
 (provide 'init-evil)
