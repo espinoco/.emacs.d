@@ -195,4 +195,6 @@
 
 (define-key org-agenda-mode-map "\C-w" 'my-evil-window-actions)
 
+(define-key calendar-mode-map "\C-w" 'my-evil-window-actions)
+
 (provide 'init-evil)
