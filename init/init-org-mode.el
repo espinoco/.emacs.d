@@ -68,4 +68,8 @@
 
 (add-hook 'emacs-startup-hook 'org-agenda-list)
 
+(setq org-tag-faces
+      '(("waiting" . "#f1c40f")
+        ("test" . (:foreground "blue" :weight bold))))
+
 (provide 'init-org-mode)
