@@ -120,6 +120,8 @@
 
 (evil-define-key 'normal org-mode-map "gs" 'org-schedule)
 
+(evil-define-key 'normal org-mode-map "gt" 'org-set-tags-command)
+
 (evil-define-key 'normal org-mode-map "\C-i" 'org-cycle)
 
 (dolist (command '(evil-paste-after evil-paste-before))
