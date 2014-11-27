@@ -24,6 +24,10 @@
 
 (define-key evil-visual-state-map (kbd "<return>") 'align-regexp)
 
+(define-key evil-normal-state-map (kbd "gr") 'revert-buffer-no-confirm)
+
+(define-key evil-normal-state-map (kbd "go") 'read-only-mode)
+
 (global-set-key (kbd "C-c") 'nil)
 
 (define-key evil-normal-state-map (kbd "C-e") 'fiplr-find-file)
