@@ -70,6 +70,7 @@
 
 (setq org-tag-faces
       '(("waiting" . "#f1c40f")
+        ("standby" . "#3498db")
         ("test" . (:foreground "blue" :weight bold))))
 
 (provide 'init-org-mode)
