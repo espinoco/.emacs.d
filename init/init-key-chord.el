@@ -12,8 +12,6 @@
 
 (key-chord-define-global ",." 'eshell)
 
-(key-chord-define-global "qj" 'ispell-word)
-
 (key-chord-define-global "jk" 'ace-jump-mode-pop-mark)
 
 (add-hook 'eshell-mode-hook
