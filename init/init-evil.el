@@ -73,6 +73,7 @@
   "m" 'smex
   "a" 'org-agenda-list
   "b" 'previous-buffer
+  "i" 'ispell-word
   "+" 'evil-numbers/inc-at-pt
   "-" 'evil-numbers/dec-at-pt
   "<left>"  'winner-undo
