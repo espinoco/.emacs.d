@@ -188,6 +188,8 @@
 
 (evil-set-initial-state 'git-commit-mode 'insert)
 
+(define-key magit-mode-map (kbd "C-w") 'my-evil-window-actions)
+
 ;; window
 
 (defun my-evil-window-actions ()
