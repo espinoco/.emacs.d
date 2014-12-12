@@ -8,6 +8,8 @@
 
 (setq cperl-indent-level 4)
 
+(setq python-indent-offset 4)
+
 (setq-default tab-stop-list (number-sequence 4 120 4))
 
 (setq backup-directory-alist
