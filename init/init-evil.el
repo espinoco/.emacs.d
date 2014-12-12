@@ -40,6 +40,20 @@
   (evil-force-normal-state)
   )
 
+(defun my-evil-window-actions ()
+  (interactive)
+  (set-temporary-overlay-map
+   (let ((map (make-sparse-keymap)))
+     (define-key map (kbd "q") 'delete-window)
+     (define-key map (kbd "o") 'delete-other-windows)
+     (define-key map (kbd "s") 'switch-to-buffer-other-bottom-window)
+     (define-key map (kbd "v") 'switch-to-buffer-other-side-window)
+     (define-key map (kbd "k") 'windmove-up)
+     (define-key map (kbd "j") 'windmove-down)
+     (define-key map (kbd "h") 'windmove-left)
+     (define-key map (kbd "l") 'windmove-right)
+     map)))
+
 (global-set-key (kbd "C-c") 'my-evil-force-normal-state)
 
 (global-set-key (kbd "C-s") 'save-buffer)
@@ -191,20 +205,6 @@
 (define-key magit-mode-map (kbd "C-w") 'my-evil-window-actions)
 
 ;; window
-
-(defun my-evil-window-actions ()
-  (interactive)
-  (set-temporary-overlay-map
-   (let ((map (make-sparse-keymap)))
-     (define-key map (kbd "q") 'delete-window)
-     (define-key map (kbd "o") 'delete-other-windows)
-     (define-key map (kbd "s") 'switch-to-buffer-other-bottom-window)
-     (define-key map (kbd "v") 'switch-to-buffer-other-side-window)
-     (define-key map (kbd "k") 'windmove-up)
-     (define-key map (kbd "j") 'windmove-down)
-     (define-key map (kbd "h") 'windmove-left)
-     (define-key map (kbd "l") 'windmove-right)
-     map)))
 
 (define-key evil-normal-state-map (kbd "C-w") 'my-evil-window-actions)
 
