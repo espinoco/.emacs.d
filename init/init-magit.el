@@ -7,4 +7,6 @@
 (add-hook 'git-commit-mode (lambda ()
                              (flyspell-mode t)))
 
+(setq magit-completing-read-function 'magit-ido-completing-read)
+
 (provide 'init-magit)
