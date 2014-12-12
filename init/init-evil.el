@@ -145,7 +145,7 @@
                                      plain-tex-mode  web-mode
                                      java-mode       php-mode
                                      html-mode       nxml-mode
-                                     css-mode
+                                     css-mode        python-mode
                                      ))
         (let ((mark-even-if-inactive transient-mark-mode))
           (indent-region (region-beginning) (region-end) nil))))))
@@ -177,6 +177,8 @@
 ;; gnus
 
 ;; (define-key message-mode-map (kbd "gs") 'message-send-and-exit)
+
+;; mml-attach-file
 
 ;; magit
 
