@@ -97,4 +97,6 @@
 
 (setq ring-bell-function 'ignore)
 
+(setq default-abbrev-mode t)
+
 (provide 'editor)
