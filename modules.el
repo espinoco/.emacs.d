@@ -35,5 +35,6 @@
 (require 'init-sublimity)
 (require 'init-fiplr)
 (require 'init-goto-chg)
+(require 'init-fish-mode)
 (require 'init-evil)
 (require 'init-key-chord)
