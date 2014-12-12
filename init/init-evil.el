@@ -42,6 +42,8 @@
 
 (global-set-key (kbd "C-c") 'my-evil-force-normal-state)
 
+(global-set-key (kbd "C-s") 'save-buffer)
+
 (define-key evil-normal-state-map (kbd "C-c") 'my-evil-force-normal-state)
 
 (define-key evil-insert-state-map (kbd "C-c") 'my-evil-force-normal-state)
