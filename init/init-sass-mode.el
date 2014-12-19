@@ -5,6 +5,4 @@
 
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . sass-mode))
 
-(add-hook 'sass-mode-hook 'syntax-color-hex)
-
 (provide 'init-sass-mode)

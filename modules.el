@@ -35,6 +35,7 @@
 (require 'init-fiplr)
 (require 'init-goto-chg)
 (require 'init-fish-mode)
+(require 'init-rainbow-mode)
 (require 'init-diff-hl)
 (require 'init-evil)
 (require 'init-key-chord)

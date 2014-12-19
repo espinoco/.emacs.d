@@ -84,10 +84,6 @@
 
 (add-hook 'emacs-startup-hook 'welcome-message)
 
-(add-hook 'emacs-lisp-mode-hook 'syntax-color-hex)
-
-(add-hook 'nxml-mode-hook 'syntax-color-hex)
-
 (add-to-list 'exec-path "/usr/local/bin")
 
 (setenv "PATH" (concat (getenv "PATH") ":/bin"))
