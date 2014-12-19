@@ -55,6 +55,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+        compile-goto-error
         describe-key
         evil-lookup
         evil-mouse-drag-region
