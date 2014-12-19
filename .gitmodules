@@ -16,3 +16,6 @@
 [submodule "modules/emacs-fish"]
 	path = modules/emacs-fish
 	url = https://github.com/wwwjfy/emacs-fish.git
+[submodule "modules/browse-kill-ring"]
+	path = modules/browse-kill-ring
+	url = https://github.com/browse-kill-ring/browse-kill-ring.git

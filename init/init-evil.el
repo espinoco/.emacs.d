@@ -32,6 +32,8 @@
 
 (define-key evil-normal-state-map (kbd "C-e") 'fiplr-find-file)
 
+(define-key evil-normal-state-map (kbd "\"") 'browse-kill-ring)
+
 (defun my-evil-force-normal-state ()
   "Evil force normal state"
   (interactive)
@@ -211,5 +213,33 @@
 (define-key org-agenda-mode-map "\C-w" 'my-evil-window-actions)
 
 (define-key calendar-mode-map "\C-w" 'my-evil-window-actions)
+
+;; browse-kill-ring
+
+(define-key browse-kill-ring-mode-map "j" 'browse-kill-ring-forward)
+
+(define-key browse-kill-ring-mode-map "k" 'browse-kill-ring-previous)
+
+(define-key browse-kill-ring-mode-map "/" 'browse-kill-ring-search-forward)
+
+(define-key browse-kill-ring-mode-map "0" 'digit-argument)
+
+(define-key browse-kill-ring-mode-map "1" 'digit-argument)
+
+(define-key browse-kill-ring-mode-map "2" 'digit-argument)
+
+(define-key browse-kill-ring-mode-map "3" 'digit-argument)
+
+(define-key browse-kill-ring-mode-map "4" 'digit-argument)
+
+(define-key browse-kill-ring-mode-map "5" 'digit-argument)
+
+(define-key browse-kill-ring-mode-map "6" 'digit-argument)
+
+(define-key browse-kill-ring-mode-map "7" 'digit-argument)
+
+(define-key browse-kill-ring-mode-map "8" 'digit-argument)
+
+(define-key browse-kill-ring-mode-map "9" 'digit-argument)
 
 (provide 'init-evil)

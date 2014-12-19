@@ -34,6 +34,7 @@
 (require 'init-sublimity)
 (require 'init-fiplr)
 (require 'init-goto-chg)
+(require 'init-browse-kill-ring)
 (require 'init-fish-mode)
 (require 'init-rainbow-mode)
 (require 'init-diff-hl)
