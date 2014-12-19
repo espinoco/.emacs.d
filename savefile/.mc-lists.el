@@ -32,6 +32,7 @@
         evil-previous-line
         evil-search-word-forward
         evil-shift-right
+        evil-upcase
         goto-match-paren
         insert-couple-parentesis
         insert-semi-colon-with-ñ
