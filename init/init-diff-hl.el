@@ -1,7 +1,16 @@
 (require 'diff-hl)
 
-(require 'diff-hl-dired)
-
-(global-diff-hl-mode)
+(add-hook 'emacs-lisp-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'python-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'java-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'nxml-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'css-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'html-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'java-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'c-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'c++-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'latex-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'php-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'fish-mode-hook 'turn-on-diff-hl-mode)
 
 (provide 'init-diff-hl)
