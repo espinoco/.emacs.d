@@ -126,8 +126,8 @@ Including indent-buffer, which should not be called automatically on save."
   (setq input-method-function nil))
 
 (defun welcome-message()
-    (message 
-      (format "Emacs is ready Master %s, Happy Hacking!" 
-       (user-login-name)))) 
+    (message
+      (format "Emacs is ready Master %s, Happy Hacking!"
+       (user-login-name))))
 
 (provide 'core)
