@@ -13,7 +13,7 @@
 (eval-after-load "ace-jump-mode"
   '(ace-jump-mode-enable-mark-sync))
 
-(setq ace-jump-mode-scope 'frame)
+(setq ace-jump-mode-scope 'window)
 
 (setq ace-jump-mode-move-keys
       (loop for i from ?a to ?z collect i))
