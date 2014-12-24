@@ -87,6 +87,7 @@
   "j" 'ido-switch-buffer
   "k" 'kill-buffer
   "s" 'magit-status
+  "l" 'magit-log
   "d" 'dired-jump
   "m" 'smex
   "a" 'org-agenda-list
