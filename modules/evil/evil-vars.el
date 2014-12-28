@@ -241,12 +241,12 @@ that symbol."
                       symbol))
   :group 'evil)
 
-(defcustom evil-mouse-word 'evil-move-word
-  "The (movement) function to be used for double click selection.
+(defcustom evil-mouse-word 'evil-word
+  "The thing-at-point symbol for double click selection.
 The double-click starts visual state in a special word selection
-mode. This function is used to determine the words to be
-selected. Possible values are 'evil-move-word or
-'evil-move-WORD."
+mode. This symbol is used to determine the words to be
+selected. Possible values are 'evil-word or
+'evil-WORD."
   :type 'symbol
   :group 'evil)
 
@@ -257,9 +257,18 @@ This should be a regexp set without the enclosing []."
   :group 'evil)
 (make-variable-buffer-local 'evil-bigword)
 
-(defcustom evil-want-fine-undo nil
-  "Whether actions like \"cw\" are undone in several steps."
-  :type 'boolean
+(defcustom evil-want-fine-undo 'fine
+  "Whether actions like \"cw\" are undone in several steps.
+There are three possible choices. \"No\" means all chances made
+during insert state including a possible delete after a change
+operation are collected in a single undo step. If \"Fine\" is
+selected, insertion commands create several undo steps as Emacs
+would do and the delete after a change operation is merged with
+the first undo step of the insertion. \"Very fine\" is the same
+but the delete operation is a separate undo step."
+  :type '(radio (const :tag "No" :value nil)
+                (const :tag "Fine" :value fine)
+                (const :tag "Very fine" :value t))
   :group 'evil)
 
 (defcustom evil-regexp-search t
@@ -1426,6 +1435,79 @@ Elements have the form (NAME . FUNCTION).")
 
 (defvar evil-visual-x-select-timeout 0.1
   "Time in seconds for the update of the X selection.")
+
+(defvar evil-fold-list
+  `(((hs-minor-mode)
+     :open-all   hs-show-all
+     :close-all  hs-hide-all
+     :toggle     hs-toggle-hiding
+     :open       hs-show-block
+     :open-rec   nil
+     :close      hs-hide-block)
+    ((hide-ifdef-mode)
+     :open-all   show-ifdefs
+     :close-all  hide-ifdefs
+     :toggle     nil
+     :open       show-ifdef-block
+     :open-rec   nil
+     :close      hide-ifdef-block)
+    ((outline-mode
+      outline-minor-mode
+      org-mode)
+     :open-all   show-all
+     :close-all  ,(lambda ()
+                    (with-no-warnings (hide-sublevels 1)))
+     :toggle     outline-toggle-children
+     :open       ,(lambda ()
+                    (with-no-warnings
+                      (show-entry)
+                      (show-children)))
+     :open-rec   show-subtree
+     :close      hide-subtree))
+  "Actions to be performed for various folding operations.
+
+The value should be a list of fold handlers, were a fold handler has
+the format:
+
+  ((MODES) PROPERTIES)
+
+MODES acts as a predicate, containing the symbols of all major or
+minor modes for which the handler should match.  For example:
+
+  '((outline-minor-mode org-mode) ...)
+
+would match for either outline-minor-mode or org-mode, even though the
+former is a minor mode and the latter is a major.
+
+PROPERTIES specifies possible folding actions and the functions to be
+applied in the event of a match on one (or more) of the MODES; the
+supported properties are:
+
+  - `:open-all'
+    Open all folds.
+  - `:close-all'
+    Close all folds.
+  - `:toggle'
+    Toggle the display of the fold at point.
+  - `:open'
+    Open the fold at point.
+  - `:open-rec'
+    Open the fold at point recursively.
+  - `:close'
+    Close the fold at point.
+
+Each value must be a function.  A value of `nil' will cause the action
+to be ignored for that respective handler.  For example:
+
+  `((org-mode)
+     :close-all  nil
+     :open       ,(lambda ()
+                    (show-entry)
+                    (show-children))
+     :close      hide-subtree)
+
+would ignore `:close-all' actions and invoke the provided functions on
+`:open' or `:close'.")
 
 ;;; Ex
 
