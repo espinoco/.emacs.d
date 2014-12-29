@@ -21,5 +21,6 @@ I install Emacs from homebrew with:
   * Java development.
   * PHP development.
   * Emacs Lisp hacks.
+  * Python scripts.
 
 ## Emacs 24.4.1 tested configuration
