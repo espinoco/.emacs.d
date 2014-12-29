@@ -17,6 +17,7 @@
      (dired-do-rename . ido)
      (dired-create-directory . ido)
      (dired-goto-file . ido)
+     (epa-encrypt-file . ido)
      )))
 
 (provide 'init-helm)
