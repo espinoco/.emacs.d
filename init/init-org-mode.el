@@ -62,6 +62,11 @@
 
 (define-key org-agenda-mode-map (kbd ",") nil)
 
+(defun my-org-agenda-write ()
+  "Writes agenda file to agenda.html"
+  (interactive)
+  (org-agenda-write "~/Dropbox/agenda.html")
+  )
 
 (add-hook 'emacs-startup-hook 'org-agenda-list)
 

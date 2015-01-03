@@ -128,6 +128,8 @@
 
 (define-key org-agenda-mode-map "k" 'evil-previous-line)
 
+(define-key org-agenda-mode-map "w" 'my-org-agenda-write)
+
 (evil-leader/set-key-for-mode 'org-mode "t" 'org-todo)
 
 (evil-leader/set-key-for-mode 'org-mode "o" 'evil-org-insert-heading-respect-content)
