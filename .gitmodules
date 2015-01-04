@@ -19,3 +19,6 @@
 [submodule "modules/browse-kill-ring"]
 	path = modules/browse-kill-ring
 	url = https://github.com/browse-kill-ring/browse-kill-ring.git
+[submodule "modules/groovy-emacs-modes"]
+	path = modules/groovy-emacs-modes
+	url = https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes.git

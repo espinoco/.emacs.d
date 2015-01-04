@@ -1,4 +1,5 @@
 (require 'init-dired)
+(require 'init-groovy-modes)
 (require 'init-ace-jump-mode)
 (require 'init-ido-vertical-mode)
 (require 'init-smex)
