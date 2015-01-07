@@ -15,4 +15,6 @@
 
 (add-hook 'java-mode-hook 'my-turn-on-rainbow-mode)
 
+(add-hook 'css-mode-hook 'my-turn-on-rainbow-mode)
+
 (provide 'init-rainbow-mode)
