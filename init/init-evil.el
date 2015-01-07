@@ -103,6 +103,8 @@
 
 (evil-define-key 'normal dired-mode-map (kbd "r") 'rgrep)
 
+(evil-define-key 'normal dired-mode-map (kbd "n") 'find-name-dired)
+
 (evil-leader/set-key-for-mode 'emacs-lisp-mode "e" 'eval-region)
 
 ;; org-mode
