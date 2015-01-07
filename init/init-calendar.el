@@ -11,6 +11,7 @@
 
 (setq holiday-local-holidays
       '((holiday-fixed 1 1 "Año nuevo")
+        (holiday-fixed 1 6 "Día del los reyes magos")
         (holiday-fixed 2 5 "Día de la Constitución Mexicana")
         (holiday-fixed 2 14 "Día de San Valentín")
         (holiday-fixed 4 30 "Día del niño")
