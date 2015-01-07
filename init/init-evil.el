@@ -154,6 +154,10 @@
 
 (evil-define-key 'normal org-mode-map "\C-i" 'org-cycle)
 
+(evil-define-key 'normal org-mode-map "gcr" 'set-runtime)
+
+(evil-define-key 'normal org-mode-map "gcp" 'set-priority)
+
 (dolist (command '(evil-paste-after evil-paste-before))
   (eval `(defadvice ,command (after indent-region activate)
            (and (not current-prefix-arg)
