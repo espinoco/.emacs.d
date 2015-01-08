@@ -22,3 +22,6 @@
 [submodule "modules/groovy-emacs-modes"]
 	path = modules/groovy-emacs-modes
 	url = https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes.git
+[submodule "modules/exec-path-from-shell"]
+	path = modules/exec-path-from-shell
+	url = https://github.com/purcell/exec-path-from-shell.git
