@@ -19,6 +19,8 @@
      (dired-goto-file . ido)
      (epa-encrypt-file . ido)
      (find-name-dired . ido)
+     (org-set-tags-command . ido)
+     (org-set-tags . ido)
      )))
 
 (provide 'init-helm)
