@@ -5,6 +5,10 @@
 
 (add-to-list 'auto-mode-alist '("\\.hledger.journal$" . ledger-mode))
 
-(add-to-list 'auto-mode-alist '("\\.ledger$" . ledger-mode))
+(defun push-ledger-journal-file ()
+  (interactive)
+  (shell-command "cd ~/Dropbox/hledger ; git add -A ; git commit -m \"Auto push file\" ; git push -u origin master" nil nil))
+
+(add-hook 'kill-emacs-hook 'push-ledger-journal-file)
 
 (provide 'init-ledger)
