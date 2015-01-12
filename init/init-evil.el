@@ -193,11 +193,11 @@
 
 ;; multiple-cursors
 
-(define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this)
+(define-key evil-normal-state-map (kbd "C-j") 'mc/mark-next-like-this)
 
-(define-key evil-normal-state-map (kbd "C-p") 'mc/unmark-next-like-this)
+(define-key evil-normal-state-map (kbd "C-k") 'mc/unmark-next-like-this)
 
-(define-key evil-normal-state-map (kbd "C-x") 'mc/skip-to-next-like-this)
+(define-key evil-normal-state-map (kbd "C-n") 'mc/skip-to-next-like-this)
 
 ;; gnus
 
