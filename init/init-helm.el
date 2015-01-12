@@ -21,6 +21,7 @@
      (find-name-dired . ido)
      (org-set-tags-command . ido)
      (org-set-tags . ido)
+     (rgrep . ido)
      )))
 
 (provide 'init-helm)
