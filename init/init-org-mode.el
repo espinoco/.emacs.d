@@ -75,4 +75,9 @@
         ("standby" . "#3498db")
         ("test" . (:foreground "blue" :weight bold))))
 
+(setq org-todo-keyword-faces
+      '(("NEW" . "#3498db")
+        ("READY" . org-warning)
+        ("IN-PROGRESS" . "#f1c40f")))
+
 (provide 'init-org-mode)
