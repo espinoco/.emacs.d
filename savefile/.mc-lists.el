@@ -30,6 +30,7 @@
         evil-normal-state
         evil-paste-after
         evil-previous-line
+        evil-replace
         evil-search-word-forward
         evil-shift-right
         evil-upcase
