@@ -1,4 +1,5 @@
 (require 'init-dired)
+(require 'init-defaultcontent)
 (require 'init-ledger)
 (require 'init-groovy-modes)
 (require 'init-exec-path-from-shell)
