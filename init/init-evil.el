@@ -251,4 +251,10 @@
 
 (define-key browse-kill-ring-mode-map "9" 'digit-argument)
 
+;; git-timemachine
+
+(evil-set-initial-state 'git-timemachine-mode 'emacs)
+
+(add-hook 'git-timemachine-mode-hook 'turn-off-evil-mode)
+
 (provide 'init-evil)

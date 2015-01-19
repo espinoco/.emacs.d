@@ -25,3 +25,6 @@
 [submodule "modules/exec-path-from-shell"]
 	path = modules/exec-path-from-shell
 	url = https://github.com/purcell/exec-path-from-shell.git
+[submodule "modules/git-timemachine"]
+	path = modules/git-timemachine
+	url = https://github.com/pidu/git-timemachine.git

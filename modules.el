@@ -1,4 +1,5 @@
 (require 'init-dired)
+(require 'init-git-timemachine)
 (require 'init-defaultcontent)
 (require 'init-ledger)
 (require 'init-groovy-modes)
