@@ -12,6 +12,7 @@
      (ffap-alternate-file)
      (tmm-menubar)
      (dired-do-copy . ido)
+     (dired-do-chmod . ido)
      (mml-attach-file . ido)
      (byte-recompile-directory . ido)
      (dired-do-rename . ido)
