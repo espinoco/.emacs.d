@@ -28,3 +28,6 @@
 [submodule "modules/git-timemachine"]
 	path = modules/git-timemachine
 	url = https://github.com/pidu/git-timemachine.git
+[submodule "modules/pt"]
+	path = modules/pt
+	url = https://github.com/bling/pt.el.git

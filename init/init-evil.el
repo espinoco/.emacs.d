@@ -101,7 +101,9 @@
 
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
 
-(evil-define-key 'normal dired-mode-map (kbd "r") 'rgrep)
+(evil-define-key 'normal dired-mode-map (kbd "p") 'pt-regexp-file-pattern)
+
+(evil-define-key 'normal dired-mode-map (kbd "P") 'pt-regexp)
 
 (evil-define-key 'normal dired-mode-map (kbd "n") 'find-name-dired)
 
