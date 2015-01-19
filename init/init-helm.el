@@ -25,6 +25,7 @@
      (pt-regexp . ido)
      (pt-regexp-file-pattern . ido)
      (rgrep . ido)
+     (package-install . ido)
      )))
 
 (provide 'init-helm)
