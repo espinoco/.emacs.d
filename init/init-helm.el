@@ -22,6 +22,8 @@
      (find-name-dired . ido)
      (org-set-tags-command . ido)
      (org-set-tags . ido)
+     (pt-regexp . ido)
+     (pt-regexp-file-pattern . ido)
      (rgrep . ido)
      )))
 
