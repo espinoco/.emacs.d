@@ -14,6 +14,10 @@ ido.last
 # EmacsLisp byte-compiled files
 *.elc
 
+# Emacs elpa
+elpa/gnupg/
+elpa/archives/gnu/archive-contents.signed
+
 # Org-mode
 .org-id-locations
 *_archive
