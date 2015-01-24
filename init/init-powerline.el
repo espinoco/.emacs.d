@@ -20,13 +20,11 @@
 (setq powerline-color2 "grey40")
 
 (set-face-attribute 'mode-line nil
-                    :foreground "#fdf6e3"
-                    :background "#383838"
+                    :foreground "#383838"
                     :box nil)
 
 (set-face-attribute 'mode-line-inactive nil
-                    :foreground "#6f6f6f"
-                    :background "#494949"
+                    :foreground "grey40"
                     :box nil)
 
 (provide 'init-powerline)
