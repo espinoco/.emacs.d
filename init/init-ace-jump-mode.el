@@ -5,6 +5,12 @@
   t)
 
 (autoload
+  'ace-jump-char-mode
+  "ace-jump-mode"
+  "Emacs quick move by char"
+  t)
+
+(autoload
   'ace-jump-mode-pop-mark
   "ace-jump-mode"
   "Ace jump back:-)"
