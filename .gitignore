@@ -16,7 +16,7 @@ ido.last
 
 # Emacs elpa
 elpa/gnupg/
-elpa/archives/gnu/archive-contents.signed
+elpa/archives/
 
 # Org-mode
 .org-id-locations
