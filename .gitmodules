@@ -31,3 +31,6 @@
 [submodule "modules/pt"]
 	path = modules/pt
 	url = https://github.com/bling/pt.el.git
+[submodule "modules/evil"]
+	path = modules/evil
+	url = https://github.com/emacsmirror/evil.git
