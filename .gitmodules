@@ -34,3 +34,6 @@
 [submodule "modules/evil"]
 	path = modules/evil
 	url = https://github.com/emacsmirror/evil.git
+[submodule "modules/ace-jump-mode"]
+	path = modules/ace-jump-mode
+	url = https://github.com/winterTTr/ace-jump-mode.git
