@@ -16,6 +16,7 @@
         evil-delete
         evil-delete-backward-char-and-join
         evil-delete-char
+        evil-delete-line
         evil-digit-argument-or-evil-beginning-of-line
         evil-end-of-line
         evil-ex
@@ -25,15 +26,18 @@
         evil-forward-char
         evil-forward-word-begin
         evil-forward-word-end
+        evil-indent
         evil-insert
         evil-next-line
         evil-normal-state
         evil-paste-after
         evil-previous-line
+        evil-previous-line-first-non-blank
         evil-replace
         evil-search-word-forward
         evil-shift-right
         evil-upcase
+        evil-visual-line
         goto-match-paren
         insert-couple-parentesis
         insert-semi-colon-with-ñ
