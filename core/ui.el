@@ -2,6 +2,8 @@
 
 (scroll-bar-mode -1)
 
+(menu-bar-mode -1)
+
 (global-hl-line-mode 1)
 
 (fset 'yes-or-no-p 'y-or-n-p)
