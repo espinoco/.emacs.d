@@ -13,5 +13,6 @@
 (add-hook 'php-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'fish-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'markdown-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'groovy-mode-hook 'turn-on-diff-hl-mode)
 
 (provide 'init-diff-hl)
