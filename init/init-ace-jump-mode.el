@@ -26,4 +26,13 @@
 
 (setq ace-jump-mode-case-fold nil)
 
+(require 'ace-jump-mode)
+
+(set-face-attribute 'ace-jump-face-background nil
+                    :foreground "#7a7a7a")
+
+(set-face-attribute 'ace-jump-face-foreground nil
+                    :weight 'bold
+                    :foreground "#ecd99e")
+
 (provide 'init-ace-jump-mode)
