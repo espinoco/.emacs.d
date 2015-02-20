@@ -7,12 +7,6 @@
 [submodule "modules/sublimity"]
 	path = modules/sublimity
 	url = https://github.com/zk-phi/sublimity.git
-[submodule "modules/fiplr"]
-	path = modules/fiplr
-	url = https://github.com/d11wtq/fiplr.git
-[submodule "modules/grizzl"]
-	path = modules/grizzl
-	url = https://github.com/d11wtq/grizzl.git
 [submodule "modules/emacs-fish"]
 	path = modules/emacs-fish
 	url = https://github.com/wwwjfy/emacs-fish.git

@@ -30,7 +30,7 @@
 
 (global-set-key (kbd "C-c") 'nil)
 
-(define-key evil-normal-state-map (kbd "C-e") 'fiplr-find-file)
+(define-key evil-normal-state-map (kbd "C-e") 'projectile-find-file)
 
 (define-key evil-normal-state-map (kbd "\"") 'browse-kill-ring)
 
