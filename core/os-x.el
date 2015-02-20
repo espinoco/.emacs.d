@@ -1,5 +1,7 @@
 (setq mac-command-modifier 'control)
 
+(require 'init-exec-path-from-shell)
+
 (defun mac-copy ()
   (shell-command-to-string "pbpaste"))
 
