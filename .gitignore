@@ -31,3 +31,7 @@ elpa/archives/
 ac-comphist.dat
 auto-save-list
 personal.el
+
+# Emacs projectile
+projectile.cache
+projectile-bookmarks.eld
