@@ -95,4 +95,6 @@
 
 (setq default-abbrev-mode t)
 
+(setq gc-cons-threshold 20000000)
+
 (provide 'editor)
