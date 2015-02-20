@@ -1,4 +1,5 @@
 (require 'init-dired)
+(require 'init-flx)
 (require 'init-buffer-move)
 (require 'init-pt)
 (require 'init-git-timemachine)
