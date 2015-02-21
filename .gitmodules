@@ -1,6 +1,3 @@
-[submodule "themes/zenburn-emacs"]
-	path = themes/zenburn-emacs
-	url = https://github.com/bbatsov/zenburn-emacs.git
 [submodule "modules/emacs-powerline"]
 	path = modules/emacs-powerline
 	url = https://github.com/jonathanchu/emacs-powerline.git
