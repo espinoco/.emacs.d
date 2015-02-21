@@ -8,10 +8,12 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(load-theme 'zenburn t)
+(require 'solarized-theme)
+
+(load-theme 'solarized-dark t)
 
 (global-hl-line-mode 1)
 
-(set-face-background hl-line-face "#434443")
+(setq ns-use-srgb-colorspace nil)
 
 (provide 'ui)
