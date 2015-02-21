@@ -15,4 +15,16 @@
 (add-hook 'markdown-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'groovy-mode-hook 'turn-on-diff-hl-mode)
 
+(set-face-attribute 'diff-hl-delete nil
+                    :background "#dca3a3"
+                    :foreground "#dca3a3")
+
+(set-face-attribute 'diff-hl-change nil
+                    :background "#94bff3"
+                    :foreground "#94bff3")
+
+(set-face-attribute 'diff-hl-insert nil
+                    :background "#5f7f5f"
+                    :foreground "#5f7f5f")
+
 (provide 'init-diff-hl)
