@@ -1,4 +1,5 @@
 (require 'init-dired)
+(require 'init-elpy)
 (require 'init-flx)
 (require 'init-projectile)
 (require 'init-buffer-move)

@@ -18,6 +18,7 @@
         evil-delete-char
         evil-delete-line
         evil-digit-argument-or-evil-beginning-of-line
+        evil-downcase
         evil-end-of-line
         evil-ex
         evil-exit-visual-state

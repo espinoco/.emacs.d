@@ -134,7 +134,13 @@
 
 (define-key org-agenda-mode-map "w" 'my-org-agenda-write)
 
+(define-key org-agenda-mode-map "z" 'evil-scroll-line-to-center)
+
 (evil-leader/set-key-for-mode 'org-mode "t" 'org-todo)
+
+(evil-leader/set-key-for-mode 'org-mode "r" 'set-runtime)
+
+(evil-leader/set-key-for-mode 'org-mode "p" 'set-priority)
 
 (evil-leader/set-key-for-mode 'org-mode "o" 'evil-org-insert-heading-respect-content)
 
@@ -155,10 +161,6 @@
 (evil-define-key 'normal org-mode-map "gt" 'org-set-tags-command)
 
 (evil-define-key 'normal org-mode-map "\C-i" 'org-cycle)
-
-(evil-define-key 'normal org-mode-map "gcr" 'set-runtime)
-
-(evil-define-key 'normal org-mode-map "gcp" 'set-priority)
 
 (dolist (command '(evil-paste-after evil-paste-before))
   (eval `(defadvice ,command (after indent-region activate)
