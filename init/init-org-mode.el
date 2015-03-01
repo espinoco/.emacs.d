@@ -39,6 +39,7 @@
 
 (defun set-priority (selected-priority)
   (interactive "nEnter priority (Blocker: 1, Critical: 2, Major: 3, Minor: 4, Trivial: 5): ")
+  (org-beginning-of-line)
   (if (< selected-priority 1) (error "Enter an integer number between 0 and 6")
     (if (> selected-priority 5) (error "Enter an integer number between 0 and 6")
       (search-forward "]")
