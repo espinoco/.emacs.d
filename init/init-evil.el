@@ -134,6 +134,8 @@
 
 (define-key org-agenda-mode-map "w" 'my-org-agenda-write)
 
+(define-key org-agenda-mode-map "z" 'evil-scroll-line-to-center)
+
 (evil-leader/set-key-for-mode 'org-mode "t" 'org-todo)
 
 (evil-leader/set-key-for-mode 'org-mode "o" 'evil-org-insert-heading-respect-content)
