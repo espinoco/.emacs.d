@@ -1,7 +1,11 @@
 (require 'tea-time)
+
 (setq tea-time-sound "~/Music/your-turn.mp3")
+
 (setq tea-time-sound-command "afplay %s")
+
 (setq tea-time-notification-message "I know you're busy but it's TEA TIME!")
+
 (setq tea-time-notification-title "Excuse me Master")
 
 (add-hook 'tea-time-notification-hook
