@@ -2,12 +2,6 @@
 
 (key-chord-mode 1)
 
-(key-chord-define-global "fj" 'ido-switch-buffer)
-
-(key-chord-define-global "xh" 'mark-whole-buffer)
-
-(key-chord-define-global "cm" 'goto-match-paren)
-
 (key-chord-define-global "jj" 'er/expand-region)
 
 (key-chord-define-global ",." 'eshell)
