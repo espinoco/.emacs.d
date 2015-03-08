@@ -38,6 +38,7 @@
         evil-search-word-forward
         evil-shift-right
         evil-upcase
+        evil-visual-char
         evil-visual-line
         goto-match-paren
         insert-couple-parentesis
