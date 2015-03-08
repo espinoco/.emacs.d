@@ -67,4 +67,5 @@
         evil-lookup
         evil-mouse-drag-region
         evil-window-middle
+        my-evil-window-actions
         ))
