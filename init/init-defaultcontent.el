@@ -6,6 +6,7 @@
       '(
         ("\\.py$" . "insert.py")
         ("\\Actor.java$" . "actor.java")
+        ("\\Screen.java$" . "screen.java")
         ))
 
 (provide 'init-defaultcontent)
