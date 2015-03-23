@@ -34,6 +34,15 @@
 
 (define-key evil-normal-state-map (kbd "\"") 'browse-kill-ring)
 
+(defun visual-contents-of-line ()
+  "Visual the contents of the line"
+  (interactive)
+  (evil-beginning-of-line)
+  (evil-visual-char)
+  (evil-end-of-line)
+  (evil-backward-char)
+  )
+
 (defun my-evil-force-normal-state ()
   "Evil force normal state"
   (interactive)
@@ -112,6 +121,7 @@
   "-" 'evil-numbers/dec-at-pt
   "<left>"  'winner-undo
   "<right>"  'winner-redo
+  "v" 'visual-contents-of-line
   )
 
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
