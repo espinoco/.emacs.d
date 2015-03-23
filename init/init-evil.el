@@ -68,6 +68,21 @@
 
 (define-key evil-normal-state-map "'" 'jump-to-register)
 
+(defun my-evil-macro ()
+  "Make use of native Emacs macros with evil"
+  (interactive)
+  (if defining-kbd-macro
+      (kmacro-end-macro nil)
+    (kmacro-start-macro nil)
+    )
+  )
+
+(define-key evil-normal-state-map "q" 'my-evil-macro)
+
+(define-key evil-normal-state-map "gq" 'kmacro-bind-to-key)
+
+(define-key evil-normal-state-map "@" 'kmacro-call-macro)
+
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
