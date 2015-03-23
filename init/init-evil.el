@@ -121,6 +121,7 @@
   "<left>"  'winner-undo
   "<right>"  'winner-redo
   "v" 'visual-contents-of-line
+  "h" 'mark-whole-buffer
   )
 
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
