@@ -1,5 +1,4 @@
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -10,9 +9,13 @@ import com.badlogic.gdx.scenes.scene2d.Touchable;
 public class @BASEFILENAMELESSEXTENSION@ extends Actor {
 
     private Sprite sprite;
+    private Sprite touchedSprite;
+    private boolean isTouched;
 
-    public @BASEFILENAMELESSEXTENSION@(Sprite sprite) {
+    public @BASEFILENAMELESSEXTENSION@(Sprite sprite, Sprite touchedSprite) {
         this.sprite = sprite;
+        this.touchedSprite = touchedSprite;
+        isTouched = false;
         setPosition(250, 250);
         setTouchable(Touchable.enabled);
         setWidth(sprite.getWidth());
@@ -21,20 +24,23 @@ public class @BASEFILENAMELESSEXTENSION@ extends Actor {
         addListener(new InputListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                Gdx.app.log("ACTOR", "TOUCH DOWN");
+                isTouched = true;
                 return true;
             }
 
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                Gdx.app.log("ACTOR", "TOUCH UP");
+                isTouched = false;
             }
         });
     }
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        batch.draw(sprite, getX(), getY());
+        if (isTouched)
+            batch.draw(touchedSprite, getX(), getY());
+        else
+            batch.draw(sprite, getX(), getY());
     }
 
 }
