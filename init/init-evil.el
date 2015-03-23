@@ -47,7 +47,6 @@
   "Evil force normal state"
   (interactive)
   (ac-stop)
-  (mc/keyboard-quit)
   (evil-force-normal-state)
   )
 
