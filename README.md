@@ -11,7 +11,7 @@ In my `.emacs` I have:
 
 ## This is an Emacs under OS X configuration
 
-I install Emacs from homebrew with:
+I install Emacs with homebrew:
 
 `brew install emacs --cocoa --with-gnutls`
 
