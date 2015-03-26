@@ -9,17 +9,17 @@ In my `.emacs` I have:
 (load "~/.emacs.d/init.el")
 ```
 
-## This is an Emacs Mac OS X configuration
+## This is an Emacs under OS X configuration
 
-I install Emacs from homebrew with:
+I install Emacs with homebrew:
 
 `brew install emacs --cocoa --with-gnutls`
 
 ## Works done with this configuration
 
-  * Web development with HTML, CSS and JavaScript.
-  * Java development.
-  * PHP development.
+  * Web programming with HTML, CSS and JavaScript.
+  * Java programming.
+  * PHP programming.
   * Emacs Lisp hacks.
   * Python scripts.
 

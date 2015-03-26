@@ -3,5 +3,5 @@
 # key: f
 # group: definitions
 # --
-def ${1}($2):
+def $1($2):
     $0

@@ -3,6 +3,10 @@
 (setq dc-auto-insert-directory (concat modules-dir "/defaultcontent/dc-dir"))
 
 (setq dc-auto-insert-alist
-      '(("\\.py$" . "insert.py")))
+      '(
+        ("\\.py$" . "insert.py")
+        ("\\Actor.java$" . "actor.java")
+        ("\\Screen.java$" . "screen.java")
+        ))
 
 (provide 'init-defaultcontent)

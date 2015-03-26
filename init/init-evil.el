@@ -34,11 +34,19 @@
 
 (define-key evil-normal-state-map (kbd "\"") 'browse-kill-ring)
 
+(defun visual-contents-of-line ()
+  "Visual the contents of the line"
+  (interactive)
+  (evil-beginning-of-line)
+  (evil-visual-char)
+  (evil-end-of-line)
+  (evil-backward-char)
+  )
+
 (defun my-evil-force-normal-state ()
   "Evil force normal state"
   (interactive)
   (ac-stop)
-  (mc/keyboard-quit)
   (evil-force-normal-state)
   )
 
@@ -67,6 +75,21 @@
 (define-key evil-normal-state-map "m" 'point-to-register)
 
 (define-key evil-normal-state-map "'" 'jump-to-register)
+
+(defun my-evil-macro ()
+  "Make use of native Emacs macros with evil"
+  (interactive)
+  (if defining-kbd-macro
+      (kmacro-end-macro nil)
+    (kmacro-start-macro nil)
+    )
+  )
+
+(define-key evil-normal-state-map "q" 'my-evil-macro)
+
+(define-key evil-normal-state-map "gq" 'kmacro-bind-to-key)
+
+(define-key evil-normal-state-map "@" 'kmacro-call-macro)
 
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 
@@ -97,6 +120,8 @@
   "-" 'evil-numbers/dec-at-pt
   "<left>"  'winner-undo
   "<right>"  'winner-redo
+  "v" 'visual-contents-of-line
+  "h" 'mark-whole-buffer
   )
 
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-goto-file)
