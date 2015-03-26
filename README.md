@@ -17,9 +17,9 @@ I install Emacs with homebrew:
 
 ## Works done with this configuration
 
-  * Web development with HTML, CSS and JavaScript.
-  * Java development.
-  * PHP development.
+  * Web programming with HTML, CSS and JavaScript.
+  * Java programming.
+  * PHP programming.
   * Emacs Lisp hacks.
   * Python scripts.
 
