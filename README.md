@@ -9,7 +9,7 @@ In my `.emacs` I have:
 (load "~/.emacs.d/init.el")
 ```
 
-## This is an Emacs Mac OS X configuration
+## This is an Emacs under OS X configuration
 
 I install Emacs from homebrew with:
 
