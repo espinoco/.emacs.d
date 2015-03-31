@@ -39,7 +39,8 @@
 (add-to-list 'load-path (concat emacs-dir "core"))
 (add-to-list 'load-path (concat emacs-dir "init"))
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/zenburn-emacs")
+(add-to-list 'custom-theme-load-path
+             (concat emacs-dir "themes/zenburn-emacs"))
 
 (message "Loading Emacs's core...")
 
