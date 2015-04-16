@@ -9,6 +9,7 @@
 (require 'init-ledger)
 (require 'init-groovy-modes)
 (require 'init-yaml-mode)
+(require 'init-apache-mode)
 (require 'init-ace-jump-mode)
 (require 'init-ido-vertical-mode)
 (require 'init-smex)
