@@ -51,6 +51,7 @@
         org-delete-char
         org-return-indent
         org-self-insert-command
+        sgml-slash
         smex
         suspend-frame
         tinyeat-forward-preserve
@@ -68,4 +69,5 @@
         evil-mouse-drag-region
         evil-window-middle
         my-evil-window-actions
+        yaml-electric-backspace
         ))
