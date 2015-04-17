@@ -6,4 +6,6 @@
 
 (setq projectile-file-exists-remote-cache-expire nil)
 
+(setq projectile-enable-caching nil)
+
 (provide 'init-projectile)
