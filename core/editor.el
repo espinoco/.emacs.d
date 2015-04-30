@@ -52,6 +52,8 @@
 
 (desktop-save-mode 1)
 
+(setq desktop-restore-frames nil)
+
 (pending-delete-mode t)
 
 (setq shell-file-name "/bin/sh")
