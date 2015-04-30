@@ -48,7 +48,7 @@
 
 (show-paren-mode 1)
 
-(setq default-frame-alist '((font . "Meslo-11")))
+(set-default-font "Source Code Pro 11")
 
 (desktop-save-mode 1)
 
