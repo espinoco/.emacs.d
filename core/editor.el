@@ -82,8 +82,6 @@
 
 (setq inhibit-startup-echo-area-message user-login-name)
 
-(add-hook 'emacs-startup-hook 'welcome-message)
-
 (add-to-list 'exec-path "/usr/local/bin")
 
 (setenv "PATH" (concat (getenv "PATH") ":/bin"))

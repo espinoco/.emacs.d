@@ -60,3 +60,5 @@
 (when (file-exists-p personal-file)
   (message "Loading personal configuration files...")
   (load personal-file))
+
+(add-hook 'after-init-hook 'welcome-message)
