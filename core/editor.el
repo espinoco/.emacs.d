@@ -54,6 +54,8 @@
 
 (setq desktop-restore-frames nil)
 
+(setq desktop-restore-eager 50)
+
 (pending-delete-mode t)
 
 (setq shell-file-name "/bin/sh")
