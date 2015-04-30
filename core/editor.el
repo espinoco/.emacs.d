@@ -48,9 +48,13 @@
 
 (show-paren-mode 1)
 
-(setq default-frame-alist '((font . "Meslo-11")))
+(set-default-font "Source Code Pro 11")
 
 (desktop-save-mode 1)
+
+(setq desktop-restore-frames nil)
+
+(setq desktop-restore-eager 50)
 
 (pending-delete-mode t)
 
@@ -81,8 +85,6 @@
 (add-hook 'post-command-hook 'my-disable-chords)
 
 (setq inhibit-startup-echo-area-message user-login-name)
-
-(add-hook 'emacs-startup-hook 'welcome-message)
 
 (add-to-list 'exec-path "/usr/local/bin")
 

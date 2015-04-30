@@ -69,7 +69,9 @@
   (org-agenda-write "~/Dropbox/agenda.html")
   )
 
-(add-hook 'emacs-startup-hook 'org-agenda-list)
+(add-hook 'emacs-startup-hook (lambda ()
+                                 (org-agenda-list)
+                                 (delete-other-windows)))
 
 (setq org-tag-faces
       '(("waiting" . "#f1c40f")

@@ -6,7 +6,6 @@
 (add-hook 'nxml-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'css-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'html-mode-hook 'turn-on-diff-hl-mode)
-(add-hook 'java-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'c-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'c++-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'latex-mode-hook 'turn-on-diff-hl-mode)
@@ -14,6 +13,8 @@
 (add-hook 'fish-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'markdown-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'groovy-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'yaml-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'apache-mode-hook 'turn-on-diff-hl-mode)
 
 (set-face-attribute 'diff-hl-delete nil
                     :background "#dc322f"

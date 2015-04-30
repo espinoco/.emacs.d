@@ -31,3 +31,6 @@
 [submodule "modules/flx"]
 	path = modules/flx
 	url = https://github.com/lewang/flx.git
+[submodule "modules/yaml-mode"]
+	path = modules/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git

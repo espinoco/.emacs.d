@@ -287,3 +287,9 @@
 (add-hook 'git-timemachine-mode-hook 'turn-off-evil-mode)
 
 (provide 'init-evil)
+
+;; ediff
+
+(add-hook 'ediff-load-hook (lambda () (evil-mode 0)))
+
+(add-hook 'ediff-quit-hook (lambda () (evil-mode t)))
