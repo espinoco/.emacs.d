@@ -35,3 +35,7 @@ personal.el
 # Emacs projectile
 projectile.cache
 projectile-bookmarks.eld
+
+# Emacs desktop
+/.emacs.desktop
+/.emacs.desktop.lock
