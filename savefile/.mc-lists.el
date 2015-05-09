@@ -29,6 +29,7 @@
         evil-forward-word-end
         evil-indent
         evil-insert
+        evil-invert-char
         evil-next-line
         evil-normal-state
         evil-paste-after
@@ -68,6 +69,7 @@
         evil-lookup
         evil-mouse-drag-region
         evil-window-middle
+        markdown-exdent-or-delete
         my-evil-window-actions
         yaml-electric-backspace
         ))
