@@ -26,6 +26,7 @@
      (pt-regexp-file-pattern . ido)
      (rgrep . ido)
      (package-install . ido)
+     (magit-status . ido)
      )))
 
 (provide 'init-helm)
