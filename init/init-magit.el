@@ -9,4 +9,7 @@
 
 (setq magit-completing-read-function 'magit-ido-completing-read)
 
+(set-face-attribute 'magit-item-highlight nil
+                    :background "#393939")
+
 (provide 'init-magit)

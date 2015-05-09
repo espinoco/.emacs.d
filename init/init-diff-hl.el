@@ -17,15 +17,15 @@
 (add-hook 'apache-mode-hook 'turn-on-diff-hl-mode)
 
 (set-face-attribute 'diff-hl-delete nil
-                    :background "#dc322f"
-                    :foreground "#dc322f")
+                    :background "#f2777a"
+                    :foreground "#f2777a")
 
 (set-face-attribute 'diff-hl-change nil
-                    :background "#268bd2"
-                    :foreground "#268bd2")
+                    :background "#6699cc"
+                    :foreground "#6699cc")
 
 (set-face-attribute 'diff-hl-insert nil
-                    :background "#5f8700"
-                    :foreground "#5f8700")
+                    :background "#99cc99"
+                    :foreground "#99cc99")
 
 (provide 'init-diff-hl)

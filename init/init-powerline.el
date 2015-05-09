@@ -15,13 +15,13 @@
                              (powerline-percent 'right nil powerline-color1 )
                              (powerline-make-text " " nil )))))
 
-(setq powerline-color1 "#0c414e")
+(setq powerline-color1 "#515151")
 
-(setq powerline-color2 "#073642")
+(setq powerline-color2 "#393939")
 
 (set-face-attribute 'mode-line nil
-                    :foreground "#fdf6e3"
-                    :background "#2aa198"
+                    :foreground "#393939"
+                    :background "#cccccc"
                     :overline nil
                     :underline nil
                     :box nil)

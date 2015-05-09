@@ -30,6 +30,6 @@
 
 (set-face-attribute 'ace-jump-face-foreground nil
                     :weight 'bold
-                    :foreground "#ecd99e")
+                    :foreground "#ffcc66")
 
 (provide 'init-ace-jump-mode)

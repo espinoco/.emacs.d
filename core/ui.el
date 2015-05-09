@@ -8,9 +8,12 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(require 'solarized-theme)
+(load (concat emacs-dir "themes/tomorrow-theme/color-theme-tomorrow"))
 
-(load-theme 'solarized-dark t)
+(add-to-list 'custom-theme-load-path
+             (concat emacs-dir "themes/tomorrow-theme"))
+
+(load-theme 'tomorrow-night-eighties t)
 
 (global-hl-line-mode 1)
 
