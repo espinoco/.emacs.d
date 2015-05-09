@@ -28,6 +28,10 @@
 
 (define-key evil-normal-state-map (kbd "go") 'read-only-mode)
 
+(define-key evil-normal-state-map (kbd "gs") 'copy-to-register)
+
+(define-key evil-normal-state-map (kbd "gi") 'insert-register)
+
 (global-set-key (kbd "C-c") 'nil)
 
 (define-key evil-normal-state-map (kbd "C-e") 'projectile-find-file)
