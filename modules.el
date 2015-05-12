@@ -1,5 +1,4 @@
 (require 'init-dired)
-(require 'init-elpy)
 (require 'init-flx)
 (require 'init-projectile)
 (require 'init-buffer-move)
@@ -48,5 +47,6 @@
 (require 'init-fish-mode)
 (require 'init-rainbow-mode)
 (require 'init-diff-hl)
+(require 'init-flycheck)
 (require 'init-evil)
 (require 'init-key-chord)
