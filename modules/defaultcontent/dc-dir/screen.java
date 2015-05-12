@@ -1,3 +1,4 @@
+package
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
@@ -5,6 +6,10 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
+
+import mx.ujed.escueladelenguas.EnglishTaleGame;
+import mx.ujed.escueladelenguas.GameScreen;
+import mx.ujed.escueladelenguas.ScreenUtils;
 
 public class @BASEFILENAMELESSEXTENSION@ extends GameScreen {
 

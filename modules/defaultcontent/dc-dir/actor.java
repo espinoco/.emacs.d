@@ -1,3 +1,4 @@
+package
 
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -23,13 +24,15 @@ public class @BASEFILENAMELESSEXTENSION@ extends Actor {
         setBounds(0, 0, getWidth(), getHeight());
         addListener(new InputListener() {
             @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+            public boolean touchDown(InputEvent event, float x, float y, int pointer,
+                                     int button) {
                 isTouched = true;
                 return true;
             }
 
             @Override
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
+            public void touchUp(InputEvent event, float x, float y, int pointer,
+                                int button) {
                 isTouched = false;
             }
         });
