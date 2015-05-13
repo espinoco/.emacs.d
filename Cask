@@ -9,3 +9,4 @@
 (depends-on "multiple-cursors")
 (depends-on "smex")
 (depends-on "ido-complete-space-or-hyphen")
+(depends-on "ido-vertical-mode")
