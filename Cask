@@ -12,3 +12,7 @@
 (depends-on "ido-vertical-mode")
 (depends-on "expand-region")
 (depends-on "markdown-mode")
+(depends-on "evil-leader")
+(depends-on "evil-nerd-commenter")
+(depends-on "evil-numbers")
+(depends-on "evil-surround")
