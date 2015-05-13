@@ -18,3 +18,4 @@
 (depends-on "evil-surround")
 (depends-on "php-mode")
 (depends-on "tea-time")
+(depends-on "zencoding-mode")
