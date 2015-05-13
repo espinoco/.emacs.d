@@ -7,3 +7,4 @@
 (depends-on "highlight-symbol")
 (depends-on "sass-mode")
 (depends-on "multiple-cursors")
+(depends-on "smex")
