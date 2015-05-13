@@ -17,3 +17,4 @@
 (depends-on "evil-numbers")
 (depends-on "evil-surround")
 (depends-on "php-mode")
+(depends-on "tea-time")
