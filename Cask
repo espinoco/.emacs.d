@@ -5,3 +5,4 @@
 
 (depends-on "diff-hl")
 (depends-on "highlight-symbol")
+(depends-on "sass-mode")

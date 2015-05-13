@@ -30,7 +30,6 @@
 (require 'init-gse-number-rect)
 (require 'init-git-modes)
 (require 'init-markdown-mode)
-(require 'init-haml-mode)
 (require 'init-sass-mode)
 (require 'init-smartrep)
 (require 'init-single-files)
