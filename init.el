@@ -50,6 +50,10 @@
 (when (eq system-type 'darwin)
     (require 'os-x))
 
+(require 'cask "~/.cask/cask.el")
+
+(cask-initialize)
+
 (when (file-exists-p modules-file)
   (message "Loading Emacs's modules...")
   (load modules-file))
@@ -59,3 +63,4 @@
   (load personal-file))
 
 (add-hook 'after-init-hook 'welcome-message)
+
