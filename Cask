@@ -19,3 +19,4 @@
 (depends-on "php-mode")
 (depends-on "tea-time")
 (depends-on "zencoding-mode")
+(depends-on "smartrep")
