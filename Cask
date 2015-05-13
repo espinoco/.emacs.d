@@ -8,3 +8,4 @@
 (depends-on "sass-mode")
 (depends-on "multiple-cursors")
 (depends-on "smex")
+(depends-on "ido-complete-space-or-hyphen")
