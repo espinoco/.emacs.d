@@ -11,3 +11,4 @@
 (depends-on "ido-complete-space-or-hyphen")
 (depends-on "ido-vertical-mode")
 (depends-on "expand-region")
+(depends-on "markdown-mode")
