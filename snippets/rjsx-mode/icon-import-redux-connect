@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: icon import redux connect
+# key: icon
+# --
+import { connect } from 'react-redux';$0

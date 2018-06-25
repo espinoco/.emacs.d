@@ -1,0 +1,11 @@
+elpa/
+persistent/
+url/
+server/
+backups/
+auto-save-list/
+/projectile.cache
+/projectile-bookmarks.eld
+/recentf
+eshell/
+/elisp/local.el

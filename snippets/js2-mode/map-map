@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: map map
+# key: map
+# --
+${1:array}.map((${2:item}) => ${3:${4:\{$0
+\}}});

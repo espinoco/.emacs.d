@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: af anonymous function
+# key: af
+# --
+${1:()} => ${2:${3:\{$0
+\}}}

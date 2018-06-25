@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: co react component
+# key: co
+# --
+class ${1:Component} extends Component {
+    render() {
+        return ${2:${3:($0)}};
+    }
+}

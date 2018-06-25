@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: cons react constructor
+# key: cons
+# --
+constructor(props) {
+    super(props);
+    ${1:${2:this.state = \{$0\};}}
+}

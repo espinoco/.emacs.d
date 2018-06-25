@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: pt propTypes
+# key: pt
+# --
+${1:`(capitalize (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`}.propTypes = {
+  ${2:field}: PropTypes.$0
+};

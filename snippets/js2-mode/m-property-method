@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: m property method
+# key: m
+# --
+${1:method}($0) {
+}

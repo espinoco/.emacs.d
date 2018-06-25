@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: i import
+# key: i
+# --
+import ${1:module} from '$0';

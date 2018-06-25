@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: fc functional component
+# key: fc
+# --
+const ${1:Component} = (${2:props}) => {$0
+};

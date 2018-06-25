@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: l let
+# key: l
+# --
+let ${1:name}${2: = ${0:value}};
