@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: mdtp mapDispatchToProps
+# key: mdtp
+# --
+const mapDispatchToProps = (dispatch) => {
+  return {
+    ${1:onAction}: ($2) => {
+        dispatch($1($2));
+    }
+  };
+};

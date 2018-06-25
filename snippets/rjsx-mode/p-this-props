@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: p this.props
+# key: p
+# --
+this.props.$0

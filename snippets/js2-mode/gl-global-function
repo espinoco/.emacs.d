@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: gf global function
+# key: gf
+# --
+function ${1:name}($0) {
+}

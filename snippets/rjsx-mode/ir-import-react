@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ir import react
+# key: ir
+# --
+import React${1:${2:, \{ Component \}}} from 'react';$0

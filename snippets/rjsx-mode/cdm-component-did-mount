@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: cdm component did mount
+# key: cdm
+# --
+componentDidMount() {$0
+}

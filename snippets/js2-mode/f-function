@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: f function
+# key: f
+# --
+const $1 = ($0) => {
+};

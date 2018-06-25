@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: bind this.method.bind(this)
+# key: bind
+# --
+this.$1 = this.$1.bind(this);$0

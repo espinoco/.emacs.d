@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ipt import PropTypes
+# key: ipt
+# --
+import PropTypes from 'prop-types';$0
