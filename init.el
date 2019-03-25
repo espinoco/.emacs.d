@@ -14,7 +14,7 @@
     (expand-file-name "local.el" elisp-directory)
     "This file stores all machine local elisp files.")
 
-(defvar font "Hack 12" "Font")
+(defvar font "Hack 14" "Font")
 
 (unless (string-equal system-type "windows-nt")
     (progn
@@ -64,6 +64,10 @@
   dired-recursive-deletes 'always
   dired-recursive-copies 'always)
 
+(add-hook 'dired-mode-hook
+      (lambda ()
+        (dired-hide-details-mode)))
+
 (ido-mode t)
 
 (ido-everywhere t)
@@ -105,6 +109,91 @@
         ispell-extra-args '("--run-together"))
     (setq-default ispell-program-name "hunspell"))
 
+;; Taken from https://www.emacswiki.org/emacs/ExecuteExternalCommand
+;;
+;; "Here is some EmacsLisp code that modifies ‘shell-command’ to allow many
+;; commands to execute asynchronously (and show the command at the top of
+;; the buffer):"
+;;
+;; Example:
+
+;; (defvar local/qa-token-generated-at nil
+;;     "Date in which last QA access token was generated.")
+
+;; (defun local/gen-qa-token ()
+;;     "Generate QA access token."
+;;     (interactive)
+;;     (progn
+;;         (setq local/qa-token-generated-at (current-time))
+;;         (shell-command "xyz -e qa -v auth get_token &")
+;;         ""))
+
+;; (defun local/fetch-qa-token ()
+;;     "Fetch QA access token."
+;;     (interactive)
+;;     (let ((access-token ""))
+;;         (progn
+;;             (with-current-buffer "*background: zyx -e qa -v auth get_token*"
+;;                 (setq access-token
+;;                     (nth 1
+;;                         (s-match "Access token: \\([0-9A-z]+\\)$"
+;;                             (buffer-substring-no-properties (point-max) (point-min))))))
+;;             access-token)))
+
+;; (defun local/get-qa-token ()
+;;     "Get QA access token."
+;;     (if (time-less-p (current-time) (time-add local/qa-token-generated-at (* 60 57)))
+;;         (local/fetch-qa-token)
+;;         (if (yes-or-no-p "QA access token expired. Generate new one? ")
+;;             (local/gen-qa-token))))
+
+;; (defun local/kill-qa-token ()
+;;     "Kills QA access token."
+;;     (interactive)
+;;     (with-current-buffer "*background: xyz -e qa -v auth get_token*"
+;;         (kill-new
+;;             (nth 1
+;;                 (s-match "Access token: \\([0-9A-z]+\\)$"
+;;                     (buffer-substring-no-properties (point-max) (point-min)))))))
+
+(defadvice erase-buffer (around erase-buffer-noop)
+  "make erase-buffer do nothing")
+
+(defadvice shell-command (around shell-command-unique-buffer activate compile)
+  (if (or current-prefix-arg
+          (not (string-match "[ \t]*&[ \t]*\\'" command)) ;; background
+          (bufferp output-buffer)
+          (stringp output-buffer))
+      ad-do-it ;; no behavior change
+
+    ;; else we need to set up buffer
+    (let* ((command-buffer-name
+            (format "*background: %s*"
+                    (substring command 0 (match-beginning 0))))
+           (command-buffer (get-buffer command-buffer-name)))
+
+      (when command-buffer
+        ;; if the buffer exists, reuse it, or rename it if it's still in use
+        (cond ((get-buffer-process command-buffer)
+               (set-buffer command-buffer)
+               (rename-uniquely))
+              ('t
+               (kill-buffer command-buffer))))
+      (setq output-buffer command-buffer-name)
+
+      ;; insert command at top of buffer
+      (switch-to-buffer-other-window output-buffer)
+      (insert "Running command: " command
+              "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
+
+      ;; temporarily blow away erase-buffer while doing it, to avoid
+      ;; erasing the above
+      (ad-activate-regexp "erase-buffer-noop")
+      ad-do-it
+      (ad-deactivate-regexp "erase-buffer-noop"))))
+
+;; Taken from https://www.emacswiki.org/emacs/ExecuteExternalCommand
+
 (require 'package)
 
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
@@ -135,11 +224,15 @@
          magit
          markdown-mode
          markdown-toc
+         multi-term
          nodejs-repl
          origami
+         password-store
+         pinentry
          projectile
          restclient
          rjsx-mode
+         s
          wgrep
          yafolding
          yaml-mode
@@ -148,6 +241,14 @@
 (dolist (package package-list)
   (unless (package-installed-p package)
       (package-install package)))
+
+(use-package multi-term
+    :config
+    (setq multi-term-program "/bin/bash"))
+
+(use-package pinentry
+    :init
+    (pinentry-start))
 
 (use-package yaml-mode
     :config
@@ -210,6 +311,8 @@
     :config
     (add-hook 'prog-mode-hook 'git-gutter-mode))
 
+(use-package password-store)
+
 (use-package projectile
     :config
     (setq projectile-indexing-method 'alien)
@@ -222,22 +325,25 @@
         :test-suffix ".test"))
 
 (use-package dashboard
-    :config
-    (dashboard-setup-startup-hook)
+    :init
     (setq
         dashboard-banner-logo-title "Welcome Master"
         dashboard-startup-banner 'logo
-        dashboard-items '((projects . 5)
-                             (recents  . 5)
+        dashboard-items '((recents  . 5)
+                             (projects . 5)
                              (bookmarks . 5)
                              (agenda . 5)
-                             (registers . 5))))
+                             (registers . 5)))
+    :config
+    (dashboard-setup-startup-hook))
 
 (use-package magit)
 
 (use-package js2-mode
     :config
-    (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
+    (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+    :init
+    (setq js2-strict-missing-semi-warning t))
 
 (use-package rjsx-mode
     :config
@@ -272,6 +378,7 @@
 
 (when (file-exists-p local-elisp-file)
     (use-package local
+        :requires (s)
         :load-path elisp-directory))
 
 (use-package evil-leader
@@ -297,11 +404,13 @@
         "fj" 'dired-jump
         "fei" 'user/switch-to-init-buffer
         "feu" 'user/switch-to-user-buffer
+        "fel" 'user/switch-to-local-buffer
         "gs" 'magit-status
         "gg" 'vc-git-grep
         "ghj" 'git-gutter:next-hunk
         "ghk" 'git-gutter:previous-hunk
         "ghs" 'git-gutter:stage-hunk
+        "ghr" 'git-gutter:revert-hunk
         "ghr" 'git-gutter:revert-hunk
         "ghp" 'git-gutter:popup-hunk
         "ghm" 'git-gutter:mark-hunk
@@ -338,6 +447,10 @@
     (define-key evil-normal-state-map "zo" 'origami-show-only-node)
     (define-key evil-normal-state-map "zp" 'user/yafolding-go-parent-element)
     (define-key evil-normal-state-map "zm" 'origami-close-all-nodes)
+    (define-key evil-normal-state-map "zyha" 'yafolding-hide-all)
+    (define-key evil-normal-state-map "zysa" 'yafolding-show-all)
+    (define-key evil-normal-state-map "zyhe" 'yafolding-hide-element)
+    (define-key evil-normal-state-map "zyse" 'yafolding-show-element)
     (define-key evil-normal-state-map "zr" 'origami-open-all-nodes))
 
 (use-package evil
@@ -386,6 +499,11 @@
     (evil-commentary-mode))
 
 ;; TODO
+;; choose better yafolding keybindings of find better code folding extension
+;; decide if use multi-term
+;; use password store for pass management
+;; verify pinentry is actually working when signing commit with gpg key
+;; code folding between origami and yafolding
 ;; use user/yafolding-go-parent-element more often
 ;; use nodejs-repl more often
 ;; use origami folding when required a quick overview of file
@@ -403,7 +521,7 @@
  ;; If there is more than one, they won't work right.
     '(package-selected-packages
          (quote
-             (nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package))))
+             (pinentry el-mock ert-expectations password-store nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

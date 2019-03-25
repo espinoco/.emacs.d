@@ -8,6 +8,11 @@
     (interactive)
     (find-file (expand-file-name "user.el" elisp-directory)))
 
+(defun user/switch-to-local-buffer ()
+    "Switch to the local.el buffer in elisp directory."
+    (interactive)
+    (find-file (expand-file-name "local.el" elisp-directory)))
+
 (defun user/switch-to-scratch-buffer ()
     "Switch to `*scratch*' buffer."
     (interactive)
