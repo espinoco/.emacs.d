@@ -242,6 +242,9 @@
   (unless (package-installed-p package)
       (package-install package)))
 
+(use-package org-mode-configs
+    :load-path elisp-directory)
+
 (use-package multi-term
     :config
     (setq multi-term-program "/bin/bash"))
