@@ -35,6 +35,11 @@
         (global-hl-line-mode 1)
         (load-theme 'material t)))
 
+(if (eq window-system 'ns)
+  (progn
+    (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+    (add-to-list 'default-frame-alist '(ns-appearance . dark))))
+
 (prefer-coding-system 'utf-8-unix)
 
 (x-focus-frame nil)
