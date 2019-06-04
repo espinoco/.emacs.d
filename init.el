@@ -350,7 +350,9 @@
 
 (use-package projectile
     :config
-    (setq projectile-indexing-method 'alien)
+    (setq
+        projectile-indexing-method 'alien
+        projectile-use-git-grep t)
     (projectile-register-project-type 'npm '("package.json")
         :compile "npm install"
         :test "npm test"
