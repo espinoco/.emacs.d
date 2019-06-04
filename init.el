@@ -413,7 +413,7 @@
 (use-package restclient)
 
 (use-package user
-    :requires (nvm projectile s)
+    :requires (magit nvm projectile s)
     :load-path elisp-directory)
 
 (use-package flycheck)

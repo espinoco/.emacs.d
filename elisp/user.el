@@ -172,4 +172,13 @@ For example:
     (if (file-exists-p nvmrc-project-file-path)
       (nvm-use (s-trim (f-read nvmrc-project-file-path)) nil))))
 
+(defun user/branch-to-kill-ring ()
+    "Add current git branch to the `kill-ring'"
+    (interactive)
+    (let ((branch (magit-get-current-branch)))
+      (if branch
+        (progn (kill-new branch)
+          (message "%s" branch))
+        (user-error "There is not current branch"))))
+
 (provide 'user)
