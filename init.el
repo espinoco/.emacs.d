@@ -247,6 +247,7 @@
          s
          shell-pop
          tide
+         web-mode
          wgrep
          yafolding
          yaml-mode
@@ -256,8 +257,6 @@
   (unless (package-installed-p package)
       (package-install package)))
 
-(use-package org-mode-configs
-    :load-path elisp-directory)
 (use-package shell-pop
   :bind (("C-t" . shell-pop))
   :config
@@ -422,8 +421,10 @@
 
 (use-package company)
 
+(use-package web-mode)
+
 (use-package tide
-  :requires (company eldoc flycheck)
+  :requires (company eldoc flycheck web-mode)
   :init
   (defun setup-tide-mode ()
     (interactive)
@@ -471,11 +472,6 @@
         (lambda () (user/nvm-use-project)))
     :config
     (setq eshell-visual-subcommands '(("git" "log" "diff" "show"))))
-
-(when (file-exists-p local-elisp-file)
-    (use-package local
-        :requires (s)
-        :load-path elisp-directory))
 
 (use-package evil-leader
     :requires (avy git-gutter magit user yasnippet)
@@ -530,17 +526,22 @@
         "wj" 'windmove-down
         "wh" 'windmove-left
         "wl" 'windmove-right
+        "wfc" 'make-frame-command
+        "wfo" 'other-frame
+        "wfq" 'delete-frame
         "yc" 'yas-new-snippet
         "yf" 'yas-visit-snippet-file
         "yt" 'yas-tryout-snippet
         "<left>" 'buf-move-left
         "<right>" 'buf-move-right
         "<up>" 'buf-move-up
+        "SPC" 'local/npm-test
         "<down>" 'buf-move-down
         "'" 'shell-pop
         "o" user-command-map)
     (evil-leader/set-key-for-mode 'rjsx-mode "mp" 'user/prettier-eslint)
     (evil-leader/set-key-for-mode 'markdown-mode "m" markdown-mode-style-map)
+    (evil-leader/set-key-for-mode 'eshell-mode "mh" 'eshell-previous-matching-input)
     (define-key evil-normal-state-map "za" 'origami-toggle-node)
     (define-key evil-normal-state-map "zo" 'origami-show-only-node)
     (define-key evil-normal-state-map "zp" 'user/yafolding-go-parent-element)
@@ -596,7 +597,16 @@
     :config
     (evil-commentary-mode))
 
+(when (file-exists-p local-elisp-file)
+    (use-package local
+        :requires (s user)
+        :load-path elisp-directory))
+
 ;; TODO
+;; https://github.com/mclear-tools/dotemacs/blob/master/config.org#eshell
+;; eshell up
+;; Protect your Eshell prompt https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Btools/shell#protect-your-eshell-prompt
+;; use package move add-hook's to :init not :config
 ;; choose better yafolding keybindings of find better code folding extension
 ;; decide if use multi-term
 ;; use password store for pass management
