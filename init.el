@@ -214,7 +214,9 @@
 (setq package-list
     '(use-package
          avy
+         company
          dashboard
+         eldoc
          esh-autosuggest
          eshell-prompt-extras
          evil
@@ -222,6 +224,7 @@
          evil-escape
          evil-leader
          evil-mc
+         flycheck
          exec-path-from-shell
          expand-region
          git-gutter
@@ -243,6 +246,7 @@
          rjsx-mode
          s
          shell-pop
+         tide
          wgrep
          yafolding
          yaml-mode
@@ -408,6 +412,48 @@
 (use-package user
     :requires (nvm projectile s)
     :load-path elisp-directory)
+
+(use-package flycheck)
+
+(use-package eldoc)
+
+(use-package company)
+
+(use-package tide
+  :requires (company eldoc flycheck)
+  :init
+  (defun setup-tide-mode ()
+    (interactive)
+    (tide-setup)
+    (evil-local-set-key 'normal (kbd "gf") 'tide-jump-to-definition)
+    (evil-local-set-key 'normal (kbd "gb") 'tide-jump-back)
+    (flycheck-mode +1)
+    (setq flycheck-check-syntax-automatically '(save mode-enabled))
+    (eldoc-mode +1)
+    (tide-hl-identifier-mode +1)
+    (company-mode +1))
+  (add-hook 'before-save-hook 'tide-format-before-save)
+  (add-hook 'typescript-mode-hook #'setup-tide-mode)
+  ;; TSX
+  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+  (add-hook 'web-mode-hook
+    (lambda ()
+      (when (string-equal "tsx" (file-name-extension buffer-file-name))
+        (setup-tide-mode))))
+  (flycheck-add-mode 'typescript-tslint 'web-mode)
+  ;; JavaScript
+  (defun setup-tide-mode-for-js ()
+    (interactive)
+    (tide-setup))
+  (add-hook 'js2-mode-hook #'setup-tide-mode-for-js)
+  ;; JSX
+  ;; NOTE: js2 is also active on rjsx buffers, may not be required to activate
+  ;; twice
+  ;; (add-hook 'rjsx-mode-hook
+  ;;   (lambda ()
+  ;;     (setup-tide-mode-for-js)))
+  :config
+  (setq company-tooltip-align-annotations t))
 
 (use-package eshell
     :requires (user)
