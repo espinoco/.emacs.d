@@ -48,10 +48,10 @@
   inhibit-startup-screen t
   indent-tabs-mode nil
   lisp-indent-function 'common-lisp-indent-function
-  lisp-indent-offset 4
-  tab-width 4
-  c-basic-offset 4
-  tab-stop-list (number-sequence 4 120 4)
+  lisp-indent-offset 2
+  tab-width 2
+  c-basic-offset 2
+  tab-stop-list (number-sequence 2 50 2)
   epa-pinentry-mode 'loopback)
 
 (setq-default
