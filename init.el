@@ -364,8 +364,8 @@
 (use-package dashboard
     :init
     (setq
-        dashboard-banner-logo-title "Welcome Master"
-        dashboard-startup-banner 'logo
+        dashboard-banner-logo-title ""
+        dashboard-startup-banner nil
         dashboard-items '((recents  . 5)
                              (projects . 5)
                              (bookmarks . 5)
