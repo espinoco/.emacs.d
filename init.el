@@ -52,6 +52,7 @@
   tab-width 2
   c-basic-offset 2
   tab-stop-list (number-sequence 2 50 2)
+  eshell-banner-message ""
   epa-pinentry-mode 'loopback)
 
 (setq-default
@@ -214,6 +215,8 @@
     '(use-package
          avy
          dashboard
+         esh-autosuggest
+         eshell-prompt-extras
          evil
          evil-commentary
          evil-escape
@@ -226,6 +229,7 @@
          js2-mode
          js2-refactor
          json-reformat
+         nvm
          magit
          markdown-mode
          markdown-toc
@@ -238,6 +242,7 @@
          restclient
          rjsx-mode
          s
+         shell-pop
          wgrep
          yafolding
          yaml-mode
@@ -249,6 +254,22 @@
 
 (use-package org-mode-configs
     :load-path elisp-directory)
+(use-package shell-pop
+  :bind (("C-t" . shell-pop))
+  :config
+  (setq shell-pop-shell-type (quote ("eshell" "*eshell*" (lambda nil (eshell)))))
+  (shell-pop--set-shell-type 'shell-pop-shell-type shell-pop-shell-type))
+
+(use-package eshell-prompt-extras
+  :config
+  (with-eval-after-load "esh-opt"
+    (autoload 'epe-theme-lambda "eshell-prompt-extras")
+    (setq eshell-highlight-prompt nil
+      eshell-prompt-function 'epe-theme-lambda)))
+
+(use-package esh-autosuggest
+  :hook (eshell-mode . esh-autosuggest-mode)
+  :ensure t)
 
 (use-package multi-term
     :config
@@ -287,7 +308,8 @@
   (use-package exec-path-from-shell
     :ensure t
     :config
-    (exec-path-from-shell-initialize)))
+    (exec-path-from-shell-initialize)
+    (exec-path-from-shell-copy-env "JAVA_HOME")))
 
 (use-package highlight-thing
     :config
@@ -368,6 +390,8 @@
     :init
     (js2r-add-keybindings-with-prefix "C-c C-j"))
 
+(use-package nvm)
+
 (use-package nodejs-repl
     :requires (js2-mode)
     :config
@@ -382,7 +406,22 @@
 (use-package restclient)
 
 (use-package user
+    :requires (nvm projectile s)
     :load-path elisp-directory)
+
+(use-package eshell
+    :requires (user)
+    :init
+    (add-hook 'eshell-mode-hook
+        (lambda ()
+          (evil-local-set-key 'normal (kbd "i") 'user/eshell-jump-to-prompt)
+          (semantic-mode -1)
+          (hl-line-mode -1)
+          (user/nvm-use-project)))
+    (add-hook 'eshell-directory-change-hook
+        (lambda () (user/nvm-use-project)))
+    :config
+    (setq eshell-visual-subcommands '(("git" "log" "diff" "show"))))
 
 (when (file-exists-p local-elisp-file)
     (use-package local
@@ -430,6 +469,7 @@
         "iw" 'ispell-word
         "ib" 'ispell
         "p" 'projectile-command-map
+        "p'" 'projectile-run-eshell
         "v" 'er/expand-region
         "ws" 'split-window-below
         "wv" 'split-window-right
@@ -448,6 +488,7 @@
         "<right>" 'buf-move-right
         "<up>" 'buf-move-up
         "<down>" 'buf-move-down
+        "'" 'shell-pop
         "o" user-command-map)
     (evil-leader/set-key-for-mode 'rjsx-mode "mp" 'user/prettier-eslint)
     (evil-leader/set-key-for-mode 'markdown-mode "m" markdown-mode-style-map)
@@ -527,9 +568,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-    '(package-selected-packages
-         (quote
-             (pinentry el-mock ert-expectations password-store nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package))))
+  '(package-selected-packages
+     (quote
+       (tide nvm git-timemachine typescript-mode graphql-mode fasd esh-autosuggest shell-pop eshell-prompt-extras scala-mode emmet-mode web-mode pinentry el-mock ert-expectations password-store nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

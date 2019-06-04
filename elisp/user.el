@@ -157,4 +157,19 @@ For example:
     map)
   "Keymap for User commands.")
 
+(defun user/eshell-jump-to-prompt ()
+  "In normal state will automatically jump to the eshell prompt"
+  (interactive)
+  (progn
+    (evil-goto-line)
+    (evil-end-of-line)
+    (evil-append 0)))
+
+(defun user/nvm-use-project ()
+  "`nvm-use' on project level .nvmrc file if exists."
+  (interactive)
+  (let ((nvmrc-project-file-path (concat (projectile-project-root) ".nvmrc")))
+    (if (file-exists-p nvmrc-project-file-path)
+      (nvm-use (s-trim (f-read nvmrc-project-file-path)) nil))))
+
 (provide 'user)
