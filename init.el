@@ -343,6 +343,7 @@
 
 (use-package git-gutter
     :config
+    (add-hook 'yaml-mode-hook 'git-gutter-mode)
     (add-hook 'prog-mode-hook 'git-gutter-mode))
 
 (use-package password-store)
