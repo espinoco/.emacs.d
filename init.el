@@ -565,9 +565,10 @@
     (global-evil-mc-mode 1))
 
 (use-package wgrep
-    :requires (evil)
-    :config
-    (add-hook 'wgrep-setup-hook 'evil-normal-state))
+  :requires (evil)
+  :config
+  (setq wgrep-auto-save-buffer t)
+  (add-hook 'wgrep-setup-hook 'evil-normal-state))
 
 (use-package targets
     :requires (evil)
