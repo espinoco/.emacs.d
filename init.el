@@ -308,12 +308,12 @@
     (add-hook 'prog-mode-hook
         (lambda () (origami-mode))))
 
-(when (memq window-system '(mac ns))
-  (use-package exec-path-from-shell
-    :ensure t
-    :config
-    (exec-path-from-shell-initialize)
-    (exec-path-from-shell-copy-env "JAVA_HOME")))
+(use-package exec-path-from-shell
+  :if (memq window-system '(mac ns))
+  :ensure t
+  :config
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-env "JAVA_HOME"))
 
 (use-package highlight-thing
     :config
