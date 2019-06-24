@@ -181,4 +181,17 @@ For example:
           (message "%s" branch))
         (user-error "There is not current branch"))))
 
+(setq user/projectile-run-eshell-counter 0)
+
+(defun user/projectile-run-eshell (arg)
+  "Invoke `eshell' in the project's root.
+
+Switch to the project specific eshell buffer if it already exists. Use universal argument to create new shells"
+  (interactive "P")
+  (if arg
+    (setq user/projectile-run-eshell-counter (+ user/projectile-run-eshell-counter 1)))
+  (projectile-with-default-dir (projectile-ensure-project (projectile-project-root))
+    (let ((eshell-buffer-name (concat "*eshell " (projectile-project-name) " " (number-to-string user/projectile-run-eshell-counter) "*")))
+      (eshell))))
+
 (provide 'user)

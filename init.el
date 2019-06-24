@@ -514,7 +514,7 @@
         "iw" 'ispell-word
         "ib" 'ispell
         "p" 'projectile-command-map
-        "p'" 'projectile-run-eshell
+        "p'" 'user/projectile-run-eshell
         "v" 'er/expand-region
         "ws" 'split-window-below
         "wv" 'split-window-right
