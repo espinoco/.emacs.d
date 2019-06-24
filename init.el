@@ -539,7 +539,8 @@
         "SPC" 'local/npm-test
         "<down>" 'buf-move-down
         "'" 'shell-pop
-        "o" user-command-map)
+        "o" user-command-map
+        "u" 'universal-argument)
     (evil-leader/set-key-for-mode 'rjsx-mode "mp" 'user/prettier-eslint)
     (evil-leader/set-key-for-mode 'markdown-mode "m" markdown-mode-style-map)
     (evil-leader/set-key-for-mode 'eshell-mode "mh" 'eshell-previous-matching-input)
