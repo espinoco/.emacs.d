@@ -555,12 +555,18 @@
     (define-key evil-normal-state-map "zyse" 'yafolding-show-element)
     (define-key evil-normal-state-map "zr" 'origami-open-all-nodes))
 
+(use-package git-timemachine)
+
 (use-package evil
-    :requires (evil-leader dashboard)
-    :config
-    (evil-mode 1)
-    (define-key evil-insert-state-map (kbd "<tab>") 'hippie-expand)
-    (evil-set-initial-state 'dashboard-mode 'emacs))
+  :requires (evil-leader dashboard)
+  :config
+  (evil-mode 1)
+  (define-key evil-insert-state-map (kbd "<tab>") 'hippie-expand)
+  (evil-set-initial-state 'dashboard-mode 'emacs)
+  (eval-after-load 'git-timemachine
+    '(progn
+       (evil-make-overriding-map git-timemachine-mode-map 'normal)
+       (add-hook 'git-timemachine-mode-hook #'evil-normalize-keymaps))))
 
 (use-package evil-mc
     :requires (evil)
