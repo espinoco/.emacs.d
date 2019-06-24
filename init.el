@@ -46,6 +46,7 @@
 
 (setq-default
   org-list-allow-alphabetical t
+  use-package-always-ensure t
   inhibit-startup-screen t
   indent-tabs-mode nil
   lisp-indent-function 'common-lisp-indent-function
