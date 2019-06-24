@@ -45,6 +45,7 @@
 (x-focus-frame nil)
 
 (setq-default
+  org-list-allow-alphabetical t
   inhibit-startup-screen t
   indent-tabs-mode nil
   lisp-indent-function 'common-lisp-indent-function
