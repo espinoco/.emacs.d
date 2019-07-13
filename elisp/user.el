@@ -21,7 +21,7 @@
 (defun user/switch-to-previous-buffer ()
     "Switch to previous buffer."
     (interactive)
-    (switch-to-buffer (other-buffer)))
+    (previous-buffer))
 
 (defun user/dos2unix ()
     "Replace all DOS carriage returns (^M) with Unix line feeds in a current buffer."
