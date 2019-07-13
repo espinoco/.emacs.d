@@ -617,6 +617,9 @@
         :load-path elisp-directory))
 
 ;; TODO
+;; (add-hook 'prog-mode-hook #'flyspell-prog-mode)
+;; tide configs and possibilities
+;; fix dashboard
 ;; https://github.com/mclear-tools/dotemacs/blob/master/config.org#eshell
 ;; eshell up
 ;; Protect your Eshell prompt https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Btools/shell#protect-your-eshell-prompt
