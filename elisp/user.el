@@ -194,4 +194,9 @@ Switch to the project specific eshell buffer if it already exists. Use universal
     (let ((eshell-buffer-name (concat "*eshell " (projectile-project-name) " " (number-to-string user/projectile-run-eshell-counter) "*")))
       (eshell))))
 
+(defun user/kill-all-buffers-except-current ()
+  "Kills all user buffers except current one."
+  (interactive)
+    (mapc 'kill-buffer (cdr (buffer-list (current-buffer)))))
+
 (provide 'user)
