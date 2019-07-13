@@ -537,7 +537,6 @@
         "<left>" 'buf-move-left
         "<right>" 'buf-move-right
         "<up>" 'buf-move-up
-        "SPC" 'local/npm-test
         "<down>" 'buf-move-down
         "'" 'shell-pop
         "o" user-command-map
