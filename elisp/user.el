@@ -199,4 +199,15 @@ Switch to the project specific eshell buffer if it already exists. Use universal
   (interactive)
     (mapc 'kill-buffer (cdr (buffer-list (current-buffer)))))
 
+(defun user/save-all-buffers ()
+  "Save all buffers by mode."
+  (interactive)
+  (save-some-buffers 'no-confirm (lambda ()
+    (cond
+      ((and buffer-file-name (equal buffer-file-name abbrev-file-name)))
+      ((and buffer-file-name (eq major-mode 'tide-mode)))
+      ((and buffer-file-name (eq major-mode 'web-mode)))
+      ((and buffer-file-name (eq major-mode 'js2-mode)))
+      ((and buffer-file-name (derived-mode-p 'org-mode)))))))
+
 (provide 'user)
