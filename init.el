@@ -505,6 +505,7 @@
         "feu" 'user/switch-to-user-buffer
         "fel" 'user/switch-to-local-buffer
         "gs" 'magit-status
+        "gff" 'magit-find-file
         "gg" 'vc-git-grep
         "ghj" 'git-gutter:next-hunk
         "ghk" 'git-gutter:previous-hunk
