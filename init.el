@@ -488,7 +488,6 @@
     (evil-leader/set-key
         "ac" 'avy-goto-char
         "a2" 'avy-goto-char-2
-        "s" 'avy-goto-char-timer
         "al" 'avy-goto-line
         "aw" 'avy-goto-word-1
         "bb" 'ido-switch-buffer
