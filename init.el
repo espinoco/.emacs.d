@@ -497,6 +497,8 @@
         "bs" 'user/switch-to-scratch-file-buffer
         "bk" 'kill-buffer
         "br" 'revert-buffer
+        "en" 'flycheck-next-error
+        "ep" 'flycheck-previous-error
         "fs" 'save-buffer
         "ff" 'find-file
         "fj" 'dired-jump
