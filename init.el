@@ -224,7 +224,6 @@
     '(use-package
          avy
          company
-         dashboard
          eldoc
          esh-autosuggest
          eshell-prompt-extras
@@ -370,17 +369,16 @@
         :test-suffix ".test"))
 
 (use-package dashboard
-    :init
-    (setq
-        dashboard-banner-logo-title ""
-        dashboard-startup-banner nil
-        dashboard-items '((recents  . 5)
-                             (projects . 5)
-                             (bookmarks . 5)
-                             (agenda . 5)
-                             (registers . 5)))
-    :config
-    (dashboard-setup-startup-hook))
+  :ensure t
+  :init
+  (setq
+    dashboard-banner-logo-title ""
+    dashboard-startup-banner nil
+    dashboard-items '((recents  . 10)
+                       (projects . 10)))
+  (setq dashboard-set-footer nil)
+  :config
+  (dashboard-setup-startup-hook))
 
 (use-package magit)
 
@@ -660,7 +658,7 @@
  ;; If there is more than one, they won't work right.
   '(package-selected-packages
      (quote
-       (emojify tide nvm git-timemachine typescript-mode graphql-mode fasd esh-autosuggest shell-pop eshell-prompt-extras scala-mode emmet-mode web-mode pinentry el-mock ert-expectations password-store nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package))))
+       (all-the-icons emojify tide nvm git-timemachine typescript-mode graphql-mode fasd esh-autosuggest shell-pop eshell-prompt-extras scala-mode emmet-mode web-mode pinentry el-mock ert-expectations password-store nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
