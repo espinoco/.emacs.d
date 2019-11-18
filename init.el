@@ -483,7 +483,9 @@
     (add-hook 'eshell-directory-change-hook
         (lambda () (user/nvm-use-project)))
     :config
-    (setq eshell-visual-subcommands '(("git" "log" "diff" "show"))))
+  (setq eshell-visual-subcommands
+    '(("git" "log" "diff" "show" "status" "st")
+       ("yarn" "tslint"))))
 
 (use-package evil-leader
     :requires (avy git-gutter magit user yasnippet)
