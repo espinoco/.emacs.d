@@ -28,6 +28,8 @@
 
 (menu-bar-mode -1)
 
+(auto-insert-mode)
+
 (delete-selection-mode 1)
 
 (if (window-system)
@@ -56,6 +58,10 @@
   tab-stop-list (number-sequence 2 50 2)
   eshell-banner-message ""
   epa-pinentry-mode 'loopback)
+
+(setq-default
+  auto-insert-directory (expand-file-name "autoinsert" user-emacs-directory)
+  auto-insert-query nil)
 
 (setq-default
   backup-directory-alist `((".*" . ,backups-directory))
