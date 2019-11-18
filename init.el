@@ -551,6 +551,7 @@
     (evil-leader/set-key-for-mode 'rjsx-mode "mp" 'user/prettier-eslint)
     (evil-leader/set-key-for-mode 'markdown-mode "m" markdown-mode-style-map)
     (evil-leader/set-key-for-mode 'eshell-mode "mh" 'eshell-previous-matching-input)
+    (define-key evil-normal-state-map "s" 'avy-goto-char-timer)
     (define-key evil-normal-state-map "za" 'origami-toggle-node)
     (define-key evil-normal-state-map "zo" 'origami-show-only-node)
     (define-key evil-normal-state-map "zp" 'user/yafolding-go-parent-element)
