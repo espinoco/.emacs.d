@@ -47,6 +47,7 @@
 (x-focus-frame nil)
 
 (setq-default
+  org-startup-truncated nil
   org-list-allow-alphabetical t
   use-package-always-ensure t
   inhibit-startup-screen t
