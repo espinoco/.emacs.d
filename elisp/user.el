@@ -199,11 +199,11 @@ Switch to the project specific eshell buffer if it already exists. Use universal
   (interactive)
   (save-some-buffers 'no-confirm (lambda ()
     (cond
-      ((and buffer-file-name (equal buffer-file-name abbrev-file-name)))
       ((and buffer-file-name (eq major-mode 'tide-mode)))
       ((and buffer-file-name (eq major-mode 'web-mode)))
       ((and buffer-file-name (eq major-mode 'js2-mode)))
-      ((and buffer-file-name (derived-mode-p 'org-mode)))))))
+      ((and buffer-file-name (derived-mode-p 'org-mode)))
+      ((and buffer-file-name (equal buffer-file-name abbrev-file-name)))))))
 
 (defun user/switch-to-scratch-file-buffer ()
     "Switch to `scratch' file buffer."
