@@ -13,11 +13,6 @@
     (interactive)
     (find-file (expand-file-name "local.el" elisp-directory)))
 
-(defun user/switch-to-scratch-buffer ()
-    "Switch to `*scratch*' buffer."
-    (interactive)
-    (switch-to-buffer "*scratch*"))
-
 (defun user/switch-to-previous-buffer ()
     "Switch to previous buffer."
     (interactive)
@@ -209,5 +204,10 @@ Switch to the project specific eshell buffer if it already exists. Use universal
       ((and buffer-file-name (eq major-mode 'web-mode)))
       ((and buffer-file-name (eq major-mode 'js2-mode)))
       ((and buffer-file-name (derived-mode-p 'org-mode)))))))
+
+(defun user/switch-to-scratch-file-buffer ()
+    "Switch to `scratch' file buffer."
+    (interactive)
+    (find-file "~/scratch"))
 
 (provide 'user)

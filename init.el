@@ -495,7 +495,7 @@
         "bp" 'user/switch-to-previous-buffer
         "bh" 'previous-buffer
         "bl" 'next-buffer
-        "bs" 'user/switch-to-scratch-buffer
+        "bs" 'user/switch-to-scratch-file-buffer
         "bk" 'kill-buffer
         "br" 'revert-buffer
         "fs" 'save-buffer
