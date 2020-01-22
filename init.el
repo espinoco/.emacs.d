@@ -578,6 +578,7 @@
   :config
   (evil-mode 1)
   (define-key evil-insert-state-map (kbd "<tab>") 'hippie-expand)
+  (add-hook 'git-commit-mode-hook 'evil-insert-state)
   (evil-set-initial-state 'dashboard-mode 'emacs)
   (eval-after-load 'git-timemachine
     '(progn
