@@ -560,6 +560,11 @@
     (evil-leader/set-key-for-mode 'rjsx-mode "mp" 'user/prettier-eslint)
     (evil-leader/set-key-for-mode 'markdown-mode "m" markdown-mode-style-map)
     (evil-leader/set-key-for-mode 'eshell-mode "mh" 'eshell-previous-matching-input)
+  (evil-leader/set-key-for-mode 'web-mode
+    "mm" 'web-mode-tag-match
+    "ms" 'web-mode-element-select
+    "mn" 'web-mode-element-next
+    "mw" 'web-mode-element-wrap)
     (define-key evil-normal-state-map "s" 'avy-goto-char-timer)
     (define-key evil-normal-state-map "za" 'origami-toggle-node)
     (define-key evil-normal-state-map "zo" 'origami-show-only-node)
