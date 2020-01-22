@@ -14,7 +14,7 @@
     (expand-file-name "local.el" elisp-directory)
     "This file stores all machine local elisp files.")
 
-(defvar font "Hack 14" "Font")
+(defvar font "Hack 16" "Font")
 
 (unless (string-equal system-type "windows-nt")
     (progn
