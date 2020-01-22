@@ -531,6 +531,10 @@
         "hf" 'describe-function
         "iw" 'ispell-word
         "ib" 'ispell
+        "ml" 'smerge-keep-lower
+        "mu" 'smerge-keep-upper
+        "mn" 'smerge-next
+        "mp" 'smerge-prev
         "p" 'projectile-command-map
         "p'" 'user/projectile-run-eshell
         "v" 'er/expand-region
