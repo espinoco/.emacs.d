@@ -211,61 +211,20 @@
 
 (require 'package)
 
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
        (proto (if no-ssl "http" "https")))
-    (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t))
+    (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+    (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")) t))
 
 (package-initialize)
 
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
-
-;; (package-refresh-contents)
-
-(setq package-list
-    '(use-package
-         avy
-         company
-         eldoc
-         esh-autosuggest
-         eshell-prompt-extras
-         evil
-         evil-commentary
-         evil-escape
-         evil-leader
-         evil-mc
-         flycheck
-         exec-path-from-shell
-         expand-region
-         git-gutter
-         highlight-thing
-         js2-mode
-         js2-refactor
-         json-reformat
-         nvm
-         magit
-         markdown-mode
-         markdown-toc
-         multi-term
-         nodejs-repl
-         origami
-         password-store
-         pinentry
-         projectile
-         restclient
-         rjsx-mode
-         s
-         shell-pop
-         tide
-         web-mode
-         wgrep
-         yafolding
-         yaml-mode
-         yasnippet))
-
-(dolist (package package-list)
-  (unless (package-installed-p package)
-      (package-install package)))
+;; Setup `use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 (use-package shell-pop
   :bind (("C-t" . shell-pop))
@@ -368,7 +327,8 @@
         :run "npm start"
         :src-dir "src"
         :test-dir "test"
-        :test-suffix ".test"))
+        :test-suffix ".test")
+    (projectile-mode +1))
 
 (use-package dashboard
   :ensure t
@@ -633,9 +593,9 @@
     :config
     (evil-commentary-mode))
 
-(use-package emojify
-  :config
-  (add-hook 'after-init-hook #'global-emojify-mode))
+;; (use-package emojify
+;;   :config
+;;   (add-hook 'after-init-hook #'global-emojify-mode))
 
 (when (file-exists-p local-elisp-file)
     (use-package local
@@ -672,7 +632,7 @@
  ;; If there is more than one, they won't work right.
   '(package-selected-packages
      (quote
-       (all-the-icons emojify tide nvm git-timemachine typescript-mode graphql-mode fasd esh-autosuggest shell-pop eshell-prompt-extras scala-mode emmet-mode web-mode pinentry el-mock ert-expectations password-store nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package))))
+       (awesome-tray all-the-icons emojify tide nvm git-timemachine typescript-mode graphql-mode fasd esh-autosuggest shell-pop eshell-prompt-extras scala-mode emmet-mode web-mode pinentry el-mock ert-expectations password-store nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
