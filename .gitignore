@@ -10,3 +10,4 @@ auto-save-list/
 eshell/
 /elisp/local.el
 games/
+/transient/
