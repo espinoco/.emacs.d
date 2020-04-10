@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: count console.count
+# key: count
+# --
+console.count($0);
