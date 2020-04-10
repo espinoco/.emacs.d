@@ -47,6 +47,7 @@
 (x-focus-frame nil)
 
 (setq-default
+  bidi-inhibit-bpa t
   org-startup-truncated nil
   org-list-allow-alphabetical t
   use-package-always-ensure t
@@ -226,6 +227,10 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(use-package flx-ido
+  :config
+  (flx-ido-mode t))
+
 (use-package shell-pop
   :bind (("C-t" . shell-pop))
   :config
@@ -293,7 +298,11 @@
 
 (use-package expand-region)
 
-(use-package avy)
+(use-package avy
+  :config
+  (setq
+    avy-all-windows nil
+    avy-keys (number-sequence ?a ?z)))
 
 (use-package yasnippet
     :config
@@ -365,8 +374,6 @@
     :init
     (js2r-add-keybindings-with-prefix "C-c C-j"))
 
-(use-package nvm)
-
 (use-package nodejs-repl
     :requires (js2-mode)
     :config
@@ -379,6 +386,13 @@
             (define-key js-mode-map (kbd "C-c C-z") 'nodejs-repl-switch-to-repl))))
 
 (use-package restclient)
+
+(use-package nvm
+  :requires (projectile)
+  :init
+  (defun nvm-switch-project-hook ()
+    (user/nvm-use-project))
+  (add-hook 'projectile-after-switch-project-hook #'nvm-switch-project-hook))
 
 (use-package user
     :requires (magit nvm projectile s)
@@ -493,6 +507,9 @@
         "ib" 'ispell
         "ml" 'smerge-keep-lower
         "mu" 'smerge-keep-upper
+        "ma" 'smerge-keep-all
+        "mj" 'smerge-next
+        "mk" 'smerge-prev
         "mn" 'smerge-next
         "mp" 'smerge-prev
         "p" 'projectile-command-map
@@ -529,7 +546,7 @@
     "ms" 'web-mode-element-select
     "mn" 'web-mode-element-next
     "mw" 'web-mode-element-wrap)
-    (define-key evil-normal-state-map "s" 'avy-goto-char-timer)
+    (define-key evil-normal-state-map "s" 'avy-goto-word-1)
     (define-key evil-normal-state-map "za" 'origami-toggle-node)
     (define-key evil-normal-state-map "zo" 'origami-show-only-node)
     (define-key evil-normal-state-map "zp" 'user/yafolding-go-parent-element)
@@ -549,10 +566,13 @@
   (define-key evil-insert-state-map (kbd "<tab>") 'hippie-expand)
   (add-hook 'git-commit-mode-hook 'evil-insert-state)
   (evil-set-initial-state 'dashboard-mode 'emacs)
+  ;; (evil-set-initial-state 'tide-references-mode 'emacs)
   (eval-after-load 'git-timemachine
     '(progn
        (evil-make-overriding-map git-timemachine-mode-map 'normal)
-       (add-hook 'git-timemachine-mode-hook #'evil-normalize-keymaps))))
+       (add-hook 'git-timemachine-mode-hook #'evil-normalize-keymaps)))
+  (evil-define-key 'normal tide-references-mode-map
+    (kbd "<return>") 'tide-goto-line-reference))
 
 (use-package evil-mc
     :requires (evil)
@@ -631,8 +651,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
   '(package-selected-packages
-     (quote
-       (awesome-tray all-the-icons emojify tide nvm git-timemachine typescript-mode graphql-mode fasd esh-autosuggest shell-pop eshell-prompt-extras scala-mode emmet-mode web-mode pinentry el-mock ert-expectations password-store nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package))))
+     '(flx-ido awesome-tray all-the-icons emojify tide nvm git-timemachine typescript-mode graphql-mode fasd esh-autosuggest shell-pop eshell-prompt-extras scala-mode emmet-mode web-mode pinentry el-mock ert-expectations password-store nodejs-repl yafolding multi-term yaml-mode restclient wgrep origami camelCase-mode string-inflection markdown-toc markdown-mode exec-path-from-shell projectile dashboard evil-mc hydra indium expand-region highlight-thing js2-refactor rjsx-mode json-reformat avy git-gutter magit evil-commentary evil-escape evil-escape-mode evil use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
