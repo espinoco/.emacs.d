@@ -210,4 +210,14 @@ Switch to the project specific eshell buffer if it already exists. Use universal
     (interactive)
     (find-file "~/scratch"))
 
+(defun user/decode-url (start end)
+    "Decode encoded url"
+    (interactive "r")
+    (if (use-region-p)
+      (let* ((regionp (buffer-substring start end))
+             (decoded (url-unhex-string regionp)))
+          (progn
+            (kill-new decoded)
+            (message (concat "Copied \"" decoded "\" to kill ring"))))))
+
 (provide 'user)
